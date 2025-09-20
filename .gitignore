@@ -2,4 +2,5 @@ google_accounts.json
 history/
 installation_id
 oauth_creds.json
+tmp/
 user_id

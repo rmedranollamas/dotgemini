@@ -28,14 +28,15 @@
   "experimental": {
     "useModelRouter": true
   },
+  "excludeTools": [
+    "glob",
+    "search_file_content",
+  ],
   "allowedTools": [
     "read_file",
     "read_many_files",
     "list_directory",
-    "glob",
     "save_memory",
-    "glob",
-    "search_file_content",
     "run_shell_command(find)"
   ]
 }
