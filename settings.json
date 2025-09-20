@@ -23,7 +23,7 @@
   "showCitations": true,
   "ideMode": true,
   "loadMemoryFromIncludeDirectories": true,
-  "theme": "ANSI Light",
+  "theme": "Default Light",
   "useSmartEdit": true,
   "experimental": {
     "useModelRouter": true
