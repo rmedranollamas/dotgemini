@@ -30,7 +30,7 @@
   },
   "excludeTools": [
     "glob",
-    "search_file_content",
+    "search_file_content"
   ],
   "allowedTools": [
     "read_file",
