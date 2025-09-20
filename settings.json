@@ -1,0 +1,41 @@
+{
+  "chatCompression": {
+    "contextPercentageThreshold": 0.9
+  },
+  "checkpointing": {
+    "enabled": true
+  },
+  "contextFileName": [
+    "CONTEXT.md",
+    "GEMINI.md",
+    "AGENTS.md"
+  ],
+  "disableAutoUpdate": true,
+  "disableUpdateNag": true,
+  "fileFiltering": {
+    "enableRecursiveFileSearch": false
+  },
+  "hasSeenIdeIntegrationNudge": true,
+  "hideTips": true,
+  "hideSandboxStatus": true,
+  "showMemoryUsage": true,
+  "showLineNumbers": true,
+  "showCitations": true,
+  "ideMode": true,
+  "loadMemoryFromIncludeDirectories": true,
+  "theme": "ANSI Light",
+  "useSmartEdit": true,
+  "experimental": {
+    "useModelRouter": true
+  },
+  "allowedTools": [
+    "read_file",
+    "read_many_files",
+    "list_directory",
+    "glob",
+    "save_memory",
+    "glob",
+    "search_file_content",
+    "run_shell_command(find)"
+  ]
+}
