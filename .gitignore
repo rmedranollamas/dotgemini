@@ -1,6 +1,9 @@
+extensions/
 google_accounts.json
 history/
 installation_id
 oauth_creds.json
+logs.json
+settings.json.orig
 tmp/
 user_id
