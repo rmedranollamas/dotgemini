@@ -1,42 +1,57 @@
 {
-  "chatCompression": {
-    "contextPercentageThreshold": 0.9
+  "tools": {
+    "allowed": [
+      "read_file",
+      "read_many_files",
+      "list_directory",
+      "save_memory",
+      "run_shell_command(find)",
+      "run_shell_command(mdformat)"
+    ],
+    "exclude": [
+      "glob",
+      "search_file_content"
+    ]
   },
-  "checkpointing": {
+  "model": {
+    "chatCompression": {
+      "contextPercentageThreshold": 0.9
+    }
+  },
+  "general": {
+    "checkpointing": {
+      "enabled": true
+    },
+    "disableAutoUpdate": true,
+    "disableUpdateNag": true
+  },
+  "context": {
+    "fileName": [
+      "CONTEXT.md",
+      "GEMINI.md",
+      "AGENTS.md"
+    ],
+    "fileFiltering": {
+      "enableRecursiveFileSearch": false
+    },
+    "loadFromIncludeDirectories": true
+  },
+  "ide": {
+    "hasSeenNudge": true,
     "enabled": true
   },
-  "contextFileName": [
-    "CONTEXT.md",
-    "GEMINI.md",
-    "AGENTS.md"
-  ],
-  "disableAutoUpdate": true,
-  "disableUpdateNag": true,
-  "fileFiltering": {
-    "enableRecursiveFileSearch": false
+  "ui": {
+    "hideTips": true,
+    "footer": {
+      "hideSandboxStatus": true
+    },
+    "showMemoryUsage": true,
+    "showLineNumbers": true,
+    "showCitations": true,
+    "theme": "ANSI Light"
   },
-  "hasSeenIdeIntegrationNudge": true,
-  "hideTips": true,
-  "hideSandboxStatus": true,
-  "showMemoryUsage": true,
-  "showLineNumbers": true,
-  "showCitations": true,
-  "ideMode": true,
-  "loadMemoryFromIncludeDirectories": true,
-  "theme": "ANSI Light",
   "useSmartEdit": true,
   "experimental": {
     "useModelRouter": true
-  },
-  "excludeTools": [
-    "glob",
-    "search_file_content"
-  ],
-  "allowedTools": [
-    "read_file",
-    "read_many_files",
-    "list_directory",
-    "save_memory",
-    "run_shell_command(find)"
-  ]
+  }
 }
