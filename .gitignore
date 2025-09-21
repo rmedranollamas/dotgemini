@@ -1,4 +1,6 @@
+.gemini/
 extensions/
+gha-creds-*.json
 google_accounts.json
 history/
 installation_id
