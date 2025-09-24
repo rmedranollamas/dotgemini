@@ -26,3 +26,8 @@ Before writing any code, I must follow this "deep thinking" framework:
    nice to track this plan for example on an md file in a tmp directory.
 5. Write the Code: Write code only after planning.
 6. Suggest Tests: Propose unit, integration, and/or end-to-end tests.
+
+## Gemini Added Memories
+- Please try to run unit tests as you develop code, to know things that are
+  working well or need change. Remember that each project has different ways to
+  run tests.
