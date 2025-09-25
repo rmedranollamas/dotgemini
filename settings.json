@@ -1,10 +1,11 @@
 {
   "tools": {
     "allowed": [
+      "list_directory",
       "read_file",
       "read_many_files",
-      "list_directory",
       "save_memory",
+      "run_shell_command(cat)",
       "run_shell_command(find)",
       "run_shell_command(mdformat)",
       "run_shell_command(vcstool)"
