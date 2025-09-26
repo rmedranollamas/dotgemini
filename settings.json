@@ -6,6 +6,7 @@
       "read_many_files",
       "save_memory",
       "run_shell_command(cat)",
+      "run_shell_command(diff)",
       "run_shell_command(find)",
       "run_shell_command(mdformat)",
       "run_shell_command(vcstool)"
