@@ -40,3 +40,6 @@ Before writing any code, you must follow this "deep thinking" framework:
 - Please try to run unit tests as you develop code, to know things that are
   working well or need change. Remember that each project has different ways to
   run tests.
+
+- Whenever you need to create a commit or a changelist, please figure out the
+  commit message yourself.
