@@ -8,4 +8,5 @@ oauth_creds.json
 logs.json
 settings.json.orig
 tmp/
+trustedFolders.json
 user_id
