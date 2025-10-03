@@ -8,6 +8,8 @@
       "run_shell_command(cat)",
       "run_shell_command(diff)",
       "run_shell_command(find)",
+      "run_shell_command(gh)",
+      "run_shell_command(git)",
       "run_shell_command(grep)",
       "run_shell_command(mdformat)",
       "run_shell_command(whoami)"
@@ -51,10 +53,15 @@
     "showMemoryUsage": true,
     "showLineNumbers": true,
     "showCitations": true,
-    "theme": "ANSI Light"
+    "theme": "ANSI"
   },
   "useSmartEdit": true,
   "experimental": {
     "useModelRouter": true
+  },
+  "security": {
+    "auth": {
+      "selectedType": "gemini-api-key"
+    }
   }
 }
