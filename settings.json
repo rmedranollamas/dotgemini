@@ -8,8 +8,9 @@
       "run_shell_command(cat)",
       "run_shell_command(diff)",
       "run_shell_command(find)",
+      "run_shell_command(grep)",
       "run_shell_command(mdformat)",
-      "run_shell_command(vcstool)"
+      "run_shell_command(whoami)"
     ],
     "exclude": [
       "glob",
