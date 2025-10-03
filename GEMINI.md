@@ -45,4 +45,4 @@ Before writing any code, you must follow this "deep thinking" framework:
   commit message yourself.
 
 - If you ever need to interact with the GitHub service (e.g. to manage a pull
-  request) always use thwe gh command.
+  request) always use the gh command.
