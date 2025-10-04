@@ -25,3 +25,7 @@ Gemini must follow this structured process for all development tasks:
 - **Python**: Gemini must use `uv` for project and dependency management and `ruff` for all linting and formatting.
 - **GitHub**: Gemini must interact with the GitHub service exclusively through the `gh` CLI tool.
 - **Markdown**: Gemini must format all Markdown files in-place using `mdformat`.
+
+## Gemini Added Memories
+
+- The user wants me to run `ruff` to check and format the code after making changes.
