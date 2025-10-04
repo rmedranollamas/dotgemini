@@ -11,12 +11,11 @@
       "run_shell_command(gh)",
       "run_shell_command(git)",
       "run_shell_command(grep)",
+      "run_shell_command(ls)",
       "run_shell_command(mdformat)",
+      "run_shell_command(uv)",
+      "run_shell_command(ruff)",
       "run_shell_command(whoami)"
-    ],
-    "exclude": [
-      "glob",
-      "search_file_content"
     ]
   },
   "model": {
@@ -36,9 +35,6 @@
       "GEMINI.md",
       "AGENTS.md"
     ],
-    "fileFiltering": {
-      "enableRecursiveFileSearch": false
-    },
     "loadFromIncludeDirectories": true
   },
   "ide": {
@@ -50,7 +46,6 @@
     "footer": {
       "hideSandboxStatus": true
     },
-    "showMemoryUsage": true,
     "showLineNumbers": true,
     "showCitations": true,
     "theme": "ANSI"
