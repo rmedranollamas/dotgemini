@@ -15,7 +15,9 @@
       "run_shell_command(mdformat)",
       "run_shell_command(uv)",
       "run_shell_command(ruff)",
-      "run_shell_command(whoami)"
+      "run_shell_command(whoami)",
+      "run_shell_command(mkdir)",
+      "run_shell_command(touch)"
     ]
   },
   "model": {
