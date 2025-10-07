@@ -4,7 +4,7 @@
       "GEMINI.md",
       "AGENTS.md"
     ],
-    "loadFromIncludeDirectories": true,
+    "loadFromIncludeDirectories": true
   },
   "model": {
     "name": {
