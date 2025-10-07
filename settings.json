@@ -7,10 +7,8 @@
     "loadFromIncludeDirectories": true
   },
   "model": {
-    "name": {
-      "chatCompression": {
-        "contextPercentageThreshold": 0.9
-      }
+    "chatCompression": {
+      "contextPercentageThreshold": 0.9
     }
   },
   "tools": {
@@ -39,7 +37,8 @@
       "enabled": true
     },
     "disableAutoUpdate": true,
-    "disableUpdateNag": true
+    "disableUpdateNag": true,
+    "enablePromptCompletion": true
   },
   "ide": {
     "hasSeenNudge": true,
@@ -52,7 +51,8 @@
     },
     "showLineNumbers": true,
     "showCitations": true,
-    "theme": "ANSI"
+    "theme": "ANSI",
+    "showStatusInTitle": true
   },
   "useSmartEdit": true,
   "experimental": {
