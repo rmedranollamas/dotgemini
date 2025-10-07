@@ -1,4 +1,18 @@
 {
+  "context": {
+    "fileName": [
+      "GEMINI.md",
+      "AGENTS.md"
+    ],
+    "loadFromIncludeDirectories": true,
+  },
+  "model": {
+    "name": {
+      "chatCompression": {
+        "contextPercentageThreshold": 0.9
+      }
+    }
+  },
   "tools": {
     "allowed": [
       "list_directory",
@@ -20,24 +34,12 @@
       "run_shell_command(touch)"
     ]
   },
-  "model": {
-    "chatCompression": {
-      "contextPercentageThreshold": 0.9
-    }
-  },
   "general": {
     "checkpointing": {
       "enabled": true
     },
     "disableAutoUpdate": true,
     "disableUpdateNag": true
-  },
-  "context": {
-    "fileName": [
-      "GEMINI.md",
-      "AGENTS.md"
-    ],
-    "loadFromIncludeDirectories": true
   },
   "ide": {
     "hasSeenNudge": true,
@@ -50,7 +52,7 @@
     },
     "showLineNumbers": true,
     "showCitations": true,
-    "theme": "ANSI Light"
+    "theme": "ANSI"
   },
   "useSmartEdit": true,
   "experimental": {
