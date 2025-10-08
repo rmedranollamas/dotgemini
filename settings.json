@@ -7,8 +7,12 @@
     "loadFromIncludeDirectories": true
   },
   "model": {
+    "summarizeToolOutput": {
+      "run_shell_command": {
+        "tokenBudget": 10000
+    },
     "chatCompression": {
-      "contextPercentageThreshold": 0.9
+      "contextPercentageThreshold": 0.4
     }
   },
   "tools": {
