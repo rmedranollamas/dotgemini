@@ -34,7 +34,8 @@
       "run_shell_command(ruff)",
       "run_shell_command(whoami)",
       "run_shell_command(mkdir)",
-      "run_shell_command(touch)"
+      "run_shell_command(touch)",
+      "run_shell_command(sed)"
     ]
   },
   "general": {
