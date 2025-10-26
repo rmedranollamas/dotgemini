@@ -45,7 +45,7 @@
         },
         "disableAutoUpdate": true,
         "disableUpdateNag": true,
-        "enablePromptCompletion": true
+        "enablePromptCompletion": false
     },
     "ide": {
         "hasSeenNudge": true,
