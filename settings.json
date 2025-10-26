@@ -1,73 +1,73 @@
 {
-  "context": {
-    "fileName": [
-      "GEMINI.md",
-      "AGENTS.md"
-    ],
-    "loadFromIncludeDirectories": true
-  },
-  "model": {
-    "summarizeToolOutput": {
-      "run_shell_command": {
-        "tokenBudget": 10000
-      }
+    "context": {
+        "fileName": [
+            "GEMINI.md",
+            "AGENTS.md"
+        ],
+        "loadFromIncludeDirectories": true
     },
-    "chatCompression": {
-      "contextPercentageThreshold": 0.4
+    "model": {
+        "summarizeToolOutput": {
+            "ShellTool": {
+                "tokenBudget": 10000
+            }
+        },
+        "chatCompression": {
+            "contextPercentageThreshold": 0.4
+        }
+    },
+    "tools": {
+        "allowed": [
+            "list_directory",
+            "read_file",
+            "read_many_files",
+            "save_memory",
+            "ShellTool(cat)",
+            "ShellTool(diff)",
+            "ShellTool(find)",
+            "ShellTool(gh)",
+            "ShellTool(git)",
+            "ShellTool(grep)",
+            "ShellTool(ls)",
+            "ShellTool(mdformat)",
+            "ShellTool(uv)",
+            "ShellTool(ruff)",
+            "ShellTool(whoami)",
+            "ShellTool(mkdir)",
+            "ShellTool(touch)",
+            "ShellTool(sed)",
+            "ShellTool(head)"
+        ]
+    },
+    "general": {
+        "checkpointing": {
+            "enabled": true
+        },
+        "disableAutoUpdate": true,
+        "disableUpdateNag": true,
+        "enablePromptCompletion": true
+    },
+    "ide": {
+        "hasSeenNudge": true,
+        "enabled": false
+    },
+    "ui": {
+        "hideTips": true,
+        "footer": {
+            "hideSandboxStatus": true
+        },
+        "showLineNumbers": true,
+        "showCitations": true,
+        "theme": "ANSI",
+        "showStatusInTitle": true
+    },
+    "useSmartEdit": true,
+    "experimental": {
+        "useModelRouter": true
+    },
+    "security": {
+        "auth": {
+            "selectedType": "gemini-api-key"
+        }
     }
-  },
-  "tools": {
-    "allowed": [
-      "list_directory",
-      "read_file",
-      "read_many_files",
-      "save_memory",
-      "run_shell_command(cat)",
-      "run_shell_command(diff)",
-      "run_shell_command(find)",
-      "run_shell_command(gh)",
-      "run_shell_command(git)",
-      "run_shell_command(grep)",
-      "run_shell_command(ls)",
-      "run_shell_command(mdformat)",
-      "run_shell_command(uv)",
-      "run_shell_command(ruff)",
-      "run_shell_command(whoami)",
-      "run_shell_command(mkdir)",
-      "run_shell_command(touch)",
-      "run_shell_command(sed)",
-      "run_shell_command(head)"
-    ]
-  },
-  "general": {
-    "checkpointing": {
-      "enabled": true
-    },
-    "disableAutoUpdate": true,
-    "disableUpdateNag": true,
-    "enablePromptCompletion": true
-  },
-  "ide": {
-    "hasSeenNudge": true,
-    "enabled": true
-  },
-  "ui": {
-    "hideTips": true,
-    "footer": {
-      "hideSandboxStatus": true
-    },
-    "showLineNumbers": true,
-    "showCitations": true,
-    "theme": "ANSI",
-    "showStatusInTitle": true
-  },
-  "useSmartEdit": true,
-  "experimental": {
-    "useModelRouter": true
-  },
-  "security": {
-    "auth": {
-      "selectedType": "gemini-api-key"
-    }
-  }
 }
