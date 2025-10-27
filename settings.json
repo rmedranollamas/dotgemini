@@ -71,8 +71,6 @@
     "useModelRouter": true
   },
   "security": {
-    "auth": {
-      "selectedType": "gemini-api-key"
-    }
+    "disableYoloMode": true
   }
 }
