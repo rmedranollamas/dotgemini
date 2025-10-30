@@ -71,6 +71,9 @@
     "useModelRouter": true
   },
   "security": {
-    "disableYoloMode": true
+    "disableYoloMode": true,
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
   }
 }
