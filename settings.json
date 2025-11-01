@@ -12,7 +12,7 @@
       }
     },
     "chatCompression": {
-      "contextPercentageThreshold": 0.4
+      "contextPercentageThreshold": 0.9
     }
   },
   "tools": {
