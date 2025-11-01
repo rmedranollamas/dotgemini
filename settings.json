@@ -1,8 +1,7 @@
 {
   "context": {
     "fileName": [
-      "GEMINI.md",
-      "AGENTS.md"
+      "GEMINI.md"
     ],
     "loadFromIncludeDirectories": true
   },
