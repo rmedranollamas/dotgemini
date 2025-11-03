@@ -67,6 +67,7 @@
     "useFullWidth": true
   },
   "useSmartEdit": true,
+  "useWriteTodos": true,
   "experimental": {
     "useModelRouter": true
   },
