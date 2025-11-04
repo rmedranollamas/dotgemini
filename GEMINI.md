@@ -29,6 +29,9 @@ Gemini must follow this structured process for all development tasks:
     sequence of steps.
 1.  **Write Code**: Begin coding only after the plan is established.
 1.  **Test**: Run existing tests or create new ones to validate the changes.
+1.  **Track Tasks with Todos**: For any task that involves more than a single
+    step, use the `write_todos` tool to create and update a todo list. This
+    should be done consistently and frequently to track progress.
 
 ## Tooling
 

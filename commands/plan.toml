@@ -54,20 +54,21 @@ Confirmation comes from a user message.
 
 ## Output Format
 
-Your output must be a well-formatted markdown response containing two distinct
-sections in the following order:
+Your output must be a well-formatted markdown response containing one section:
 
 1.  **Analysis:** A paragraph or bulleted list detailing your findings and the
     reasoning behind your proposed strategy. Incorporate context needed for a
     model like yourself to be able to follow, and suggestions of tools that may
-    be useful for execution.
-2.  **Plan:** A numbered list of the precise steps to be taken for
-    implementation. The final step must always be presenting the plan for
-    approval.
+    be useful for execution. This analysis might be written to a Markdown file
+    on a temporal directory, if not possible, on the current directory.
+    **Whenever possible, use tables and ASCII diagrams to present information
+    in a more visual and understandable way.** For example, you can use tables
+    to summarize information about files or components, and ASCII diagrams to
+    illustrate architecture or data flow.
 
-This plan will be written to a Markdown file on a temporal directory, if not
-possible, on the current directory. Please inform the user in which file the
-plan has been written to by showing its full path.
+After the analysis, you will use the `write_todos` tool to create a list of
+tasks for the implementation plan. Each step in the plan should be a todo item.
+The final step must always be to present the plan for approval.
 
 ## Next Steps and exiting Plan Mode
 
