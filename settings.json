@@ -3,7 +3,8 @@
     "fileName": [
       "GEMINI.md"
     ],
-    "loadFromIncludeDirectories": true
+    "loadFromIncludeDirectories": true,
+    "loadMemoryFromIncludeDirectories": true
   },
   "model": {
     "summarizeToolOutput": {
@@ -12,7 +13,7 @@
       }
     },
     "chatCompression": {
-      "contextPercentageThreshold": 0.9
+      "contextPercentageThreshold": 0.4
     }
   },
   "tools": {
@@ -40,7 +41,9 @@
     "shell": {
       "showColor": true
     },
-    "truncateToolOutputLines": 10000
+    "truncateToolOutputLines": 1000,
+    "truncateToolOutputThreshold": 100000,
+    "autoAccept": true
   },
   "general": {
     "checkpointing": {
@@ -48,7 +51,11 @@
     },
     "disableAutoUpdate": true,
     "disableUpdateNag": true,
-    "enablePromptCompletion": false
+    "enablePromptCompletion": false,
+    "sessionRetention": {
+      "enabled": true,
+      "maxAge": "30d"
+    }
   },
   "ide": {
     "hasSeenNudge": true,
@@ -63,12 +70,17 @@
     "showCitations": true,
     "theme": "ANSI",
     "showStatusInTitle": true,
-    "useFullWidth": true
+    "useFullWidth": true,
+    "showMemoryUsage": false
   },
   "useSmartEdit": true,
   "useWriteTodos": true,
   "experimental": {
-    "useModelRouter": true
+    "useModelRouter": true,
+    "codebaseInvestigatorSettings": {
+      "enabled": true,
+      "codebaseInvestigatorSettings": 16384
+    }
   },
   "security": {
     "disableYoloMode": true
