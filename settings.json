@@ -36,6 +36,7 @@
       "ShellTool(mkdir)",
       "ShellTool(touch)",
       "ShellTool(sed)",
+      "ShellTool(pwd)"
       "ShellTool(head)"
     ],
     "shell": {
