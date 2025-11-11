@@ -72,7 +72,8 @@
     "theme": "ANSI",
     "showStatusInTitle": true,
     "useFullWidth": true,
-    "showMemoryUsage": false
+    "showMemoryUsage": false,
+    "useAlternateBuffer": true
   },
   "useSmartEdit": true,
   "useWriteTodos": true,
