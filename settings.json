@@ -20,7 +20,6 @@
     "allowed": [
       "list_directory",
       "read_file",
-      "read_many_files",
       "save_memory",
       "ShellTool(cat)",
       "ShellTool(diff)",
