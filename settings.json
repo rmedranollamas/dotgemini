@@ -22,6 +22,7 @@
       "read_file",
       "save_memory",
       "ShellTool(cat)",
+      "ShellTool(cp)",
       "ShellTool(diff)",
       "ShellTool(find)",
       "ShellTool(gh)",
