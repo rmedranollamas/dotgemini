@@ -12,8 +12,7 @@
         "tokenBudget": 100000
       }
     },
-    "skipNextSpeakerCheck": false,
-    "compressionThreshold": 0.4
+    "compressionThreshold": 0.5
   },
   "tools": {
     "allowed": [
@@ -61,7 +60,7 @@
   },
   "ide": {
     "hasSeenNudge": true,
-    "enabled": true
+    "enabled": false
   },
   "ui": {
     "hideTips": true,
@@ -76,6 +75,7 @@
     "useFullWidth": true,
     "showMemoryUsage": false,
     "useAlternateBuffer": true,
+    "hideContextSummary": false,
     "showModelInfoInChat": true
   },
   "useSmartEdit": true,
@@ -88,6 +88,9 @@
     }
   },
   "security": {
-    "disableYoloMode": true
+    "disableYoloMode": true,
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
   }
 }
