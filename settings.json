@@ -12,9 +12,8 @@
         "tokenBudget": 100000
       }
     },
-    "chatCompression": {
-      "contextPercentageThreshold": 0.4
-    }
+    "skipNextSpeakerCheck": false,
+    "compressionThreshold": 0.4
   },
   "tools": {
     "allowed": [
@@ -61,20 +60,22 @@
   },
   "ide": {
     "hasSeenNudge": true,
-    "enabled": false
+    "enabled": true
   },
   "ui": {
     "hideTips": true,
     "footer": {
-      "hideSandboxStatus": true
+      "hideSandboxStatus": true,
+      "hideContextPercentage": false
     },
     "showLineNumbers": true,
     "showCitations": true,
-    "theme": "ANSI",
+    "theme": "ANSI Light",
     "showStatusInTitle": true,
     "useFullWidth": true,
     "showMemoryUsage": false,
-    "useAlternateBuffer": true
+    "useAlternateBuffer": true,
+    "showModelInfoInChat": true
   },
   "useSmartEdit": true,
   "useWriteTodos": true,
