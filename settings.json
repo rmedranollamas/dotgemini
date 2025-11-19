@@ -56,7 +56,8 @@
     "sessionRetention": {
       "enabled": true,
       "maxAge": "30d"
-    }
+    },
+    "previewFeatures": true
   },
   "ide": {
     "hasSeenNudge": true,
