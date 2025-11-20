@@ -9,10 +9,11 @@
   "model": {
     "summarizeToolOutput": {
       "ShellTool": {
-        "tokenBudget": 100000
+        "tokenBudget": 50000
       }
     },
-    "compressionThreshold": 0.5
+    "compressionThreshold": 0.3,
+    "skipNextSpeakerCheck": false
   },
   "tools": {
     "allowed": [
@@ -20,6 +21,7 @@
       "read_file",
       "save_memory",
       "ShellTool(cat)",
+      "ShellTool(npm)",
       "ShellTool(cp)",
       "ShellTool(diff)",
       "ShellTool(find)",
@@ -39,11 +41,14 @@
       "ShellTool(head)"
     ],
     "shell": {
-      "showColor": true
+      "showColor": true,
+      "enableInteractiveShell": true
     },
     "truncateToolOutputLines": 1000,
-    "truncateToolOutputThreshold": 100000,
-    "autoAccept": true
+    "truncateToolOutputThreshold": 50000,
+    "autoAccept": true,
+    "enableMessageBusIntegration": true,
+    "enableHooks": true
   },
   "general": {
     "checkpointing": {
@@ -52,6 +57,7 @@
     "disableAutoUpdate": true,
     "disableUpdateNag": true,
     "enablePromptCompletion": false,
+    "retryFetchErrors": true,
     "sessionRetention": {
       "enabled": true,
       "maxAge": "30d"
@@ -75,6 +81,7 @@
     "useFullWidth": true,
     "showMemoryUsage": false,
     "useAlternateBuffer": true,
+    "incrementalRendering": true,
     "hideContextSummary": false,
     "showModelInfoInChat": true
   },
@@ -88,9 +95,12 @@
     }
   },
   "security": {
-    "disableYoloMode": true,
-    "auth": {
-      "selectedType": "oauth-personal"
-    }
+    "disableYoloMode": true
+  },
+  "advanced": {
+    "autoConfigureMemory": true
+  },
+  "privacy": {
+    "usageStatisticsEnabled": false
   }
 }
