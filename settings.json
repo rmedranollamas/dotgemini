@@ -12,7 +12,7 @@
         "tokenBudget": 50000
       }
     },
-    "compressionThreshold": 0.5,
+    "compressionThreshold": 0.35,
     "skipNextSpeakerCheck": false
   },
   "tools": {
