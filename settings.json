@@ -9,7 +9,7 @@
   "model": {
     "summarizeToolOutput": {
       "run_shell_command": {
-        "tokenBudget": 50000
+        "tokenBudget": 30000
       }
     },
     "compressionThreshold": 0.35,
@@ -48,7 +48,7 @@
       "enableInteractiveShell": true
     },
     "truncateToolOutputLines": 1000,
-    "truncateToolOutputThreshold": 50000,
+    "truncateToolOutputThreshold": 30000,
     "autoAccept": true,
     "enableMessageBusIntegration": true,
     "enableHooks": true
