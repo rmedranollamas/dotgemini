@@ -1,7 +1,8 @@
 {
   "context": {
     "fileName": [
-      "GEMINI.md"
+      "GEMINI.md",
+      "AGENTS.md"
     ],
     "loadFromIncludeDirectories": true,
     "loadMemoryFromIncludeDirectories": true
@@ -23,6 +24,7 @@
       "web_fetch",
       "write_todos",
       "google_web_search",
+      "codebase_investigator",
       "run_shell_command(cat)",
       "run_shell_command(npm)",
       "run_shell_command(cp)",
@@ -69,7 +71,7 @@
   },
   "ide": {
     "hasSeenNudge": true,
-    "enabled": false
+    "enabled": true
   },
   "ui": {
     "hideTips": true,
@@ -79,8 +81,8 @@
     },
     "showLineNumbers": true,
     "showCitations": true,
-    "theme": "ANSI Light",
-    "showStatusInTitle": true,
+    "theme": "Default Light",
+    "showStatusInTitle": false,
     "useFullWidth": true,
     "showMemoryUsage": false,
     "useAlternateBuffer": true,
@@ -94,11 +96,14 @@
     "useModelRouter": true,
     "codebaseInvestigatorSettings": {
       "enabled": true,
-      "codebaseInvestigatorSettings": 16384
+      "thinkingBudget": -1
     }
   },
   "security": {
-    "disableYoloMode": true
+    "disableYoloMode": true,
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
   },
   "advanced": {
     "autoConfigureMemory": true
