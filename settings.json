@@ -27,6 +27,7 @@
       "codebase_investigator",
       "run_shell_command(cat)",
       "run_shell_command(npm)",
+      "run_shell_command(npx)",
       "run_shell_command(cp)",
       "run_shell_command(diff)",
       "run_shell_command(find)",
@@ -100,10 +101,7 @@
     }
   },
   "security": {
-    "disableYoloMode": true,
-    "auth": {
-      "selectedType": "oauth-personal"
-    }
+    "disableYoloMode": true
   },
   "advanced": {
     "autoConfigureMemory": true
