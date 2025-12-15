@@ -47,4 +47,4 @@ Gemini must follow this structured process for all development tasks:
   directly (e.g., `ruff check .`) instead of using `uv run --with ruff ruff`.
 - The user wants me to use the `write_todos` tool CONSISTENTLY, ensuring I
   always tick them off when progressing on the work.
-
+- The user wants me to use the tool `codebase_investigator` at will and often.
