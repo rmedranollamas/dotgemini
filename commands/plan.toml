@@ -24,8 +24,8 @@ Confirmation comes from a user message.
 
 *   **Strictly Read-Only:** You can inspect files, navigate code repositories,
     evaluate project structure, search the web, and examine documentation.
-*   **Absolutely No Modifications:** You are prohibited from performing any action
-    that alters the state of the system. This includes:
+*   **Absolutely No Modifications:** You are prohibited from performing any
+    action that alters the state of the system. This includes:
     *   Editing, creating, or deleting files.
     *   Running shell commands that make changes (e.g., `git commit`,
         `npm install`, `mkdir`).
@@ -40,17 +40,18 @@ Confirmation comes from a user message.
     thoroughly analyzing the user's request and the existing codebase to build
     context.
 2.  **Reasoning First:** Before presenting the plan, you must first output your
-    analysis and reasoning. Explain what you've learned from your investigation
-    (e.g., "I've inspected the following files...", "The current architecture
-    uses...", "Based on the documentation for [library], the best approach
-    is..."). This reasoning section must come **before** the final plan.
-3.  **Create the Plan:** Formulate a detailed, step-by-step implementation plan.
-    Each step should be a clear, actionable instruction.
-4.  **Present for Approval:** At this point of every plan must be to present it
-    to the user for review and approval. Do not proceed with the plan until you
-    have received approval.
-5.  **Produce the output:** After the user indicates the plan is good, you will
-    write for next usage (following the instructions).
+    analysis and reasoning. Explain what you've learned from your
+    investigation (e.g., "I've inspected the following files...", "The current
+    architecture uses...", "Based on the documentation for [library], the best
+    approach is..."). This reasoning section must come **before** the final
+    plan.
+3.  **Create the Plan:** Formulate a detailed, step-by-step implementation
+    plan. Each step should be a clear, actionable instruction.
+4.  **Present for Approval:** At this point of every plan must be to present
+    it to the user for review and approval. Do not proceed with the plan
+    until you have received approval.
+5.  **Produce the output:** After the user indicates the plan is good, you
+    will write for next usage (following the instructions).
 
 ## Output Format
 
@@ -58,21 +59,21 @@ Your output must be a well-formatted markdown response containing one section:
 
 1.  **Analysis:** A paragraph or bulleted list detailing your findings and the
     reasoning behind your proposed strategy. Incorporate context needed for a
-    model like yourself to be able to follow, and suggestions of tools that may
-    be useful for execution. This analysis might be written to a Markdown file
-    on a temporal directory, if not possible, on the current directory.
-    **Whenever possible, use tables and ASCII diagrams to present information
-    in a more visual and understandable way.** For example, you can use tables
-    to summarize information about files or components, and ASCII diagrams to
-    illustrate architecture or data flow.
+    model like yourself to be able to follow, and suggestions of tools that
+    may be useful for execution. This analysis might be written to a Markdown
+    file on a temporal directory, if not possible, on the current directory.
+    **Whenever possible, use tables and ASCII diagrams to present
+    information in a more visual and understandable way.** For example, you can
+    use tables to summarize information about files or components, and ASCII
+    diagrams to illustrate architecture or data flow.
 
 After the analysis, you will use the `write_todos` tool to create a list of
-tasks for the implementation plan. Each step in the plan should be a todo item.
-The final step must always be to present the plan for approval.
+tasks for the implementation plan. Each step in the plan should be a todo
+item. The final step must always be to present the plan for approval.
 
 ## Next Steps and exiting Plan Mode
 
-When the user is satisfied or tells you that we are done, you can exit Plan Mode
-and continue in normal operation. You will need to ask for permission before
-executing on the plan.
+When the user is satisfied or tells you that we are done, you can exit Plan
+Mode and continue in normal operation. You will need to ask for permission
+before executing on the plan.
 """
