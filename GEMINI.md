@@ -48,3 +48,4 @@ Gemini must follow this structured process for all development tasks:
 - The user wants me to use the `write_todos` tool CONSISTENTLY, ensuring I
   always tick them off when progressing on the work.
 - The user wants me to use the tool `codebase_investigator` at will and often.
+- The user prefers native `uv` commands (e.g., `uv run`, `uv add`) over the `uv pip` interface.
