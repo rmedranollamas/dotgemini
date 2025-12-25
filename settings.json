@@ -10,10 +10,10 @@
   "model": {
     "summarizeToolOutput": {
       "run_shell_command": {
-        "tokenBudget": 30000
+        "tokenBudget": 15000
       }
     },
-    "compressionThreshold": 0.35,
+    "compressionThreshold": 0.3,
     "skipNextSpeakerCheck": false
   },
   "tools": {
@@ -44,15 +44,29 @@
       "run_shell_command(sed)",
       "run_shell_command(pwd)",
       "run_shell_command(python3)",
-      "run_shell_command(head)"
+      "run_shell_command(head)",
+      "run_shell_command(jq)",
+      "run_shell_command(tail)",
+      "run_shell_command(wc)",
+      "run_shell_command(file)",
+      "run_shell_command(stat)",
+      "run_shell_command(du)",
+      "run_shell_command(tree)",
+      "run_shell_command(env)",
+      "run_shell_command(which)",
+      "run_shell_command(mv)",
+      "run_shell_command(chmod)",
+      "run_shell_command(tar)",
+      "run_shell_command(unzip)",
+      "run_shell_command(ty)"
     ],
     "shell": {
       "showColor": true,
       "enableInteractiveShell": true
     },
-    "truncateToolOutputLines": 1000,
+    "truncateToolOutputLines": 500,
     "truncateToolOutputThreshold": 30000,
-    "autoAccept": true,
+    "autoAccept": false,
     "enableMessageBusIntegration": true,
     "enableHooks": true
   },
@@ -72,7 +86,7 @@
   },
   "ide": {
     "hasSeenNudge": true,
-    "enabled": true
+    "enabled": false
   },
   "ui": {
     "hideTips": true,
@@ -82,7 +96,7 @@
     },
     "showLineNumbers": true,
     "showCitations": true,
-    "theme": "Default Light",
+    "theme": "ANSI",
     "showStatusInTitle": false,
     "useFullWidth": true,
     "showMemoryUsage": false,
@@ -97,7 +111,11 @@
     "useModelRouter": true,
     "codebaseInvestigatorSettings": {
       "enabled": true,
+      "maxNumTurns": 20,
       "thinkingBudget": -1
+    },
+    "introspectionAgentSettings": {
+      "enabled": true
     }
   },
   "security": {
