@@ -44,6 +44,8 @@
       "run_shell_command(sed)",
       "run_shell_command(pwd)",
       "run_shell_command(python3)",
+      "run_shell_command(python)",
+      "run_shell_command(sqlite3)",
       "run_shell_command(head)",
       "run_shell_command(jq)",
       "run_shell_command(tail)",
