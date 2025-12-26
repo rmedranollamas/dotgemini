@@ -16,6 +16,27 @@
     "compressionThreshold": 0.3,
     "skipNextSpeakerCheck": false
   },
+  "hooks": {
+    "AfterTool": [
+      {
+        "matcher": "write_file|replace",
+        "hooks": [
+          {
+            "name": "ruff-lint",
+            "type": "command",
+            "command": "/home/pi/dotgemini/hooks/run-ruff.sh",
+            "description": "Ruff linting and formatting."
+          },
+          {
+            "name": "ty-check",
+            "type": "command",
+            "command": "/home/pi/dotgemini/hooks/run-ty.sh",
+            "description": "Ty type checking."
+          }
+        ]
+      }
+    ]
+  },
   "tools": {
     "allowed": [
       "list_directory",
