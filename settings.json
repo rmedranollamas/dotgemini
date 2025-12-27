@@ -120,7 +120,26 @@
     },
     "showLineNumbers": true,
     "showCitations": true,
-    "theme": "ANSI",
+    "theme": "Monokai Pro",
+    "customThemes": {
+      "Monokai Pro": {
+        "name": "Monokai Pro",
+        "type": "custom",
+        "Background": "#2D2A2E",
+        "Foreground": "#FFFFFF",
+        "LightBlue": "#78DCE8",
+        "AccentBlue": "#78DCE8",
+        "AccentPurple": "#AB9DF2",
+        "AccentCyan": "#78DCE8",
+        "AccentGreen": "#A9DC76",
+        "AccentYellow": "#FFD866",
+        "AccentRed": "#FF6188",
+        "Comment": "#BBBBBB",
+        "Gray": "#BBBBBB",
+        "DiffAdded": "#2d3d25",
+        "DiffRemoved": "#4a1d24"
+      }
+    },
     "showStatusInTitle": false,
     "useFullWidth": true,
     "showMemoryUsage": false,
