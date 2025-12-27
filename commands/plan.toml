@@ -69,7 +69,8 @@ Your output must be a well-formatted markdown response containing one section:
 
 After the analysis, you will use the `write_todos` tool to create a list of
 tasks for the implementation plan. Each step in the plan should be a todo
-item. The final step must always be to present the plan for approval.
+item. The final step must always be to present the plan for approval. This
+ensures that the 'execute' mode can pick up the work consistently.
 
 ## Next Steps and exiting Plan Mode
 
