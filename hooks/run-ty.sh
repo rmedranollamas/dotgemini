@@ -14,6 +14,7 @@ if [[ "$FILE_PATH" == *.py ]]; then
     if [ $EXIT_CODE -ne 0 ]; then
         jq -n \
            --arg out "$OUTPUT" \
-           '{decision: "deny", hookSpecificOutput: {hookEventName: "AfterTool", additionalContext: ("Ty type check failed:\n" + $out)}}'
+           '{decision: "deny", hookSpecificOutput: {hookEventName: "AfterTool", additionalContext: ("Ty type check failed:\n" + $out) } }'
     fi
 fi
+

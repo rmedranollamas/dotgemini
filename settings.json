@@ -22,16 +22,22 @@
         "matcher": "write_file|replace",
         "hooks": [
           {
+            "name": "toml-validator",
+            "type": "command",
+            "command": "/home/pi/dotgemini/hooks/run-toml.sh",
+            "description": "TOML syntax validation."
+          },
+          {
             "name": "ruff-lint",
             "type": "command",
             "command": "/home/pi/dotgemini/hooks/run-ruff.sh",
-            "description": "Ruff linting and formatting."
+            "description": "Linting and formatting check."
           },
           {
             "name": "ty-check",
             "type": "command",
             "command": "/home/pi/dotgemini/hooks/run-ty.sh",
-            "description": "Ty type checking."
+            "description": "Python type checking."
           }
         ]
       }
