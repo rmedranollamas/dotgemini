@@ -51,7 +51,6 @@
       "web_fetch",
       "write_todos",
       "google_web_search",
-      "codebase_investigator",
       "delegate_to_agent",
       "run_shell_command(cat)",
       "run_shell_command(npm)",
