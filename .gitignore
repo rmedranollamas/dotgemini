@@ -11,3 +11,4 @@ state.json
 tmp/
 trustedFolders.json
 user_id
+hooks/*.log

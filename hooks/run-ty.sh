@@ -17,6 +17,13 @@ fi
 
 # Read input
 INPUT=$(cat)
+
+# Log execution
+LOG_FILE="$(pwd)/hooks/hook.log"
+echo "----------------------------------------------------------------" >> "$LOG_FILE"
+echo "[$(date)] $(basename "$0") execution" >> "$LOG_FILE"
+echo "Input: $INPUT" >> "$LOG_FILE"
+
 FILE_PATH=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
 
 # Only run on Python files
