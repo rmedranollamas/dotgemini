@@ -159,8 +159,8 @@
         "AccentRed": "#dc322f",
         "Comment": "#586e75",
         "Gray": "#586e75",
-        "DiffAdded": "#859900",
-        "DiffRemoved": "#dc322f"
+        "DiffAdded": "#2d3d25",
+        "DiffRemoved": "#4a1d24"
       },
       "Solarized Light": {
         "name": "Solarized Light",
