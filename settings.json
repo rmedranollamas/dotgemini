@@ -24,21 +24,21 @@
           {
             "name": "toml-validator",
             "type": "command",
-            "command": "$HOME/dotgemini/hooks/run-toml.sh",
+            "command": "$HOME/.gemini/hooks/run-toml.sh",
             "description": "TOML syntax validation.",
             "timeout": 30000
           },
           {
             "name": "ruff-lint",
             "type": "command",
-            "command": "$HOME/dotgemini/hooks/run-ruff.sh",
+            "command": "$HOME/.gemini/hooks/run-ruff.sh",
             "description": "Linting and formatting check.",
             "timeout": 30000
           },
           {
             "name": "ty-check",
             "type": "command",
-            "command": "$HOME/dotgemini/hooks/run-ty.sh",
+            "command": "$HOME/.gemini/hooks/run-ty.sh",
             "description": "Python type checking.",
             "timeout": 30000
           }
