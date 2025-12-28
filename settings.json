@@ -24,19 +24,19 @@
           {
             "name": "toml-validator",
             "type": "command",
-            "command": "hooks/run-toml.sh",
+            "command": "$HOME/dotgemini/hooks/run-toml.sh",
             "description": "TOML syntax validation."
           },
           {
             "name": "ruff-lint",
             "type": "command",
-            "command": "hooks/run-ruff.sh",
+            "command": "$HOME/dotgemini/hooks/run-ruff.sh",
             "description": "Linting and formatting check."
           },
           {
             "name": "ty-check",
             "type": "command",
-            "command": "hooks/run-ty.sh",
+            "command": "$HOME/dotgemini/hooks/run-ty.sh",
             "description": "Python type checking."
           }
         ]
@@ -163,7 +163,7 @@
     "showStatusInTitle": false,
     "useFullWidth": true,
     "showMemoryUsage": false,
-    "useAlternateBuffer": true,
+    "useAlternateBuffer": false,
     "incrementalRendering": true,
     "hideContextSummary": false,
     "showModelInfoInChat": true
@@ -182,7 +182,10 @@
     }
   },
   "security": {
-    "disableYoloMode": true
+    "disableYoloMode": true,
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
   },
   "advanced": {
     "autoConfigureMemory": true
