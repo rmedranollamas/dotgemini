@@ -66,8 +66,9 @@ then
         # File was modified (fixed/formatted)
         # Return a system message to inform the agent
         jq -n \
+            --arg path "$FILE_PATH" \
             --arg fmt "$FORMAT_OUT" \
             --arg chk "$CHECK_OUT" \
-            '{systemMessage: ("Ruff auto-formatted/fixed " + $INPUT.tool_input.file_path + ". Output:\n" + $fmt + "\n" + $chk)}'
+            '{systemMessage: ("Ruff auto-formatted/fixed " + $path + ". Output:\n" + $fmt + "\n" + $chk)}'
     fi
 fi
