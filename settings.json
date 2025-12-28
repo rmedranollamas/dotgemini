@@ -176,8 +176,8 @@
         "AccentRed": "#dc322f",
         "Comment": "#93a1a1",
         "Gray": "#93a1a1",
-        "DiffAdded": "#859900",
-        "DiffRemoved": "#dc322f"
+        "DiffAdded": "#d5edce",
+        "DiffRemoved": "#f1d9da"
       }
     },
     "showStatusInTitle": false,
