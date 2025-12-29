@@ -203,7 +203,8 @@
     "useAlternateBuffer": false,
     "incrementalRendering": true,
     "hideContextSummary": false,
-    "showModelInfoInChat": true
+    "showModelInfoInChat": true,
+    "hideWindowTitle": true
   },
   "useSmartEdit": true,
   "useWriteTodos": true,
