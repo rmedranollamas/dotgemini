@@ -14,7 +14,8 @@ Ensure the workspace is clean and updated, then create a new feature branch.
 1.  **Preparation**:
     *   `git stash` any current unstaged changes to avoid carry-over.
     *   Execute `gh repo sync --branch main` to ensure origin/main is current.
-    *   `git checkout main` and `git pull origin main`.
+    *   `git checkout main`.
+    *   Execute `gh repo sync` to update the local `main` branch.
 2.  **Branch Creation**:
     *   Ask the user for a short feature name if one wasn't provided in the
         arguments ({{args}}).

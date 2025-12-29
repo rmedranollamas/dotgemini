@@ -15,14 +15,18 @@ conflict occurs.
 ## Workflow
 
 1.  **Sync Fork (GitHub):**
-    Execute `gh repo sync --branch main` to pull changes from the upstream
-    repository to your origin's main branch.
+    Always start by synchronizing the fork on GitHub with the upstream source.
+    Execute `gh repo sync --branch main` to ensure your origin/main is
+    up-to-date with the upstream main.
 2.  **Update Local State:**
-    Execute `git fetch origin` to ensure your local tracking branches are
-    current.
+    Bring the changes to your local machine.
+    *   If the current branch is `main`, execute `gh repo sync` to update it
+        directly.
+    *   If on another branch, execute `git fetch origin main:main` to update
+        the local `main` without switching.
 3.  **Merge into Current:**
-    a. Identify the current branch.
-    b. Execute `git merge origin/main`.
+    If not already on `main`, merge the updated local `main` into the current
+    branch using `git merge main`.
 4.  **Error Handling:**
     *   **Success:** If all commands pass, report a concise success message
         (e.g., "Synced and merged origin/main into [branch].").
