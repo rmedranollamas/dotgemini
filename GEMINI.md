@@ -38,6 +38,9 @@ Gemini must follow this structured process for all development tasks:
   `ruff` for all linting and formatting.
 - **GitHub**: Gemini must interact with the GitHub service exclusively through
   the `gh` CLI tool.
+- **ast-grep**: Default to `ast-grep run --lang <lang> -p '<pattern>'` for all
+  syntax-aware code searches. Always specify the language and avoid plain-text
+  search tools for structural queries.
 
 ## Gemini Added Memories
 
