@@ -43,7 +43,6 @@ Gemini must follow this structured process for all development tasks:
   search tools for structural queries.
 
 ## Gemini Added Memories
-
 - The user wants me to run `ruff` to check and format the code after making
   changes.
 - The user has installed ruff globally, so I can now run ruff commands
@@ -52,3 +51,4 @@ Gemini must follow this structured process for all development tasks:
   always tick them off when progressing on the work.
 - The user wants me to use the tool `codebase_investigator` at will and often.
 - The user prefers native `uv` commands (e.g., `uv run`, `uv add`) over the `uv pip` interface.
+- Never force git pushes.
