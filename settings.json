@@ -200,10 +200,10 @@
     "showStatusInTitle": false,
     "useFullWidth": true,
     "showMemoryUsage": false,
-    "useAlternateBuffer": false,
+    "useAlternateBuffer": true,
     "incrementalRendering": true,
     "hideContextSummary": false,
-    "showModelInfoInChat": true,
+    "showModelInfoInChat": false,
     "hideWindowTitle": true
   },
   "useSmartEdit": true,
