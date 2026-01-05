@@ -6,6 +6,7 @@ history/
 installation_id
 oauth_creds.json
 logs.json
+mcp-oauth-tokens-v2.json
 settings.json.orig
 state.json
 tmp/
