@@ -221,10 +221,7 @@
     }
   },
   "security": {
-    "disableYoloMode": true,
-    "auth": {
-      "selectedType": "oauth-personal"
-    }
+    "disableYoloMode": true
   },
   "advanced": {
     "autoConfigureMemory": true
