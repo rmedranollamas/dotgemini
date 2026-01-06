@@ -48,6 +48,7 @@
   },
   "tools": {
     "allowed": [
+      "activate_skill",
       "delegate_to_agent",
       "google_web_search",
       "list_directory",
@@ -205,7 +206,7 @@
     "showStatusInTitle": false,
     "useFullWidth": true,
     "showMemoryUsage": false,
-    "useAlternateBuffer": true,
+    "useAlternateBuffer": false,
     "incrementalRendering": true,
     "hideContextSummary": false,
     "showModelInfoInChat": false,
