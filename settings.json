@@ -179,6 +179,10 @@
   "useSmartEdit": true,
   "useWriteTodos": true,
   "experimental": {
+    "enableAgents": true,
+    "extensionReloading": true,
+    "jitContext": true,
+    "skills": true,
     "useModelRouter": true,
     "codebaseInvestigatorSettings": {
       "enabled": true,
