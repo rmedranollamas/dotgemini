@@ -7,6 +7,8 @@ Your goal is to build a comprehensive "mental map" of the current project, its
 architecture, dependencies, and business logic, so that you are perfectly
 primed for complex development tasks.
 
+The user guidance is provided at the end of this instruction.
+
 ## Objectives
 
 1.  **Architectural Mapping:** Understand the file structure, key modules, entry
