@@ -187,10 +187,18 @@
     },
     "introspectionAgentSettings": {
       "enabled": true
-    }
+    },
+    "useOSC52Paste": true
   },
   "security": {
-    "disableYoloMode": true
+    "disableYoloMode": true,
+    "enablePermanentToolApproval": true,
+    "folderTrust": {
+      "enabled": true
+    },
+    "environmentVariableRedaction": {
+      "enabled": true
+    }
   },
   "advanced": {
     "autoConfigureMemory": true
