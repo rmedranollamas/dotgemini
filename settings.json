@@ -17,6 +17,7 @@
     "skipNextSpeakerCheck": false
   },
   "hooks": {
+    "enabled": true,
     "AfterTool": [
       {
         "matcher": "write_file|replace",
@@ -180,6 +181,7 @@
   "useWriteTodos": true,
   "experimental": {
     "enableAgents": true,
+    "extensionManagement": true,
     "extensionReloading": true,
     "jitContext": true,
     "skills": true,
@@ -189,7 +191,7 @@
       "maxNumTurns": 30,
       "thinkingBudget": -1
     },
-    "introspectionAgentSettings": {
+    "cliHelpAgentSettings": {
       "enabled": true
     },
     "useOSC52Paste": true
