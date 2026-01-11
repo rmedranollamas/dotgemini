@@ -33,7 +33,11 @@ gh repo create my-new-repo --public
 ### Pull Requests
 
 ```bash
-# Create a pull request
+# Create a pull request (recommended: push first, then --fill)
+git push -u origin HEAD
+gh pr create --fill
+
+# Create a pull request with explicit metadata
 gh pr create --title "Feature: Add new functionality" --body "Description"
 
 # List pull requests
@@ -47,7 +51,7 @@ gh pr view 123
 gh pr checkout 123
 
 # Merge a pull request
-gh pr merge 123 --squash
+gh pr merge --squash --delete-branch
 
 # Review PR status
 gh pr status
@@ -96,6 +100,7 @@ gh run view 12345 --log
 
 ```bash
 # List branches (via API)
+# Use 'gh repo view --json owner,name' to get correct values if unknown
 gh api repos/:owner/:repo/branches
 
 # Delete remote branch
@@ -147,7 +152,7 @@ gh pr list --json number,title | jq '.[] | select(.title | contains("bug"))'
 
 ### API Access
 
-Direct API access for advanced operations:
+Direct API access for advanced operations. Ensure you replace placeholders like `:owner` and `:repo`.
 
 ```bash
 # Generic API call
@@ -172,28 +177,30 @@ gh pr list --state merged --json headRefName,mergedAt
 
 ## Best Practices
 
-1. **Always check auth status first**: Run `gh auth status` before operations
-2. **Use structured output**: Prefer `--json` when parsing results programmatically
-3. **Check command success**: Verify exit codes and output before proceeding
-4. **Use help**: Run `gh <command> --help` for detailed syntax
-5. **Batch operations**: Combine commands with shell scripting for bulk operations
+1. **Always check auth status first**: Run `gh auth status` before operations.
+2. **Push before PR**: Ensure the current branch is pushed (`git push -u origin HEAD`) before running `gh pr create`.
+3. **Use --fill**: Prefer `gh pr create --fill` to automatically use commit titles and bodies, which avoids shell escaping issues.
+4. **Non-interactive mode**: Always provide enough flags (e.g., `--title`, `--body`, or `--fill`) to avoid interactive prompts that hang in the CLI.
+5. **Replace Placeholders**: Always replace placeholders like `:owner`, `:repo`, `123`, or `branch-name` with actual values before executing. Use `gh repo view --json owner,name` to find the current repository's details.
+6. **Use structured output**: Prefer `--json` when parsing results programmatically.
+7. **Check command success**: Verify exit codes and output before proceeding.
 
 ## Common Workflows
 
 ### Creating and Merging a PR
 
 ```bash
-# Push your changes
-git push origin feature-branch
+# 1. Push your changes and set upstream
+git push -u origin HEAD
 
-# Create PR
-gh pr create --title "Feature: Description" --body "Detailed description"
+# 2. Create PR (using --fill is recommended for automation)
+gh pr create --fill
 
-# Wait for CI/checks
+# 3. Wait for CI/checks
 gh pr checks
 
-# Merge when ready
-gh pr merge --squash
+# 4. Merge when ready
+gh pr merge --squash --delete-branch
 ```
 
 ### Cleaning Up Merged Branches
