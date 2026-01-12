@@ -1,0 +1,6 @@
+[[rule]]
+toolName = "run_shell_command"
+decision = "allow"
+priority = 100
+commandPrefix = [ "uv" ]
+
