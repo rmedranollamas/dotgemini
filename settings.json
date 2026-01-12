@@ -45,7 +45,8 @@
           }
         ]
       }
-    ]
+    ],
+    "notifications": true
   },
   "tools": {
     "allowed": [
