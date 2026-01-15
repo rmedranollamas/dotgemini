@@ -115,7 +115,8 @@
     ],
     "shell": {
       "showColor": true,
-      "enableInteractiveShell": true
+      "enableInteractiveShell": true,
+      "enableShellOutputEfficiency": true
     },
     "truncateToolOutputLines": 500,
     "truncateToolOutputThreshold": 30000,
@@ -174,9 +175,10 @@
     "showMemoryUsage": false,
     "useAlternateBuffer": true,
     "incrementalRendering": true,
-    "hideContextSummary": true,
+    "hideContextSummary": false,
     "showModelInfoInChat": true,
-    "hideWindowTitle": true
+    "hideWindowTitle": true,
+    "showHomeDirectoryWarning": false
   },
   "useSmartEdit": true,
   "useWriteTodos": true,
