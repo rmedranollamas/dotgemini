@@ -4,3 +4,14 @@ decision = "allow"
 priority = 100
 commandPrefix = [ "uv" ]
 
+[[rule]]
+toolName = "run_shell_command"
+decision = "allow"
+priority = 100
+commandPrefix = [ "curl" ]
+
+[[rule]]
+toolName = "run_shell_command"
+decision = "allow"
+priority = 100
+commandPrefix = [ "uvx" ]
