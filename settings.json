@@ -14,7 +14,8 @@
       }
     },
     "compressionThreshold": 0.35,
-    "skipNextSpeakerCheck": false
+    "skipNextSpeakerCheck": false,
+    "name": "gemini-3-flash-preview"
   },
   "hooks": {
     "enabled": true,
