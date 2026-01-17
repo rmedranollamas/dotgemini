@@ -106,7 +106,6 @@
       "run_shell_command(uniq)",
       "run_shell_command(unzip)",
       "run_shell_command(uptime)",
-      "run_shell_command(uv)",
       "run_shell_command(wc)",
       "run_shell_command(which)",
       "run_shell_command(whoami)",
@@ -208,6 +207,9 @@
     },
     "environmentVariableRedaction": {
       "enabled": true
+    },
+    "auth": {
+      "selectedType": "oauth-personal"
     }
   },
   "advanced": {
