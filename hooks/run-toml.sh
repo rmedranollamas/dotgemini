@@ -1,40 +1,34 @@
 #!/usr/bin/env bash
 
-# Best Practice: Robustness
-# Check for dependencies
-
-if ! command -v jq &> /dev/null;
-    then
-    echo "Error: jq is not installed. Skipping hook." >&2
+if ! command -v jq &> /dev/null; then
+    echo "Error: jq is not installed." >&2
     exit 0
 fi
 
-# Read input
 INPUT=$(cat)
 SESSION_ID=$(echo "$INPUT" | jq -r '.session_id // "n/a"')
 FILE_PATH=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
-LOG_FILE="$GEMINI_PROJECT_DIR/hooks/hook.log"
 
-# Only run on TOML files
+if [ -n "$GEMINI_PROJECT_DIR" ]; then
+    LOG_FILE="$GEMINI_PROJECT_DIR/hooks/hook.log"
+else
+    LOG_FILE="$(dirname "$(readlink -f "$0")")/hook.log"
+fi
+
 if [[ "$FILE_PATH" == *.toml ]]; then
     if [ ! -f "$FILE_PATH" ]; then
         exit 0
     fi
 
-    # 1. Check syntax
     OUTPUT=$(python3 -c "import tomllib; tomllib.load(open('$FILE_PATH', 'rb'))" 2>&1)
     EXIT_CODE=$?
 
     STATUS="SUCCESS"
-    # 2. If failed, return JSON to DENY/BLOCK
     if [ $EXIT_CODE -ne 0 ]; then
         STATUS="FAILED"
-        jq -n \
-           --arg out "$OUTPUT" \
-           '{decision: "deny", hookSpecificOutput: {hookEventName: "AfterTool", additionalContext: ("TOML validation failed:\n" + $out) } }'
+        jq -n --arg out "$OUTPUT" '{decision: "deny", hookSpecificOutput: {hookEventName: "AfterTool", additionalContext: ("TOML validation failed:\n" + $out) } }'
     fi
 
-    # Log execution
     if [[ "$GEMINI_DEBUG_HOOKS" != "false" ]]; then
         echo "[$(date '+%Y-%m-%d %H:%M:%S')] run-toml.sh [Session: $SESSION_ID] $STATUS: $FILE_PATH" >> "$LOG_FILE"
     fi

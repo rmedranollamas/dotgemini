@@ -41,25 +41,20 @@ sorted_settings = {k: settings[k] for k in schema_order if k in settings}
 Tool permissions are managed via TOML files in the `policies/` directory. This replaces the legacy `tools.allowed` list in `settings.json`.
 
 ### Policy Structure (`policies/*.toml`)
-Each rule specifies a tool and a decision. For shell commands, use `commandPrefix`.
-
+...
 ```toml
-[[rule]]
-toolName = "read_file"
-decision = "allow"
-priority = 100
-
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = [ "git" ]
+commandPrefix = [ "mdformat" ]
 ```
 
-- **toolName:** The name of the tool.
-- **decision:** `allow` or `deny`.
-- **priority:** Higher numbers take precedence.
-- **commandPrefix:** (Optional) Restricts `run_shell_command` to specific binaries.
+## Common Hooks
+- **run-ruff.sh:** Lints and formats Python files.
+- **run-toml.sh:** Validates TOML syntax.
+- **run-ty.sh:** Performs Python type checking.
+- **run-mdformat.sh:** Formats Markdown files.
 
 ## Best Practices
 # ... (existing sections)

@@ -141,6 +141,13 @@
         "matcher": "write_file|replace",
         "hooks": [
           {
+            "name": "md-format",
+            "type": "command",
+            "command": "$HOME/.gemini/hooks/run-mdformat.sh",
+            "description": "Markdown formatting check.",
+            "timeout": 5000
+          },
+          {
             "name": "toml-validator",
             "type": "command",
             "command": "$HOME/.gemini/hooks/run-toml.sh",
