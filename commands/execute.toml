@@ -32,8 +32,11 @@ list, and execute the tasks in it.
     history. For each task in the todo list with status 'pending':
     a.  Create a new todo list with the current task's status updated to
         'in_progress' and call `write_todos`.
-    b.  Execute the task by calling the appropriate tools.
-    c.  If the task is successful, create a new todo list with the task's
+    b.  Execute the task by calling the appropriate tools. For complex implementation
+        tasks, delegate the work to the `implementer` agent using `delegate_to_agent`.
+    c.  Verify the result. For non-trivial changes, use the `verifier` agent to
+        ensure the implementation is robust and follows the plan.
+    d.  If the task is successful, create a new todo list with the task's
         status updated to 'completed' and call `write_todos`.
     d.  If the task fails, create a new todo list with the task's status
         updated to 'failed' and call `write_todos`, then stop execution and

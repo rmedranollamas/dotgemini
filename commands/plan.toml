@@ -60,8 +60,9 @@ Your output must be a well-formatted markdown response containing one section:
 1.  **Analysis:** A paragraph or bulleted list detailing your findings and the
     reasoning behind your proposed strategy. Incorporate context needed for a
     model like yourself to be able to follow, and suggestions of tools that
-    may be useful for execution. This analysis might be written to a Markdown
-    file on a temporal directory, if not possible, on the current directory.
+    may be useful for execution. Note that the implementation phase will
+    leverage the `implementer` agent for coding and the `verifier` agent for
+    quality assurance.
     **Whenever possible, use tables and ASCII diagrams to present
     information in a more visual and understandable way.** For example, you can
     use tables to summarize information about files or components, and ASCII

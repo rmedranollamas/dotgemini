@@ -20,3 +20,5 @@
 - **Self-Evolution**: Autonomously update `GEMINI.md` with new project-specific
   patterns or workflow optimizations.
 
+## Gemini Added Memories
+- Ramón wants me to ask for confirmation before committing and pushing changes to the repository.

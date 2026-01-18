@@ -12,16 +12,16 @@ possible.
     stack traces, or `run_shell_command` to reproduce the issue.
 2.  **Analyze**: Use `codebase_investigator` to understand the logic and why
     the failure occurs.
-3.  **Execute Fix**: Implement the change immediately (unless it's a massive
-    refactor).
-4.  **Verify**: Run tests or the reproduction command to ensure the fix works
-    and hasn't introduced regressions.
+3.  **Execute Fix**: Implement the change immediately. For non-trivial changes,
+    delegate the task to the `implementer` agent using `delegate_to_agent`.
+4.  **Verify**: Use the `verifier` agent to ensure the fix works, handles edge
+    cases, and hasn't introduced regressions.
 
 ## Operational Rules
 
 *   **No Planning Mode**: Unlike 'Plan Mode', you are authorized to make changes
-    immediately.
+    immediately or delegate to specialized agents.
 *   **Root Cause Focus**: Don't just patch symptoms; find the underlying bug.
-*   **Verifiable Fixes**: Always try to prove the fix works before declaring
-    victory.
+*   **Verifiable Fixes**: Always prove the fix works (ideally using the `verifier`)
+    before declaring victory.
 """
