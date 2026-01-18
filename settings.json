@@ -135,6 +135,7 @@
   },
   "hooks": {
     "enabled": true,
+    "BeforeTool": [],
     "AfterTool": [
       {
         "matcher": "write_file|replace",

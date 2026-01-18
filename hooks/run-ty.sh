@@ -17,16 +17,9 @@ fi
 
 # Read input
 INPUT=$(cat)
-
-# Log execution
-if [[ "$GEMINI_DEBUG_HOOKS" == "true" ]]; then
-    LOG_FILE="$(pwd)/hooks/hook.log"
-    echo "----------------------------------------------------------------" >> "$LOG_FILE"
-    echo "[$(date)] $(basename "$0") execution" >> "$LOG_FILE"
-    echo "Input: $INPUT" >> "$LOG_FILE"
-fi
-
+SESSION_ID=$(echo "$INPUT" | jq -r '.session_id // "n/a"')
 FILE_PATH=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
+LOG_FILE="$GEMINI_PROJECT_DIR/hooks/hook.log"
 
 # Only run on Python files
 if [[ "$FILE_PATH" == *.py ]]; then
@@ -38,10 +31,17 @@ if [[ "$FILE_PATH" == *.py ]]; then
     OUTPUT=$(ty check "$FILE_PATH" 2>&1)
     EXIT_CODE=$?
 
+    STATUS="SUCCESS"
     # 2. If failed, return JSON to DENY/BLOCK
     if [ $EXIT_CODE -ne 0 ]; then
+        STATUS="FAILED"
         jq -n \
            --arg out "$OUTPUT" \
            '{decision: "deny", hookSpecificOutput: {hookEventName: "AfterTool", additionalContext: ("Ty type check failed:\n" + $out) } }'
+    fi
+
+    # Log execution
+    if [[ "$GEMINI_DEBUG_HOOKS" != "false" ]]; then
+        echo "[$(date '+%Y-%m-%d %H:%M:%S')] run-ty.sh [Session: $SESSION_ID] $STATUS: $FILE_PATH" >> "$LOG_FILE"
     fi
 fi

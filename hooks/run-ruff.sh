@@ -19,56 +19,53 @@ fi
 
 # Read input
 INPUT=$(cat)
-
-# Log execution
-if [[ "$GEMINI_DEBUG_HOOKS" == "true" ]]; then
-    LOG_FILE="$(pwd)/hooks/hook.log"
-    echo "----------------------------------------------------------------" >> "$LOG_FILE"
-    echo "[$(date)] $(basename "$0") execution" >> "$LOG_FILE"
-    echo "Input: $INPUT" >> "$LOG_FILE"
-fi
-
+SESSION_ID=$(echo "$INPUT" | jq -r '.session_id // "n/a"')
 FILE_PATH=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
+LOG_FILE="$GEMINI_PROJECT_DIR/hooks/hook.log"
 
 # Only run on Python files
 if [[ "$FILE_PATH" == *.py ]]
 then
-    
     # Check if file exists
     if [ ! -f "$FILE_PATH" ]
     then
-        # File might not exist yet if this is BeforeTool (but this is configured as AfterTool)
-        # Or if path is bad.
         exit 0
     fi
 
     # Calculate hash before
     HASH_BEFORE=$(md5sum "$FILE_PATH" | awk '{print $1}')
 
-    # 1. Format (silently)
-    FORMAT_OUT=$(ruff format "$FILE_PATH" 2>&1)
-    
-    # 2. Check (capture output)
+    # 1. Check & Fix (capture output)
     CHECK_OUT=$(ruff check --fix "$FILE_PATH" 2>&1)
     EXIT_CODE=$?
+
+    # 2. Format (silently)
+    FORMAT_OUT=$(ruff format "$FILE_PATH" 2>&1)
 
     # Calculate hash after
     HASH_AFTER=$(md5sum "$FILE_PATH" | awk '{print $1}')
 
+    STATUS="SUCCESS"
     # 3. If failed, return JSON to DENY/BLOCK
     if [ $EXIT_CODE -ne 0 ]
     then
+        STATUS="FAILED"
         jq -n \
            --arg out "$CHECK_OUT" \
            '{decision: "deny", hookSpecificOutput: {hookEventName: "AfterTool", additionalContext: ("Ruff linting failed:\n" + $out)} }'
     elif [ "$HASH_BEFORE" != "$HASH_AFTER" ]
     then
+        STATUS="MODIFIED"
         # File was modified (fixed/formatted)
-        # Return a system message to inform the agent
         jq -n \
             --arg path "$FILE_PATH" \
             --arg fmt "$FORMAT_OUT" \
             --arg chk "$CHECK_OUT" \
             '{systemMessage: ("Ruff auto-formatted/fixed " + $path + ". Output:\n" + $fmt + "\n" + $chk)}'
+    fi
+
+    # Log execution
+    if [[ "$GEMINI_DEBUG_HOOKS" != "false" ]]; then
+        echo "[$(date '+%Y-%m-%d %H:%M:%S')] run-ruff.sh [Session: $SESSION_ID] $STATUS: $FILE_PATH" >> "$LOG_FILE"
     fi
 fi

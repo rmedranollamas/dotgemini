@@ -15,3 +15,15 @@ toolName = "run_shell_command"
 decision = "allow"
 priority = 100
 commandPrefix = [ "uvx" ]
+
+[[rule]]
+toolName = "run_shell_command"
+decision = "allow"
+priority = 100
+commandPrefix = [ "cat" ]
+
+[[rule]]
+toolName = "run_shell_command"
+decision = "allow"
+priority = 100
+commandPrefix = [ "echo" ]
