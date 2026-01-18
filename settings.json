@@ -5,7 +5,7 @@
     },
     "enableAutoUpdate": false,
     "enableAutoUpdateNotification": false,
-    "enablePromptCompletion": true,
+    "enablePromptCompletion": false,
     "preferredEditor": "emacs",
     "retryFetchErrors": true,
     "sessionRetention": {
@@ -45,7 +45,7 @@
     "showStatusInTitle": true,
     "useFullWidth": true,
     "showMemoryUsage": false,
-    "useAlternateBuffer": true,
+    "useAlternateBuffer": false,
     "incrementalRendering": true,
     "hideContextSummary": true,
     "showModelInfoInChat": false,
