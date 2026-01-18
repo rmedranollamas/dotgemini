@@ -16,6 +16,7 @@
   finding, etc.
 - **Investigation**: Use `codebase_investigator` frequently for context creation.
 - **To-dos**: Track work using the `write_todos` tool.
+- **Sub-Agents**: For complex features or refactors, delegate the heavy lifting to the `implementer` agent. Once implemented, delegate to the `verifier` agent to ensure correctness and catch regressions. Use `delegate_to_agent` for this handoff.
 - **Self-Evolution**: Autonomously update `GEMINI.md` with new project-specific
   patterns or workflow optimizations.
 
