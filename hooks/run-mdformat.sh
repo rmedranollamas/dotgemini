@@ -14,12 +14,12 @@ INPUT=$(cat)
 SESSION_ID=$(echo "$INPUT" | jq -r '.session_id // "n/a"')
 FILE_PATH=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
 
-# Use GEMINI_PROJECT_DIR if available, otherwise find log relative to the script
 if [ -n "$GEMINI_PROJECT_DIR" ]; then
-    LOG_FILE="$GEMINI_PROJECT_DIR/hooks/hook.log"
+    LOG_DIR="$GEMINI_PROJECT_DIR/.gemini"
+    LOG_FILE="$LOG_DIR/hooks.log"
 else
-    # Fallback: log relative to the script's location
-    LOG_FILE="$(dirname "$(readlink -f "$0")")/hook.log"
+    LOG_DIR="$(dirname "$(readlink -f "$0")")"
+    LOG_FILE="$LOG_DIR/hook.log"
 fi
 
 if [[ "$FILE_PATH" == *.md ]]; then
@@ -42,6 +42,7 @@ if [[ "$FILE_PATH" == *.md ]]; then
     fi
 
     if [[ "$GEMINI_DEBUG_HOOKS" != "false" ]]; then
+        mkdir -p "$LOG_DIR"
         echo "[$(date '+%Y-%m-%d %H:%M:%S')] run-mdformat.sh [Session: $SESSION_ID] $STATUS: $FILE_PATH" >> "$LOG_FILE"
     fi
 fi
