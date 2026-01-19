@@ -107,9 +107,6 @@
     },
     "environmentVariableRedaction": {
       "enabled": true
-    },
-    "auth": {
-      "selectedType": "oauth-personal"
     }
   },
   "advanced": {
