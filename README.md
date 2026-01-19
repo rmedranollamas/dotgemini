@@ -5,8 +5,10 @@ This repository contains my personal configurations, specialized agents, and aut
 ## 🏗️ Architecture
 
 - **`agents/`**: Persistent specialized personas.
+  - `architect`: Focused on research, system mapping, and planning.
   - `implementer`: Focused on robust, production-ready implementation.
   - `verifier`: Focused on validation, edge cases, and robustness.
+  - `reviewer`: Focused on code quality and actionable feedback.
 - **`commands/`**: Custom one-off prompt shortcuts (`/fix`, `/plan`, `/execute`, etc.).
 - **`hooks/`**: Automated quality gates triggered on file edits.
   - `run-ruff.sh`: Python linting and formatting.
