@@ -45,7 +45,7 @@
     "showStatusInTitle": true,
     "useFullWidth": true,
     "showMemoryUsage": false,
-    "useAlternateBuffer": false,
+    "useAlternateBuffer": true,
     "incrementalRendering": true,
     "hideContextSummary": true,
     "showModelInfoInChat": false,
