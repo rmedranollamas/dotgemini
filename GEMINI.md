@@ -29,7 +29,7 @@
 This project follows a strict delegation pattern to keep the main chat context clean and ensure high-quality output:
 
 - **Architect (`/learn`, `/plan`)**: Handles research, system mapping, and strategic planning. Always reason before planning.
-- **Implementer**: Handles coding, refactoring, and file modifications. Focuses on idiomatic and neat code.
+- **Implementer (`/execute`)**: Handles coding, refactoring, and file modifications. Focuses on idiomatic and neat code.
 - **Verifier**: Handles testing, edge-case discovery, and validation. Never accepts "it works" without proof.
 - **Reviewer (`/review`)**: Handles code analysis and quality gates. Focuses on impact and actionability.
 - **Codebase Investigator**: Handles deep context gathering and search.
