@@ -95,10 +95,7 @@
       "search_file_content",
       "save_memory",
       "web_fetch",
-      "write_todos",
-      "run_shell_command",
-      "write_file",
-      "replace"
+      "write_todos"
     ]
   },
   "useWriteTodos": true,
