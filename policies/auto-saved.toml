@@ -14,18 +14,6 @@ commandPrefix = [ "uvx" ]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = [ "gh" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-commandPrefix = [ "base64" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
 commandPrefix = [ "echo" ]
 
 [[rule]]
