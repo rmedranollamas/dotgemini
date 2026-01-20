@@ -14,7 +14,7 @@
 - **GitHub**: Use `gh` CLI tool exclusively.
 - **ast-grep**: Default to `ast-grep` for queries about the code, reference
   finding, etc.
-- **Investigation**: Use `codebase_investigator` frequently for context creation.
+- **Investigation**: Use `architect` frequently for context creation.
 - **To-dos**: Track work using the `write_todos` tool.
 - **Sub-Agents**: For complex features or refactors, delegate the heavy lifting
   to the `implementer` agent. Once implemented, delegate to the `verifier` agent
