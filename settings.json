@@ -130,8 +130,11 @@
     "useOSC52Paste": true,
     "plan": true
   },
-  "hooks": {
+  "hooksConfig": {
     "enabled": true,
+    "notifications": true
+  },
+  "hooks": {
     "BeforeTool": [],
     "AfterTool": [
       {
@@ -167,7 +170,6 @@
           }
         ]
       }
-    ],
-    "notifications": true
+    ]
   }
 }
