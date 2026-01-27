@@ -2,34 +2,28 @@
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "uv"
+commandPrefix = ["uv"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "uvx"
+commandPrefix = ["uvx"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "echo"
+commandPrefix = ["echo"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "xargs"
+commandPrefix = ["xargs"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "gemini"
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-commandPrefix = "tail"
+commandPrefix = ["gemini"]

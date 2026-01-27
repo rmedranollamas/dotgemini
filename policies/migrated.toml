@@ -2,304 +2,304 @@
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "awk"
+commandPrefix = ["awk"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "base64"
+commandPrefix = ["base64"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "cat"
+commandPrefix = ["cat"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "chmod"
+commandPrefix = ["chmod"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "column"
+commandPrefix = ["column"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "cp"
+commandPrefix = ["cp"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "curl"
+commandPrefix = ["curl"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "date"
+commandPrefix = ["date"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "df"
+commandPrefix = ["df"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "diff"
+commandPrefix = ["diff"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "du"
+commandPrefix = ["du"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "env"
+commandPrefix = ["env"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "file"
+commandPrefix = ["file"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "find"
+commandPrefix = ["find"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "free"
+commandPrefix = ["free"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "gh"
+commandPrefix = ["gh"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "git"
+commandPrefix = ["git"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "grep"
+commandPrefix = ["grep"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "head"
+commandPrefix = ["head"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "hostname"
+commandPrefix = ["hostname"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "id"
+commandPrefix = ["id"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "jq"
+commandPrefix = ["jq"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "ls"
+commandPrefix = ["ls"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "lscpu"
+commandPrefix = ["lscpu"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "mdformat"
+commandPrefix = ["mdformat"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "mkdir"
+commandPrefix = ["mkdir"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "mv"
+commandPrefix = ["mv"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "npm"
+commandPrefix = ["npm"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "npx"
+commandPrefix = ["npx"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "php"
+commandPrefix = ["php"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "ps"
+commandPrefix = ["ps"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "pwd"
+commandPrefix = ["pwd"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "python"
+commandPrefix = ["python"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "python3"
+commandPrefix = ["python3"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "ruff"
+commandPrefix = ["ruff"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "sed"
+commandPrefix = ["sed"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "sort"
+commandPrefix = ["sort"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "sqlite3"
+commandPrefix = ["sqlite3"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "stat"
+commandPrefix = ["stat"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "tail"
+commandPrefix = ["tail"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "tar"
+commandPrefix = ["tar"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "touch"
+commandPrefix = ["touch"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "tr"
+commandPrefix = ["tr"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "tree"
+commandPrefix = ["tree"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "ty"
+commandPrefix = ["ty"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "uniq"
+commandPrefix = ["uniq"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "unzip"
+commandPrefix = ["unzip"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "uptime"
+commandPrefix = ["uptime"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "wc"
+commandPrefix = ["wc"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "which"
+commandPrefix = ["which"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "whoami"
+commandPrefix = ["whoami"]
