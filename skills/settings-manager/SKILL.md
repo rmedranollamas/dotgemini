@@ -47,7 +47,7 @@ Tool permissions are managed via TOML files in the `policies/` directory. This r
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
-commandPrefix = "mdformat"
+commandPrefix = ["mdformat"]
 ```
 
 ## Common Hooks
