@@ -171,5 +171,25 @@
         ]
       }
     ]
+  },
+  "agents": {
+    "overrides": {
+      "codebase_investigator": {
+        "enabled": true,
+        "runConfig": {
+          "maxTurns": 30
+        },
+        "modelConfig": {
+          "generateContentConfig": {
+            "thinkingConfig": {
+              "thinkingBudget": -1
+            }
+          }
+        }
+      },
+      "cli_help": {
+        "enabled": true
+      }
+    }
   }
 }
