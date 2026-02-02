@@ -12,13 +12,15 @@
       "enabled": true,
       "maxAge": "30d"
     },
-    "previewFeatures": true
+    "previewFeatures": true,
+    "preferredEditor": "emacs"
   },
   "ui": {
     "hideTips": true,
     "footer": {
       "hideSandboxStatus": true,
-      "hideContextPercentage": false
+      "hideContextPercentage": false,
+      "hideCWD": true
     },
     "showLineNumbers": true,
     "showCitations": true,
@@ -65,7 +67,7 @@
         "tokenBudget": 5000
       }
     },
-    "compressionThreshold": 0.2,
+    "compressionThreshold": 0.25,
     "skipNextSpeakerCheck": false,
     "name": "gemini-3-flash-preview"
   },
@@ -96,7 +98,8 @@
       "save_memory",
       "web_fetch",
       "write_todos"
-    ]
+    ],
+    "disableLLMCorrection": false
   },
   "useWriteTodos": true,
   "security": {
@@ -116,6 +119,7 @@
     "enableAgents": true,
     "extensionManagement": true,
     "extensionConfig": true,
+    "enableExtensionAgents": true,
     "extensionReloading": true,
     "jitContext": true,
     "skills": true,
