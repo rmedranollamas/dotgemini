@@ -12,8 +12,7 @@
       "enabled": true,
       "maxAge": "30d"
     },
-    "previewFeatures": true,
-    "preferredEditor": "emacs"
+    "previewFeatures": true
   },
   "ui": {
     "hideTips": true,
