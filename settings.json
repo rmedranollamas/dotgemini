@@ -96,7 +96,13 @@
       "search_file_content",
       "save_memory",
       "web_fetch",
-      "write_todos"
+      "write_todos",
+      "codebase_investigator",
+      "cli_help",
+      "architect",
+      "implementer",
+      "reviewer",
+      "verifier"
     ],
     "disableLLMCorrection": false
   },
@@ -191,6 +197,18 @@
         }
       },
       "cli_help": {
+        "enabled": true
+      },
+      "architect": {
+        "enabled": true
+      },
+      "implementer": {
+        "enabled": true
+      },
+      "reviewer": {
+        "enabled": true
+      },
+      "verifier": {
         "enabled": true
       }
     }
