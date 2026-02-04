@@ -1,4 +1,5 @@
 .gemini/
+acknowledgments/
 extensions/
 gha-creds-*.json
 google_accounts.json
