@@ -87,6 +87,7 @@
     "autoAccept": true,
     "enableHooks": true,
     "allowed": [
+      "ask_user",
       "activate_skill",
       "delegate_to_agent",
       "google_web_search",
