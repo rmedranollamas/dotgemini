@@ -191,6 +191,13 @@
         "runConfig": {
           "maxTurns": 30,
           "maxTimeMinutes": 5
+        },
+        "modelConfig": {
+          "generateContentConfig": {
+            "thinkingConfig": {
+              "thinkingBudget": -1
+            }
+          }
         }
       },
       "cli_help": {
