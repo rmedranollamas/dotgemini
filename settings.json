@@ -19,7 +19,7 @@
     "footer": {
       "hideSandboxStatus": true,
       "hideContextPercentage": false,
-      "hideCWD": true
+      "hideCWD": false
     },
     "showLineNumbers": true,
     "showCitations": true,
@@ -100,12 +100,14 @@
       "write_todos",
       "codebase_investigator",
       "cli_help",
+      "generalist",
       "architect",
       "implementer",
       "reviewer",
       "verifier"
     ],
-    "disableLLMCorrection": false
+    "disableLLMCorrection": false,
+    "approvalMode": "auto_edit"
   },
   "useWriteTodos": true,
   "security": {
@@ -187,30 +189,50 @@
       "codebase_investigator": {
         "enabled": true,
         "runConfig": {
-          "maxTurns": 30
-        },
-        "modelConfig": {
-          "generateContentConfig": {
-            "thinkingConfig": {
-              "thinkingBudget": -1
-            }
-          }
+          "maxTurns": 30,
+          "maxTimeMinutes": 5
         }
       },
       "cli_help": {
-        "enabled": true
+        "enabled": true,
+        "runConfig": {
+          "maxTimeMinutes": 1
+        }
       },
       "architect": {
-        "enabled": true
+        "enabled": true,
+        "runConfig": {
+          "maxTimeMinutes": 20,
+          "maxTurns": 100
+        }
       },
       "implementer": {
-        "enabled": true
+        "enabled": true,
+        "runConfig": {
+          "maxTimeMinutes": 20,
+          "maxTurns": 100
+        }
       },
       "reviewer": {
-        "enabled": true
+        "enabled": true,
+        "runConfig": {
+          "maxTimeMinutes": 20,
+          "maxTurns": 100
+        }
       },
       "verifier": {
-        "enabled": true
+        "enabled": true,
+        "runConfig": {
+          "maxTimeMinutes": 20,
+          "maxTurns": 100
+        }
+      },
+      "generalist": {
+        "enabled": true,
+        "runConfig": {
+          "maxTurns": 100,
+          "maxTimeMinutes": 20
+        }
       }
     }
   }
