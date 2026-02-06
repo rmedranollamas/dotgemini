@@ -104,7 +104,9 @@
       "architect",
       "implementer",
       "reviewer",
-      "verifier"
+      "verifier",
+      "exit_plan_mode",
+      "enter_plan_mode"
     ],
     "disableLLMCorrection": false,
     "approvalMode": "auto_edit"
