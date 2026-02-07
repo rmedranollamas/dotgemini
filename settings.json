@@ -1,4 +1,5 @@
 {
+  "$schema": "./settings.schema.json",
   "general": {
     "checkpointing": {
       "enabled": true
@@ -81,6 +82,7 @@
       "enableShellOutputEfficiency": true
     },
     "truncateToolOutputThreshold": 20000,
+    "useRipgrep": true,
     "allowed": [
       "ask_user",
       "activate_skill",
@@ -124,6 +126,12 @@
     "autoConfigureMemory": true
   },
   "experimental": {
+    "toolOutputMasking": {
+      "enabled": true,
+      "toolProtectionThreshold": 50000,
+      "minPrunableTokensThreshold": 30000,
+      "protectLatestTurn": true
+    },
     "enableAgents": true,
     "extensionManagement": true,
     "extensionConfig": true,
