@@ -12,7 +12,8 @@
     "sessionRetention": {
       "enabled": true,
       "maxAge": "30d"
-    }
+    },
+    "previewFeatures": true
   },
   "ui": {
     "hideTips": true,
