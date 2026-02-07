@@ -51,7 +51,9 @@
     "hideContextSummary": true,
     "showModelInfoInChat": false,
     "hideWindowTitle": false,
-    "showHomeDirectoryWarning": false
+    "showHomeDirectoryWarning": false,
+    "showUserIdentity": true,
+    "autoThemeSwitching": false
   },
   "ide": {
     "hasSeenNudge": true,
@@ -63,16 +65,18 @@
   "model": {
     "summarizeToolOutput": {
       "run_shell_command": {
-        "tokenBudget": 5000
+        "tokenBudget": 20000
       }
     },
     "compressionThreshold": 0.25,
     "skipNextSpeakerCheck": false,
-    "name": "gemini-3-flash-preview"
+    "name": "gemini-3-flash-preview",
+    "disableLoopDetection": true
   },
   "context": {
     "fileName": [
-      "GEMINI.md"
+      "GEMINI.md",
+      "AGENTS.md"
     ],
     "loadMemoryFromIncludeDirectories": true
   },
@@ -96,6 +100,7 @@
       "save_memory",
       "web_fetch",
       "write_todos",
+      "planner",
       "codebase_investigator",
       "cli_help",
       "generalist",
@@ -190,13 +195,6 @@
         "runConfig": {
           "maxTurns": 30,
           "maxTimeMinutes": 5
-        },
-        "modelConfig": {
-          "generateContentConfig": {
-            "thinkingConfig": {
-              "thinkingBudget": -1
-            }
-          }
         }
       },
       "cli_help": {
@@ -234,6 +232,13 @@
         }
       },
       "generalist": {
+        "enabled": true,
+        "runConfig": {
+          "maxTurns": 100,
+          "maxTimeMinutes": 20
+        }
+      },
+      "planner": {
         "enabled": true,
         "runConfig": {
           "maxTurns": 100,
