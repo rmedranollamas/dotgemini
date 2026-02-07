@@ -11,8 +11,7 @@
     "sessionRetention": {
       "enabled": true,
       "maxAge": "30d"
-    },
-    "previewFeatures": true
+    }
   },
   "ui": {
     "hideTips": true,
@@ -44,7 +43,6 @@
       }
     },
     "showStatusInTitle": true,
-    "useFullWidth": true,
     "showMemoryUsage": false,
     "useAlternateBuffer": true,
     "incrementalRendering": true,
@@ -82,10 +80,7 @@
       "enableInteractiveShell": true,
       "enableShellOutputEfficiency": true
     },
-    "truncateToolOutputLines": 250,
     "truncateToolOutputThreshold": 20000,
-    "autoAccept": true,
-    "enableHooks": true,
     "allowed": [
       "ask_user",
       "activate_skill",
@@ -112,6 +107,9 @@
     "approvalMode": "auto_edit"
   },
   "useWriteTodos": true,
+  "skills": {
+    "enabled": true
+  },
   "security": {
     "disableYoloMode": false,
     "enablePermanentToolApproval": true,
@@ -129,18 +127,8 @@
     "enableAgents": true,
     "extensionManagement": true,
     "extensionConfig": true,
-    "enableExtensionAgents": true,
     "extensionReloading": true,
     "jitContext": true,
-    "skills": true,
-    "codebaseInvestigatorSettings": {
-      "enabled": true,
-      "maxNumTurns": 30,
-      "thinkingBudget": -1
-    },
-    "cliHelpAgentSettings": {
-      "enabled": true
-    },
     "useOSC52Paste": true,
     "plan": true
   },
