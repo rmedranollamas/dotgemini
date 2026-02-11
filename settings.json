@@ -13,7 +13,8 @@
       "enabled": true,
       "maxAge": "30d"
     },
-    "previewFeatures": true
+    "previewFeatures": true,
+    "defaultApprovalMode": "auto_edit"
   },
   "ui": {
     "hideTips": true,
@@ -42,6 +43,38 @@
         "Gray": "#6E7066",
         "DiffAdded": "#4b6616",
         "DiffRemoved": "#4a1b1b"
+      },
+      "Solarized Dark": {
+        "name": "Solarized Dark",
+        "type": "custom",
+        "Background": "#002b36",
+        "Foreground": "#839496",
+        "AccentBlue": "#268bd2",
+        "AccentPurple": "#6c71c4",
+        "AccentCyan": "#2aa198",
+        "AccentGreen": "#859900",
+        "AccentYellow": "#b58900",
+        "AccentRed": "#dc322f",
+        "Comment": "#586e75",
+        "Gray": "#586e75",
+        "DiffAdded": "#859900",
+        "DiffRemoved": "#dc322f"
+      },
+      "Solarized Light": {
+        "name": "Solarized Light",
+        "type": "custom",
+        "Background": "#fdf6e3",
+        "Foreground": "#657b83",
+        "AccentBlue": "#268bd2",
+        "AccentPurple": "#6c71c4",
+        "AccentCyan": "#2aa198",
+        "AccentGreen": "#859900",
+        "AccentYellow": "#b58900",
+        "AccentRed": "#dc322f",
+        "Comment": "#93a1a1",
+        "Gray": "#93a1a1",
+        "DiffAdded": "#859900",
+        "DiffRemoved": "#dc322f"
       }
     },
     "showStatusInTitle": true,
