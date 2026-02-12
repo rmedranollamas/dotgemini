@@ -25,56 +25,111 @@
     },
     "showLineNumbers": true,
     "showCitations": true,
-    "theme": "Monokai",
+    "theme": "Solarized Dark",
     "customThemes": {
-      "Monokai": {
-        "name": "Monokai",
-        "type": "custom",
-        "Background": "#272822",
-        "Foreground": "#FDFFF1",
-        "LightBlue": "#66D9EF",
-        "AccentBlue": "#1E90FF",
-        "AccentPurple": "#AE81FF",
-        "AccentCyan": "#66D9EF",
-        "AccentGreen": "#A6E22E",
-        "AccentYellow": "#E6DB74",
-        "AccentRed": "#F92672",
-        "Comment": "#6E7066",
-        "Gray": "#6E7066",
-        "DiffAdded": "#4b6616",
-        "DiffRemoved": "#4a1b1b"
-      },
       "Solarized Dark": {
         "name": "Solarized Dark",
         "type": "custom",
         "Background": "#002b36",
         "Foreground": "#839496",
+        "LightBlue": "#268bd2",
         "AccentBlue": "#268bd2",
         "AccentPurple": "#6c71c4",
         "AccentCyan": "#2aa198",
         "AccentGreen": "#859900",
-        "AccentYellow": "#b58900",
+        "AccentYellow": "#d0b000",
         "AccentRed": "#dc322f",
+        "DiffAdded": "#859900",
+        "DiffRemoved": "#dc322f",
         "Comment": "#586e75",
         "Gray": "#586e75",
-        "DiffAdded": "#859900",
-        "DiffRemoved": "#dc322f"
+        "DarkGray": "#073642",
+        "GradientColors": [
+          "#002b36",
+          "#073642"
+        ],
+        "text": {
+          "primary": "#839496",
+          "secondary": "#586e75",
+          "accent": "#268bd2",
+          "link": "#268bd2"
+        },
+        "background": {
+          "primary": "#002b36",
+          "diff": {
+            "added": "#00382f",
+            "removed": "#3d0115"
+          }
+        },
+        "border": {
+          "default": "#073642",
+          "focused": "#586e75"
+        },
+        "ui": {
+          "comment": "#586e75",
+          "symbol": "#93a1a1",
+          "gradient": [
+            "#002b36",
+            "#073642"
+          ]
+        },
+        "status": {
+          "success": "#859900",
+          "warning": "#d0b000",
+          "error": "#dc322f"
+        }
       },
       "Solarized Light": {
         "name": "Solarized Light",
         "type": "custom",
         "Background": "#fdf6e3",
         "Foreground": "#657b83",
+        "LightBlue": "#268bd2",
         "AccentBlue": "#268bd2",
         "AccentPurple": "#6c71c4",
         "AccentCyan": "#2aa198",
         "AccentGreen": "#859900",
-        "AccentYellow": "#b58900",
+        "AccentYellow": "#d0b000",
         "AccentRed": "#dc322f",
+        "DiffAdded": "#859900",
+        "DiffRemoved": "#dc322f",
         "Comment": "#93a1a1",
         "Gray": "#93a1a1",
-        "DiffAdded": "#859900",
-        "DiffRemoved": "#dc322f"
+        "DarkGray": "#eee8d5",
+        "GradientColors": [
+          "#fdf6e3",
+          "#eee8d5"
+        ],
+        "text": {
+          "primary": "#657b83",
+          "secondary": "#93a1a1",
+          "accent": "#268bd2",
+          "link": "#268bd2"
+        },
+        "background": {
+          "primary": "#fdf6e3",
+          "diff": {
+            "added": "#d7f2d7",
+            "removed": "#f2d7d7"
+          }
+        },
+        "border": {
+          "default": "#eee8d5",
+          "focused": "#93a1a1"
+        },
+        "ui": {
+          "comment": "#93a1a1",
+          "symbol": "#586e75",
+          "gradient": [
+            "#fdf6e3",
+            "#eee8d5"
+          ]
+        },
+        "status": {
+          "success": "#859900",
+          "warning": "#d0b000",
+          "error": "#dc322f"
+        }
       }
     },
     "showStatusInTitle": true,
@@ -86,7 +141,8 @@
     "hideWindowTitle": false,
     "showHomeDirectoryWarning": false,
     "showUserIdentity": true,
-    "autoThemeSwitching": false
+    "autoThemeSwitching": false,
+    "useBackgroundColor": false
   },
   "ide": {
     "hasSeenNudge": true,
