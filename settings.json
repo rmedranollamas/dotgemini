@@ -45,8 +45,8 @@
         "Gray": "#586e75",
         "DarkGray": "#073642",
         "GradientColors": [
-          "#002b36",
-          "#073642"
+          "#268bd2",
+          "#2aa198"
         ],
         "text": {
           "primary": "#839496",
@@ -69,8 +69,8 @@
           "comment": "#586e75",
           "symbol": "#93a1a1",
           "gradient": [
-            "#002b36",
-            "#073642"
+            "#268bd2",
+            "#2aa198"
           ]
         },
         "status": {
@@ -97,8 +97,8 @@
         "Gray": "#93a1a1",
         "DarkGray": "#eee8d5",
         "GradientColors": [
-          "#fdf6e3",
-          "#eee8d5"
+          "#268bd2",
+          "#2aa198"
         ],
         "text": {
           "primary": "#657b83",
@@ -121,8 +121,8 @@
           "comment": "#93a1a1",
           "symbol": "#586e75",
           "gradient": [
-            "#fdf6e3",
-            "#eee8d5"
+            "#268bd2",
+            "#2aa198"
           ]
         },
         "status": {
