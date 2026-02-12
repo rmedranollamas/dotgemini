@@ -142,7 +142,8 @@
     "showHomeDirectoryWarning": false,
     "showUserIdentity": true,
     "autoThemeSwitching": false,
-    "useBackgroundColor": false
+    "useBackgroundColor": false,
+    "inlineThinkingMode": "full"
   },
   "ide": {
     "hasSeenNudge": true,
@@ -160,7 +161,7 @@
     "compressionThreshold": 0.25,
     "skipNextSpeakerCheck": false,
     "name": "gemini-3-flash-preview",
-    "disableLoopDetection": true
+    "disableLoopDetection": false
   },
   "context": {
     "fileName": [
