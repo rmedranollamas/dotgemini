@@ -34,10 +34,10 @@
 
 This project follows a strict delegation pattern to keep the main chat context clean and ensure high-quality output:
 
-- **Architect (@architect, @planner)**: Handles research, system mapping, and strategic planning. Always reason before planning.
-- **Implementer (@implementer)**: Handles coding, refactoring, and file modifications. Focuses on idiomatic and neat code.
-- **Verifier (@verifier)**: Handles testing, edge-case discovery, and validation. Never accepts "it works" without proof.
-- **Reviewer (@reviewer)**: Handles code analysis and quality gates. Focuses on impact and actionability.
+- **Architect (activate agent 'architect' or 'planner')**: Handles research, system mapping, and strategic planning. Always reason before planning.
+- **Implementer (activate agent 'implementer')**: Handles coding, refactoring, and file modifications. Focuses on idiomatic and neat code.
+- **Verifier (activate agent 'verifier')**: Handles testing, edge-case discovery, and validation. Never accepts "it works" without proof.
+- **Reviewer (activate agent 'reviewer')**: Handles code analysis and quality gates. Focuses on impact and actionability.
 - **Codebase Investigator**: Handles deep context gathering and search.
 
 **Mandate**: The main agent should primarily act as an orchestrator, delegating specialized tasks to these sub-agents via `delegate_to_agent`.
