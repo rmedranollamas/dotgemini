@@ -8,11 +8,13 @@ installation_id
 oauth_creds.json
 logs.json
 mcp-oauth-tokens-v2.json
+mcp-server-enablement.json
 pricing.json
 projects.json
 settings.json.orig
 state.json
 tmp/
 trustedFolders.json
+usage_cache.json
 user_id
 hooks/*.log
