@@ -1,0 +1,104 @@
+[[rule]]
+toolName = "ask_user"
+decision = "allow"
+priority = 100
+
+[[rule]]
+toolName = "activate_skill"
+decision = "allow"
+priority = 100
+
+[[rule]]
+toolName = "delegate_to_agent"
+decision = "allow"
+priority = 100
+
+[[rule]]
+toolName = "google_web_search"
+decision = "allow"
+priority = 100
+
+[[rule]]
+toolName = "list_directory"
+decision = "allow"
+priority = 100
+
+[[rule]]
+toolName = "read_file"
+decision = "allow"
+priority = 100
+
+[[rule]]
+toolName = "glob"
+decision = "allow"
+priority = 100
+
+[[rule]]
+toolName = "search_file_content"
+decision = "allow"
+priority = 100
+
+[[rule]]
+toolName = "save_memory"
+decision = "allow"
+priority = 100
+
+[[rule]]
+toolName = "web_fetch"
+decision = "allow"
+priority = 100
+
+[[rule]]
+toolName = "write_todos"
+decision = "allow"
+priority = 100
+
+[[rule]]
+toolName = "planner"
+decision = "allow"
+priority = 100
+
+[[rule]]
+toolName = "codebase_investigator"
+decision = "allow"
+priority = 100
+
+[[rule]]
+toolName = "cli_help"
+decision = "allow"
+priority = 100
+
+[[rule]]
+toolName = "generalist"
+decision = "allow"
+priority = 100
+
+[[rule]]
+toolName = "architect"
+decision = "allow"
+priority = 100
+
+[[rule]]
+toolName = "implementer"
+decision = "allow"
+priority = 100
+
+[[rule]]
+toolName = "reviewer"
+decision = "allow"
+priority = 100
+
+[[rule]]
+toolName = "verifier"
+decision = "allow"
+priority = 100
+
+[[rule]]
+toolName = "exit_plan_mode"
+decision = "allow"
+priority = 100
+
+[[rule]]
+toolName = "enter_plan_mode"
+decision = "allow"
+priority = 100
