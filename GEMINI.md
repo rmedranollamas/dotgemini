@@ -45,4 +45,3 @@ This project follows a strict delegation pattern to keep the main chat context c
 ## Gemini Added Memories
 - Ramón wants me to ask for confirmation before committing and pushing changes to the repository.
 - When using `uv run` or `uvx` to install Python packages (like `jsonschema`), always use `--index https://pypi.org/simple` to bypass internal registry authentication issues.
-- This repository has a dual-branch structure: 'main' is for open-source/personal setup, and 'google' is for internal/work setup with private tools. The workflow is: implement general changes in 'main', merge 'main' into 'google', and then apply Google-specific customizations (like internal tool paths or notify_self hooks) to the 'google' branch. Always ensure changes intended for everyone land in 'main' first.
