@@ -25,7 +25,7 @@
     },
     "showLineNumbers": true,
     "showCitations": true,
-    "theme": "Solarized Light",
+    "theme": "Solarized Dark",
     "customThemes": {
       "Solarized Dark": {
         "name": "Solarized Dark",
@@ -142,8 +142,9 @@
     "showHomeDirectoryWarning": false,
     "showUserIdentity": true,
     "autoThemeSwitching": false,
-    "useBackgroundColor": false,
-    "inlineThinkingMode": "off"
+    "useBackgroundColor": true,
+    "inlineThinkingMode": "off",
+    "showShortcutsHint": false
   },
   "ide": {
     "hasSeenNudge": true,
