@@ -13,7 +13,6 @@
       "enabled": true,
       "maxAge": "30d"
     },
-    "previewFeatures": true,
     "defaultApprovalMode": "auto_edit"
   },
   "ui": {
@@ -179,8 +178,7 @@
     },
     "truncateToolOutputThreshold": 20000,
     "useRipgrep": true,
-    "disableLLMCorrection": false,
-    "approvalMode": "auto_edit"
+    "disableLLMCorrection": false
   },
   "useWriteTodos": true,
   "skills": {
