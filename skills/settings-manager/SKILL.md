@@ -24,7 +24,16 @@ curl -s "$SCHEMA_URL" > /tmp/settings.schema.json
 uvx check-jsonschema --schemafile /tmp/settings.schema.json settings.json
 ```
 
-# ... (existing sections)
+### 2. Feature Discovery
+When looking for new features or checking property types, query the schema directly.
+
+```bash
+# List all top-level categories
+jq -r '.properties | keys[]' /tmp/settings.schema.json
+
+# Find all boolean flags (potential features to enable)
+grep -B 2 '"type": "boolean"' /tmp/settings.schema.json
+```
 
 ### 3. Canonical Sorting
 Sort `settings.json` keys to match the schema's order for better readability and alignment with documentation.
@@ -41,7 +50,7 @@ sorted_settings = {k: settings[k] for k in schema_order if k in settings}
 Tool permissions are managed via TOML files in the `policies/` directory. This replaces the legacy `tools.allowed` list in `settings.json`.
 
 ### Policy Structure (`policies/*.toml`)
-...
+
 ```toml
 [[rule]]
 toolName = "run_shell_command"
@@ -57,7 +66,10 @@ commandPrefix = ["mdformat"]
 - **run-mdformat.sh:** Formats Markdown files.
 
 ## Best Practices
-# ... (existing sections)
+
+- **Schema as Truth:** If a property isn't in the schema, it's either deprecated or internal. Always check the schema before adding a setting.
+- **Incremental Updates:** Change one section at a time (e.g., `ui`, then `experimental`) and validate in between.
+- **Backup:** Keep a copy of your known-good `settings.json` before performing major refactors.
 
 ## Common Configuration Blocks
 
