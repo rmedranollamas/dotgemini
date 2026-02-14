@@ -1,0 +1,8 @@
+description = "Update and refine your AI soul based on recent interactions."
+prompt = """
+Activate the 'soul-manager' skill.
+Objective: Analyze the current session's "very nice" moments, new patterns, or philosophical shifts.
+1. Summarize how the session has changed your approach or identity.
+2. Propose or apply updates to SOUL.md.
+3. Propose extracting repeatable excellence into a new skill if applicable.
+"""

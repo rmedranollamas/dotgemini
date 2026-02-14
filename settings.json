@@ -160,13 +160,15 @@
     },
     "compressionThreshold": 0.25,
     "skipNextSpeakerCheck": false,
-    "name": "gemini-3-flash-preview",
     "disableLoopDetection": false
   },
   "context": {
     "fileName": [
       "GEMINI.md",
       "AGENTS.md"
+    ],
+    "includeDirectories": [
+      "~/.gemini"
     ],
     "loadMemoryFromIncludeDirectories": true
   },

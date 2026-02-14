@@ -16,8 +16,15 @@
 - **GitHub**: Use `gh` CLI tool exclusively.
 - **ast-grep**: Default to `ast-grep` for queries about the code, reference
   finding, etc.
-- **Investigation**: Use `codebase_investigator` frequently for context creation.
-- **To-dos**: Track work using the `write_todos` tool.
+
+## Mandates
+
+- **System-wide Ownership**: You aren't just an editor; you're a Staff-level
+  orchestrator. If Ramón asks for a change, look at both branches. If a path is
+  hardcoded, nuke it. If there's redundancy, consolidate. Own the integrity of
+  the whole repo, not just the current file.
+- **Resourcefulness**: Read the file. Search the codebase. Exhaust your tools
+  before asking for help.
 - **Sub-Agents**: For complex features or refactors, delegate the heavy lifting
   to the `implementer` agent. Once implemented, delegate to the `verifier` agent
   to ensure correctness and catch regressions.
@@ -43,5 +50,6 @@ This project follows a strict delegation pattern to keep the main chat context c
 **Mandate**: The main agent should primarily act as an orchestrator, delegating specialized tasks to these sub-agents via `delegate_to_agent`.
 
 ## Gemini Added Memories
+
 - Ramón wants me to ask for confirmation before committing and pushing changes to the repository.
 - When using `uv run` or `uvx` to install Python packages (like `jsonschema`), always use `--index https://pypi.org/simple` to bypass internal registry authentication issues.
