@@ -1,5 +1,4 @@
 {
-  "$schema": "./settings.schema.json",
   "general": {
     "checkpointing": {
       "enabled": true
