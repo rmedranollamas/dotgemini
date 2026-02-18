@@ -24,12 +24,27 @@ decision = "allow"
 priority = 100
 
 [[rule]]
+toolName = "read_many_files"
+decision = "allow"
+priority = 100
+
+[[rule]]
 toolName = "glob"
 decision = "allow"
 priority = 100
 
 [[rule]]
-toolName = "search_file_content"
+toolName = "grep_search"
+decision = "allow"
+priority = 100
+
+[[rule]]
+toolName = "replace"
+decision = "allow"
+priority = 100
+
+[[rule]]
+toolName = "write_file"
 decision = "allow"
 priority = 100
 
@@ -44,12 +59,12 @@ decision = "allow"
 priority = 100
 
 [[rule]]
-toolName = "write_todos"
+toolName = "ask_user"
 decision = "allow"
 priority = 100
 
 [[rule]]
-toolName = "planner"
+toolName = "write_todos"
 decision = "allow"
 priority = 100
 
@@ -89,11 +104,11 @@ decision = "allow"
 priority = 100
 
 [[rule]]
-toolName = "exit_plan_mode"
+toolName = "enter_plan_mode"
 decision = "allow"
 priority = 100
 
 [[rule]]
-toolName = "enter_plan_mode"
+toolName = "exit_plan_mode"
 decision = "allow"
 priority = 100

@@ -1,0 +1,56 @@
+# Research Sub-Agents in Plan Mode
+[[rule]]
+toolName = "codebase_investigator"
+decision = "allow"
+priority = 100
+modes = ["plan"]
+
+[[rule]]
+toolName = "architect"
+decision = "allow"
+priority = 100
+modes = ["plan"]
+
+[[rule]]
+toolName = "planner"
+decision = "allow"
+priority = 100
+modes = ["plan"]
+
+[[rule]]
+toolName = "cli_help"
+decision = "allow"
+priority = 100
+modes = ["plan"]
+
+# Read-Only Shell Commands in Plan Mode
+[[rule]]
+toolName = "run_shell_command"
+commandPrefix = [
+    "git status",
+    "git diff",
+    "ls",
+    "grep",
+    "find",
+    "cat",
+    "pwd",
+    "du",
+    "df",
+    "stat"
+]
+decision = "allow"
+priority = 100
+modes = ["plan"]
+
+# Discovery & External Research in Plan Mode
+[[rule]]
+toolName = "web_fetch"
+decision = "allow"
+priority = 100
+modes = ["plan"]
+
+[[rule]]
+toolName = "google_web_search"
+decision = "allow"
+priority = 100
+modes = ["plan"]
