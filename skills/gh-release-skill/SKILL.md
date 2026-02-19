@@ -22,10 +22,7 @@ Regardless of the language, follow these core steps:
    - Push to main: `git push origin main`
 1. **Tagging & Release**:
    - Create and push the tag: `git tag vX.Y.Z && git push origin vX.Y.Z`
-   - Create the GitHub Release:
-     ```bash
-     gh release create vX.Y.Z --generate-notes
-     ```
+   - Use GitHub Actions for automated release creation (preferred).
 
 ## Ecosystem Specifics
 
@@ -39,7 +36,7 @@ Regardless of the language, follow these core steps:
 
 - **Version File**: `pyproject.toml` or `__init__.py`.
 - **Tooling**: Use `uv` or `poetry` for environment management.
-- **Patterns**: Ensure entry points (like `run.py` for PyInstaller) are updated if necessary.
+- **PyInstaller Multi-Arch Builds**: PyInstaller cannot truly cross-compile. For reliable multi-architecture builds (e.g., `linux-arm64`), use dedicated runners for each target architecture (e.g., `runs-on: ubuntu-latest-arm64`) instead of emulation. **Note**: GitHub Actions automation for this can be unreliable; manual intervention may be required.
 
 ### Go
 
@@ -60,6 +57,10 @@ Regardless of the language, follow these core steps:
 
 ## Best Practices
 
-- **Automation**: Prefer triggering releases via tags to let CI handle binary builds and checksums.
+- **Automation**: Prefer triggering releases via tags to let CI handle binary builds and checksums. However, be prepared for automation failures and manual intervention for specific platforms.
 - **Notes**: Use `--generate-notes` to automatically pull in PR titles and contributors.
 - **Safety**: Never force-push tags unless absolutely necessary.
+- **Troubleshooting Automated Releases**: If automated release creation fails in GitHub Actions (e.g., `release not found`, "tag_name immutable" errors), inspect workflow logs closely. Manual intervention might be necessary:
+  1. Ensure all build jobs complete and artifacts are uploaded.
+  1. If the release job fails, manually create the release and upload artifacts using `gh release create <tag> ...` and `gh release upload <tag> <file> ...`.
+  1. If a tag prevents release creation, try deleting and recreating the tag, or create a new version tag.
