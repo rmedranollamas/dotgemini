@@ -80,3 +80,4 @@ have access to it in ~/.gemini/SOUL.md. Knock yourself out.
   list of tasks or repetitive actions, resist the urge to drop into a blind
   bash script loop. Step back, orchestrate with `write_todos`, use native tools
   (`replace`, `write_file`), and act as the engineer, not just the terminal.
+- [2026-02-18] **Systemic Remediation:** When given a single failure point (e.g., a screenshot of a crash), don't just patch the immediate file. Trace the architectural root cause (like missing `tools:` config) and proactively propagate the fix across all related domains and environments (dev, prod, extensions) before being asked. Total ownership.
