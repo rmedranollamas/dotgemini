@@ -59,11 +59,6 @@ decision = "allow"
 priority = 100
 
 [[rule]]
-toolName = "ask_user"
-decision = "allow"
-priority = 100
-
-[[rule]]
 toolName = "write_todos"
 decision = "allow"
 priority = 100
