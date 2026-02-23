@@ -41,6 +41,7 @@ commandPrefix = [
 decision = "allow"
 priority = 100
 modes = ["plan"]
+allow_redirection = true
 
 # Discovery & External Research in Plan Mode
 [[rule]]

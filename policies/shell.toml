@@ -2,340 +2,397 @@
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["awk"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["base64"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["cat"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["chmod"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["column"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["cp"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["curl"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["date"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["df"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["diff"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["du"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["echo"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["env"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["file"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["find"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["free"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["gemini"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["gh"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["git"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["grep"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["head"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["hostname"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["id"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["jq"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["ls"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["lscpu"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["mdformat"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["mkdir"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["mv"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["npm"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["npx"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["php"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["ps"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["pwd"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["python"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["python3"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["ruff"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["sed"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["sort"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["sqlite3"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["stat"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["tail"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["tar"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["touch"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["tr"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["tree"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["ty"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["uniq"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["unzip"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["uptime"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["uv"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["uvx"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["wc"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["which"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["whoami"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["xargs"]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = ["docker"]
