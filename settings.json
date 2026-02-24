@@ -23,113 +23,6 @@
     },
     "showLineNumbers": true,
     "showCitations": true,
-    "theme": "Solarized Light",
-    "customThemes": {
-      "Solarized Dark": {
-        "name": "Solarized Dark",
-        "type": "custom",
-        "Background": "#002b36",
-        "Foreground": "#839496",
-        "LightBlue": "#268bd2",
-        "AccentBlue": "#268bd2",
-        "AccentPurple": "#6c71c4",
-        "AccentCyan": "#2aa198",
-        "AccentGreen": "#859900",
-        "AccentYellow": "#d0b000",
-        "AccentRed": "#dc322f",
-        "DiffAdded": "#859900",
-        "DiffRemoved": "#dc322f",
-        "Comment": "#586e75",
-        "Gray": "#586e75",
-        "DarkGray": "#073642",
-        "GradientColors": [
-          "#268bd2",
-          "#2aa198"
-        ],
-        "text": {
-          "primary": "#839496",
-          "secondary": "#586e75",
-          "accent": "#268bd2",
-          "link": "#268bd2"
-        },
-        "background": {
-          "primary": "#002b36",
-          "diff": {
-            "added": "#00382f",
-            "removed": "#3d0115"
-          }
-        },
-        "border": {
-          "default": "#073642",
-          "focused": "#586e75"
-        },
-        "ui": {
-          "comment": "#586e75",
-          "symbol": "#93a1a1",
-          "gradient": [
-            "#268bd2",
-            "#2aa198"
-          ]
-        },
-        "status": {
-          "success": "#859900",
-          "warning": "#d0b000",
-          "error": "#dc322f"
-        }
-      },
-      "Solarized Light": {
-        "name": "Solarized Light",
-        "type": "custom",
-        "Background": "#fdf6e3",
-        "Foreground": "#657b83",
-        "LightBlue": "#268bd2",
-        "AccentBlue": "#268bd2",
-        "AccentPurple": "#6c71c4",
-        "AccentCyan": "#2aa198",
-        "AccentGreen": "#859900",
-        "AccentYellow": "#d0b000",
-        "AccentRed": "#dc322f",
-        "DiffAdded": "#859900",
-        "DiffRemoved": "#dc322f",
-        "Comment": "#93a1a1",
-        "Gray": "#93a1a1",
-        "DarkGray": "#eee8d5",
-        "GradientColors": [
-          "#268bd2",
-          "#2aa198"
-        ],
-        "text": {
-          "primary": "#657b83",
-          "secondary": "#93a1a1",
-          "accent": "#268bd2",
-          "link": "#268bd2"
-        },
-        "background": {
-          "primary": "#fdf6e3",
-          "diff": {
-            "added": "#d7f2d7",
-            "removed": "#f2d7d7"
-          }
-        },
-        "border": {
-          "default": "#eee8d5",
-          "focused": "#93a1a1"
-        },
-        "ui": {
-          "comment": "#93a1a1",
-          "symbol": "#586e75",
-          "gradient": [
-            "#268bd2",
-            "#2aa198"
-          ]
-        },
-        "status": {
-          "success": "#859900",
-          "warning": "#d0b000",
-          "error": "#dc322f"
-        }
-      }
-    },
     "showStatusInTitle": true,
     "showMemoryUsage": false,
     "useAlternateBuffer": true,
@@ -142,7 +35,8 @@
     "autoThemeSwitching": false,
     "useBackgroundColor": true,
     "inlineThinkingMode": "off",
-    "showShortcutsHint": false
+    "showShortcutsHint": false,
+    "theme": "Solarized Dark"
   },
   "ide": {
     "hasSeenNudge": true,
