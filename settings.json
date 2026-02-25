@@ -28,7 +28,7 @@
     "useAlternateBuffer": true,
     "incrementalRendering": true,
     "hideContextSummary": true,
-    "showModelInfoInChat": false,
+    "showModelInfoInChat": true,
     "hideWindowTitle": false,
     "showHomeDirectoryWarning": false,
     "showUserIdentity": true,
@@ -53,7 +53,8 @@
     },
     "compressionThreshold": 0.2,
     "skipNextSpeakerCheck": false,
-    "disableLoopDetection": false
+    "disableLoopDetection": false,
+    "name": "auto-gemini-3"
   },
   "context": {
     "fileName": [
