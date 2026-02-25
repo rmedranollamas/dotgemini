@@ -9,6 +9,7 @@ oauth_creds.json
 logs.json
 mcp-oauth-tokens-v2.json
 mcp-server-enablement.json
+policy_integrity.json
 pricing.json
 projects.json
 settings.json.orig
