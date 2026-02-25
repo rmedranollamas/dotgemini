@@ -14,13 +14,13 @@ INPUT=$(cat)
 SESSION_ID=$(echo "$INPUT" | jq -r '.session_id // "n/a"')
 FILE_PATH=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
 
+HOOK_DIR="$(dirname "$(readlink -f \"$0\")")"
 if [ -n "$GEMINI_PROJECT_DIR" ]; then
     LOG_DIR="$GEMINI_PROJECT_DIR/.gemini"
-    LOG_FILE="$LOG_DIR/hooks.log"
 else
-    LOG_DIR="$(dirname "$(readlink -f "$0")")"
-    LOG_FILE="$LOG_DIR/hook.log"
+    LOG_DIR="$HOOK_DIR"
 fi
+LOG_FILE="$LOG_DIR/hooks.log"
 
 if [[ "$FILE_PATH" == *.md ]]; then
     if [ ! -f "$FILE_PATH" ]; then
@@ -35,10 +35,19 @@ if [[ "$FILE_PATH" == *.md ]]; then
     STATUS="SUCCESS"
     if [ $EXIT_CODE -ne 0 ]; then
         STATUS="FAILED"
-        jq -n --arg out "$FORMAT_OUT" '{decision: "deny", hookSpecificOutput: {hookEventName: "AfterTool", additionalContext: ("mdformat failed:\n" + $out)} }'
+        jq -n --arg out "$FORMAT_OUT" \
+          '{ \
+            decision: "deny", \
+            reason: ("mdformat failed:\n" + $out), \
+            hookSpecificOutput: { \
+              hookEventName: "AfterTool", \
+              additionalContext: ("mdformat failed:\n" + $out) \
+            } \
+          }'
     elif [ "$HASH_BEFORE" != "$HASH_AFTER" ]; then
         STATUS="MODIFIED"
-        jq -n --arg path "$FILE_PATH" --arg fmt "$FORMAT_OUT" '{systemMessage: ("mdformat auto-formatted " + $path + ". Output:\n" + $fmt)}'
+        MSG=$(printf "mdformat auto-formatted %s.\n\nOutput:\n%s" "$FILE_PATH" "$FORMAT_OUT")
+        jq -n --arg msg "$MSG" '{systemMessage: $msg}'
     fi
 
     if [[ "$GEMINI_DEBUG_HOOKS" != "false" ]]; then
@@ -46,3 +55,4 @@ if [[ "$FILE_PATH" == *.md ]]; then
         echo "[$(date '+%Y-%m-%d %H:%M:%S')] run-mdformat.sh [Session: $SESSION_ID] $STATUS: $FILE_PATH" >> "$LOG_FILE"
     fi
 fi
+

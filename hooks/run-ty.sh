@@ -14,13 +14,13 @@ INPUT=$(cat)
 SESSION_ID=$(echo "$INPUT" | jq -r '.session_id // "n/a"')
 FILE_PATH=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
 
+HOOK_DIR="$(dirname \"$(readlink -f \"$0\")\")"
 if [ -n "$GEMINI_PROJECT_DIR" ]; then
     LOG_DIR="$GEMINI_PROJECT_DIR/.gemini"
-    LOG_FILE="$LOG_DIR/hooks.log"
 else
-    LOG_DIR="$(dirname "$(readlink -f "$0")")"
-    LOG_FILE="$LOG_DIR/hook.log"
+    LOG_DIR="$HOOK_DIR"
 fi
+LOG_FILE="$LOG_DIR/hooks.log"
 
 if [[ "$FILE_PATH" == *.py ]]; then
      if [ ! -f "$FILE_PATH" ]; then
@@ -33,7 +33,15 @@ if [[ "$FILE_PATH" == *.py ]]; then
     STATUS="SUCCESS"
     if [ $EXIT_CODE -ne 0 ]; then
         STATUS="FAILED"
-        jq -n --arg out "$OUTPUT" '{decision: "deny", hookSpecificOutput: {hookEventName: "AfterTool", additionalContext: ("Ty type check failed:\n" + $out) } }'
+        jq -n --arg out "$OUTPUT" \
+          '{
+            decision: "deny",
+            reason: ("Ty type check failed:\n" + $out),
+            hookSpecificOutput: {
+              hookEventName: "AfterTool",
+              additionalContext: ("Ty type check failed:\n" + $out)
+            }
+          }'
     fi
 
     if [[ "$GEMINI_DEBUG_HOOKS" != "false" ]]; then
