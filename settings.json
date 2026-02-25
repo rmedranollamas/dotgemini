@@ -155,14 +155,14 @@
       "codebase_investigator": {
         "enabled": true,
         "runConfig": {
-          "maxTurns": 30,
-          "maxTimeMinutes": 5
+          "maxTurns": 100,
+          "maxTimeMinutes": 20
         }
       },
       "cli_help": {
         "enabled": true,
         "runConfig": {
-          "maxTimeMinutes": 1
+          "maxTimeMinutes": 5
         }
       },
       "architect": {
