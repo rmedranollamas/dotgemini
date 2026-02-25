@@ -36,7 +36,8 @@
     "useBackgroundColor": true,
     "inlineThinkingMode": "off",
     "showShortcutsHint": false,
-    "theme": "Solarized Dark"
+    "theme": "Solarized Dark",
+    "showSpinner": false
   },
   "ide": {
     "hasSeenNudge": true,
