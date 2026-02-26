@@ -1,5 +1,0 @@
-description = "Review code changes or pull requests."
-prompt = """
-Delegate the code review task to the 'reviewer' agent.
-Objective: Review the provided changes or PR, prioritizing impact and actionability according to the reviewer guidelines.
-"""

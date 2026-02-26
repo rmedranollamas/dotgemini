@@ -1,8 +1,0 @@
-description = "Diagnose and fix a bug or error."
-prompt = """
-Orchestrate a fix for the following issue: {{args}}
-
-1. **Analysis**: Delegate root cause analysis to 'architect' or 'codebase_investigator'.
-2. **Implementation**: Once the cause is found, delegate the fix to 'implementer'.
-3. **Verification**: Delegate final verification to 'verifier' to ensure the fix is robust.
-"""

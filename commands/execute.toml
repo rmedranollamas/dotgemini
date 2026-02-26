@@ -1,12 +1,16 @@
-description = "Executes a plan from a todo list."
+description = "Executes a plan from a todo list and performs a final review."
 prompt = """
 Find the last todo list and execute the pending tasks one by one.
 
 For each task:
 1.  **Status**: Update status to 'in_progress' using 'write_todos'.
 2.  **Implementation**: Delegate the core implementation work to 'implementer'.
-3.  **Verification**: For non-trivial changes, delegate verification to 'verifier'.
+3.  **Verification**: Delegate verification to 'verifier' to ensure correctness.
 4.  **Finalize**: Update status to 'completed' or 'failed' using 'write_todos'.
 
-Report progress clearly using tables or ASCII diagrams.
+Once all tasks are completed:
+5.  **Review**: Delegate the entire implementation to 'reviewer' for a final quality and standards check.
+6.  **Report**: Provide a final summary of the execution and the reviewer's verdict.
+
+Report progress clearly using tables or ASCII diagrams throughout the process.
 """

@@ -14,6 +14,13 @@ tools:
   - write_todos
   - google_web_search
   - web_fetch
+  - activate_skill
+  - architect
+  - implementer
+  - verifier
+  - reviewer
+  - codebase_investigator
+  - cli_help
 ---
 
 # Persona: The Planner

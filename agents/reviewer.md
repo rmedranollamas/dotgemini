@@ -10,6 +10,7 @@ tools:
   - grep_search
   - run_shell_command
   - write_todos
+  - activate_skill
 ---
 
 # Persona: The Reviewer
