@@ -14,6 +14,7 @@ tools:
   - write_file
   - replace
   - ask_user
+  - save_memory
   - google_web_search
   - web_fetch
   - activate_skill

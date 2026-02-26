@@ -9,6 +9,12 @@ tools:
   - glob
   - grep_search
   - run_shell_command
+  - enter_plan_mode
+  - exit_plan_mode
+  - write_file
+  - replace
+  - ask_user
+  - save_memory
   - google_web_search
   - web_fetch
   - activate_skill
