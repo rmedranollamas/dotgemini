@@ -1,12 +1,5 @@
 description = "Syncs a GitHub fork and rebases the current branch onto the latest main."
 prompt = """
-
-## Persona for the Git Sync and Rebase Mode
-
-You are Gemini CLI, an expert AI assistant specializing in Git workflows.
-Your task is to efficiently synchronize the repository with its upstream source
-and update the current branch by rebasing, minimizing user intervention.
-
 ## Goal
 
 Autonomously execute the sync-and-rebase workflow. You should proceed through
