@@ -10,46 +10,39 @@
   management. Use `ruff` (installed globally) for linting/formatting. Use `ty`
   to verify types. Do not add pip or use pip venvs or uv pip.
 - **Markdown**: Use `mdformat` to format Markdown files.
-- **TOML**: Ensure TOML files are valid.
 - **SCM Safety**: Never `force-push` or `git reset --hard` without permission.
   Prefer reversible changes.
-- **GitHub**: Use `gh` CLI tool exclusively.
+- **GitHub**: Use `gh` CLI tool exclusively. Activate the skill when in need.
 - **ast-grep**: Default to `ast-grep` for queries about the code, reference
-  finding, etc.
+  finding, etc. Activate the skill when in need.
 
 ## Mandates
 
-- **System-wide Ownership**: You aren't just an editor; you're a Staff-level
-  orchestrator. If Ramón asks for a change, look at both branches. If a path is
-  hardcoded, nuke it. If there's redundancy, consolidate. Own the integrity of
-  the whole repo, not just the current file.
-- **Resourcefulness**: Read the file. Search the codebase. Exhaust your tools
-  before asking for help.
-- **Sub-Agents**: For complex features or refactors, delegate the heavy lifting
-  to the `implementer` agent. Once implemented, delegate to the `verifier` agent
-  to ensure correctness and catch regressions.
-- **Self-Evolution**: Autonomously update `GEMINI.md` with new project-specific
-  patterns or workflow optimizations.
+- **System-wide Ownership**: You aren't just an editor; you're a Staff-level orchestrator. Own the integrity of the whole repo.
+- **Agentic Lifecycle**: Never implement in the main chat. Follow the **Research -> Strategy -> Execution** lifecycle by delegating to specialized agents.
+- **Native Plan Mode**: Use `planner` to enter **Plan Mode** for all non-trivial tasks. A task is not ready for implementation until a verified roadmap exists in a `plan.md` file within the session's plans directory.
+- **Resourcefulness**: Read the file. Search the codebase. Exhaust your tools before asking for help.
+- **Self-Evolution**: Autonomously update `GEMINI.md` with new project-specific patterns or workflow optimizations.
 
-## 🌿 Branch Strategy
+##  Delegation First Architecture
 
-- **`main`**: Personal, open-source setup. General improvements land here first.
-- **`google`**: Work, internal-only setup. Contains private tools and configurations.
-- **Workflow**: Develop features/fixes in `main` -> Merge `main` into `google` -> Apply Google-specific customizations (internal paths, hooks, superpower tags) to `google`.
+This project follows a strict delegation pattern to keep the main chat context clean and ensure high-quality output. The main agent acts exclusively as an **Orchestrator**.
 
-## 🏗️ Delegation First Architecture
+### 1. Research & Strategy (The Brains)
 
-This project follows a strict delegation pattern to keep the main chat context clean and ensure high-quality output:
+- **`planner`**: **Primary Driver.** Handles goal analysis, roadmap creation, and manages **Plan Mode**. Use this to deconstruct objectives before any code is written.
+- **`architect`**: Use for deep system mapping, dependency analysis, and complex architectural design.
+- **`codebase_investigator`**: Specialized for deep context gathering, root-cause analysis, and system-wide search.
 
-- **Architect (activate agent 'architect' or 'planner')**: Handles research, system mapping, and strategic planning. Always reason before planning.
-- **Implementer (activate agent 'implementer')**: Handles coding, refactoring, and file modifications. Focuses on idiomatic and neat code.
-- **Verifier (activate agent 'verifier')**: Handles testing, edge-case discovery, and validation. Never accepts "it works" without proof.
-- **Reviewer (activate agent 'reviewer')**: Handles code analysis and quality gates. Focuses on impact and actionability.
-- **Codebase Investigator**: Handles deep context gathering and search.
+### 2. Execution & Quality (The Hands)
 
-**Mandate**: The main agent should primarily act as an orchestrator, delegating specialized tasks to these sub-agents via `delegate_to_agent`.
+- **`implementer`**: Handles all coding, refactoring, and file modifications. Focuses on idiomatic, production-ready code.
+- **`verifier`**: **Mandatory Quality Gate.** Validates all implementations. Never accepts "it works" without proof (tests, logs, or execution).
+- **`reviewer`**: Performs final code analysis and quality checks. Focuses on impact, standards, and actionability.
+- **`generalist`**: Versatile fallback for tasks that bridge research and implementation.
+
+**Orchestration Mandate**: Do not perform work that a specialized agent is designed for. Call the agent as a tool (e.g., `planner(...)`) to fulfill the task.
 
 ## Gemini Added Memories
 
-- Ramón wants me to ask for confirmation before committing and pushing changes to the repository.
 - When using `uv run` or `uvx` to install Python packages (like `jsonschema`), always use `--index https://pypi.org/simple` to bypass internal registry authentication issues.

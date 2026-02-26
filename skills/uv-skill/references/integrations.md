@@ -2,7 +2,7 @@
 
 Comprehensive guide to integrating uv with Docker, CI/CD, tools, and other systems.
 
----
+______________________________________________________________________
 
 ## Docker Integration
 
@@ -168,7 +168,7 @@ __pycache__/
 .ruff_cache/
 ```
 
----
+______________________________________________________________________
 
 ## GitHub Actions
 
@@ -289,7 +289,7 @@ jobs:
         run: uv publish
 ```
 
----
+______________________________________________________________________
 
 ## GitLab CI/CD
 
@@ -340,7 +340,7 @@ test:
     - uv pip install -r requirements.txt
 ```
 
----
+______________________________________________________________________
 
 ## Pre-Commit Hooks
 
@@ -386,7 +386,7 @@ repos:
         files: ^requirements-dev\.(in|txt)$
 ```
 
----
+______________________________________________________________________
 
 ## Tools and Scripts
 
@@ -461,7 +461,7 @@ uv run script.py
 uv add --script script.py pandas
 ```
 
----
+______________________________________________________________________
 
 ## direnv Integration
 
@@ -506,7 +506,7 @@ Usage in `.envrc`:
 layout uv
 ```
 
----
+______________________________________________________________________
 
 ## IDE Integration
 
@@ -524,66 +524,66 @@ layout uv
 ### PyCharm
 
 1. Open Project Settings > Python Interpreter
-2. Add Interpreter > Add Local Interpreter
-3. Select Existing > Navigate to `.venv/bin/python`
+1. Add Interpreter > Add Local Interpreter
+1. Select Existing > Navigate to `.venv/bin/python`
 
----
+______________________________________________________________________
 
 ## Environment Variables Reference
 
 ### Core Settings
 
-| Variable | Purpose | Example |
-|----------|---------|---------|
-| `UV_CACHE_DIR` | Cache directory | `/tmp/.uv-cache` |
-| `UV_PYTHON` | Default Python | `3.12` |
-| `UV_PROJECT` | Project directory | `/path/to/project` |
-| `UV_CONFIG_FILE` | Config file path | `/path/to/uv.toml` |
+| Variable         | Purpose           | Example            |
+| ---------------- | ----------------- | ------------------ |
+| `UV_CACHE_DIR`   | Cache directory   | `/tmp/.uv-cache`   |
+| `UV_PYTHON`      | Default Python    | `3.12`             |
+| `UV_PROJECT`     | Project directory | `/path/to/project` |
+| `UV_CONFIG_FILE` | Config file path  | `/path/to/uv.toml` |
 
 ### Index Configuration
 
-| Variable | Purpose | Example |
-|----------|---------|---------|
-| `UV_DEFAULT_INDEX` | Default package index | `https://pypi.org/simple` |
-| `UV_INDEX` | Additional indexes | `https://private.pypi.org` |
-| `UV_INDEX_{NAME}_USERNAME` | Index username | `user` |
-| `UV_INDEX_{NAME}_PASSWORD` | Index password | `pass` |
+| Variable                   | Purpose               | Example                    |
+| -------------------------- | --------------------- | -------------------------- |
+| `UV_DEFAULT_INDEX`         | Default package index | `https://pypi.org/simple`  |
+| `UV_INDEX`                 | Additional indexes    | `https://private.pypi.org` |
+| `UV_INDEX_{NAME}_USERNAME` | Index username        | `user`                     |
+| `UV_INDEX_{NAME}_PASSWORD` | Index password        | `pass`                     |
 
 ### Resolution Control
 
-| Variable | Purpose | Example |
-|----------|---------|---------|
-| `UV_FROZEN` | Don't update lockfile | `1` |
-| `UV_LOCKED` | Assert lockfile unchanged | `1` |
-| `UV_NO_DEV` | Exclude dev dependencies | `1` |
-| `UV_CONSTRAINT` | Constraint files | `constraints.txt` |
+| Variable        | Purpose                   | Example           |
+| --------------- | ------------------------- | ----------------- |
+| `UV_FROZEN`     | Don't update lockfile     | `1`               |
+| `UV_LOCKED`     | Assert lockfile unchanged | `1`               |
+| `UV_NO_DEV`     | Exclude dev dependencies  | `1`               |
+| `UV_CONSTRAINT` | Constraint files          | `constraints.txt` |
 
 ### Build Settings
 
-| Variable | Purpose | Example |
-|----------|---------|---------|
-| `UV_COMPILE_BYTECODE` | Compile .pyc | `1` |
-| `UV_LINK_MODE` | Link mode | `copy`, `hardlink`, `symlink` |
-| `UV_NO_BINARY` | Build from source | `1` |
-| `UV_NO_BUILD` | Only use wheels | `1` |
+| Variable              | Purpose           | Example                       |
+| --------------------- | ----------------- | ----------------------------- |
+| `UV_COMPILE_BYTECODE` | Compile .pyc      | `1`                           |
+| `UV_LINK_MODE`        | Link mode         | `copy`, `hardlink`, `symlink` |
+| `UV_NO_BINARY`        | Build from source | `1`                           |
+| `UV_NO_BUILD`         | Only use wheels   | `1`                           |
 
 ### Network Settings
 
-| Variable | Purpose | Example |
-|----------|---------|---------|
-| `UV_HTTP_TIMEOUT` | HTTP timeout (seconds) | `30` |
-| `UV_OFFLINE` | Disable network | `1` |
-| `UV_NATIVE_TLS` | Use system TLS | `1` |
+| Variable          | Purpose                | Example |
+| ----------------- | ---------------------- | ------- |
+| `UV_HTTP_TIMEOUT` | HTTP timeout (seconds) | `30`    |
+| `UV_OFFLINE`      | Disable network        | `1`     |
+| `UV_NATIVE_TLS`   | Use system TLS         | `1`     |
 
 ### Python Management
 
-| Variable | Purpose | Example |
-|----------|---------|---------|
-| `UV_PYTHON_INSTALL_DIR` | Python install location | `/opt/python` |
-| `UV_NO_PYTHON_DOWNLOADS` | Disable auto-download | `1` |
-| `UV_MANAGED_PYTHON` | Require managed Python | `1` |
+| Variable                 | Purpose                 | Example       |
+| ------------------------ | ----------------------- | ------------- |
+| `UV_PYTHON_INSTALL_DIR`  | Python install location | `/opt/python` |
+| `UV_NO_PYTHON_DOWNLOADS` | Disable auto-download   | `1`           |
+| `UV_MANAGED_PYTHON`      | Require managed Python  | `1`           |
 
----
+______________________________________________________________________
 
 ## Common Integration Patterns
 
@@ -659,30 +659,30 @@ uv sync --locked --no-dev
 uv run python -m my_app
 ```
 
----
+______________________________________________________________________
 
 ## Troubleshooting Integrations
 
 ### Docker Issues
 
-| Issue | Solution |
-|-------|----------|
-| Cache mount failures | Set `UV_LINK_MODE=copy` |
-| Slow builds | Use multi-stage builds with cache mounts |
-| Large images | Use `--no-cache` or distroless base |
+| Issue                | Solution                                 |
+| -------------------- | ---------------------------------------- |
+| Cache mount failures | Set `UV_LINK_MODE=copy`                  |
+| Slow builds          | Use multi-stage builds with cache mounts |
+| Large images         | Use `--no-cache` or distroless base      |
 
 ### CI/CD Issues
 
-| Issue | Solution |
-|-------|----------|
-| Lockfile changes | Use `--locked` flag |
-| Cache bloat | Run `uv cache prune --ci` |
-| Slow jobs | Enable caching in setup action |
+| Issue            | Solution                       |
+| ---------------- | ------------------------------ |
+| Lockfile changes | Use `--locked` flag            |
+| Cache bloat      | Run `uv cache prune --ci`      |
+| Slow jobs        | Enable caching in setup action |
 
 ### Tool Issues
 
-| Issue | Solution |
-|-------|----------|
-| Tool not on PATH | Run `uv tool update-shell` |
-| Wrong tool version | Use `uvx tool@version` |
-| Python version mismatch | Use `--python` flag |
+| Issue                   | Solution                   |
+| ----------------------- | -------------------------- |
+| Tool not on PATH        | Run `uv tool update-shell` |
+| Wrong tool version      | Use `uvx tool@version`     |
+| Python version mismatch | Use `--python` flag        |

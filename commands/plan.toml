@@ -1,6 +1,0 @@
-description = "Produces a plan to solve a larger problem, step by step."
-prompt = """
-Delegate the strategic planning task to the 'planner' agent.
-Objective: Create a detailed, step-by-step implementation plan for: {{args}}
-The planner must use 'write_todos' to record the plan after analysis and reasoning.
-"""

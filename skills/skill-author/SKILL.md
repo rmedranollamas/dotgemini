@@ -74,8 +74,8 @@ calls have error risk.
 
 ### CLI Optimizations
 
--   **Quiet Mode**: When using CLI binaries, always use silent/quiet flags (e.g., `npm test --silent` or `make run -s`) to save context tokens.
--   **JSON I/O**: Design internal tools to write and accept JSON.
+- **Quiet Mode**: When using CLI binaries, always use silent/quiet flags (e.g., `npm test --silent` or `make run -s`) to save context tokens.
+- **JSON I/O**: Design internal tools to write and accept JSON.
 
 ## TDD for Skills (The Iron Law)
 
@@ -83,11 +83,11 @@ calls have error risk.
 NO SKILL WITHOUT A FAILING TEST FIRST
 ```
 
-1.  **RED**: Run a pressure scenario with a subagent WITHOUT the skill. Document
-    the exact rationalizations and failures.
-2.  **GREEN**: Write the minimal skill addressing those specific violations. Run
-    scenario WITH skill; agent must now comply.
-3.  **REFACTOR**: Find new loopholes, add explicit counters, and re-verify.
+1. **RED**: Run a pressure scenario with a subagent WITHOUT the skill. Document
+   the exact rationalizations and failures.
+1. **GREEN**: Write the minimal skill addressing those specific violations. Run
+   scenario WITH skill; agent must now comply.
+1. **REFACTOR**: Find new loopholes, add explicit counters, and re-verify.
 
 ## Structure & Polish
 
@@ -106,10 +106,10 @@ progress (e.g., using `write_todos`).
 
 ### Polishing Skills
 
--   **Divide as Needed**: Split skills when the `SKILL.md` body exceeds ~500
-    lines.
--   **Fewer, Comprehensive Skills**: Prefer fewer, richer skills over thousands
-    of micro-skills. Aim for a "dozen core skills" per team.
+- **Divide as Needed**: Split skills when the `SKILL.md` body exceeds ~500
+  lines.
+- **Fewer, Comprehensive Skills**: Prefer fewer, richer skills over thousands
+  of micro-skills. Aim for a "dozen core skills" per team.
 
 ## Creating Context Files (GEMINI.md / AGENTS.md)
 
@@ -119,27 +119,27 @@ One-liner commands for linting/testing single files by path.
 
 ### Gemini CLI Technical Tips
 
--   **Modular Imports**: Use `@file.md` to import documentation without bloating
-    context.
--   **Hierarchical Order**: Global (`~/.gemini/`) -> Project Root ->
-    Sub-directory.
--   **Chain-of-Thought**: Require Gemini to provide a plan before modifying
-    code.
--   **Gemini 3 Prompting Guide**: Use [references/gemini-3-prompting-guide.md](references/gemini-3-prompting-guide.md)
-    for advanced reasoning, planning, and instruction following best practices.
+- **Modular Imports**: Use `@file.md` to import documentation without bloating
+  context.
+- **Hierarchical Order**: Global (`~/.gemini/`) -> Project Root ->
+  Sub-directory.
+- **Chain-of-Thought**: Require Gemini to provide a plan before modifying
+  code.
+- **Gemini 3 Prompting Guide**: Use [references/gemini-3-prompting-guide.md](references/gemini-3-prompting-guide.md)
+  for advanced reasoning, planning, and instruction following best practices.
 
 ## Search Optimization (CSO)
 
--   **Keyword Coverage**: Include error messages, synonyms, and tool names.
--   **Token Efficiency**: Target <200 words for frequently-loaded skills, <500
-    for others.
--   **Cross-Referencing**: Use exact skill names instead of paths.
+- **Keyword Coverage**: Include error messages, synonyms, and tool names.
+- **Token Efficiency**: Target \<200 words for frequently-loaded skills, \<500
+  for others.
+- **Cross-Referencing**: Use exact skill names instead of paths.
 
 ## Red Flags (STOP and check for skills)
 
--   "This is just a simple question" (Questions are tasks)
--   "I'll just do this one thing first" (Check BEFORE doing anything)
--   "I know what that means" (Knowing the concept ≠ using the skill)
+- "This is just a simple question" (Questions are tasks)
+- "I'll just do this one thing first" (Check BEFORE doing anything)
+- "I know what that means" (Knowing the concept ≠ using the skill)
 
 **Use flowcharts ONLY for:** - Non-obvious decision points - Process loops where
 you might stop too early - "When to use A vs B" decisions
@@ -152,13 +152,13 @@ without semantic meaning (step1, helper2)
 
 ## Boundaries (ALWAYS/NEVER)
 
--   **ALWAYS** follow the RED-GREEN-REFACTOR cycle.
+- **ALWAYS** follow the RED-GREEN-REFACTOR cycle.
 
--   **NEVER** use folded block scalars (`>`) in descriptions.
+- **NEVER** use folded block scalars (`>`) in descriptions.
 
--   **NEVER** add comments inside the frontmatter.
+- **NEVER** add comments inside the frontmatter.
 
--   **NEVER** summarize the workflow in the description.
+- **NEVER** summarize the workflow in the description.
 
--   **WARNING**: `mdformat` can be destructive to fenced code blocks and complex
-    lists; verify formatting manually if it fails.
+- **WARNING**: `mdformat` can be destructive to fenced code blocks and complex
+  lists; verify formatting manually if it fails.

@@ -11,7 +11,7 @@ uv provides integrated Python version management:
 - Version pinning per project or globally
 - Support for CPython, PyPy, GraalPy, and Pyodide
 
----
+______________________________________________________________________
 
 ## Installing Python
 
@@ -66,7 +66,7 @@ uv python install --reinstall
 uv python install --preview
 ```
 
----
+______________________________________________________________________
 
 ## Listing Python Versions
 
@@ -104,7 +104,7 @@ cpython-3.11.10-macos-aarch64-none    # installed
 pypy-3.10.14-macos-aarch64-none       # available
 ```
 
----
+______________________________________________________________________
 
 ## Version Pinning
 
@@ -151,7 +151,7 @@ For multiple versions (`.python-versions`):
 requires-python = ">=3.11"
 ```
 
----
+______________________________________________________________________
 
 ## Finding Python
 
@@ -179,10 +179,10 @@ uv python find --no-project
 ### Discovery Order
 
 1. Managed Python installations (`UV_PYTHON_INSTALL_DIR`)
-2. `PATH` executables (`python`, `python3`, `python3.x`)
-3. Windows registry / Microsoft Store (Windows only)
+1. `PATH` executables (`python`, `python3`, `python3.x`)
+1. Windows registry / Microsoft Store (Windows only)
 
----
+______________________________________________________________________
 
 ## Version Selection
 
@@ -205,27 +205,27 @@ export UV_PYTHON=3.12
 ### Selection Priority
 
 1. `--python` command-line argument
-2. `UV_PYTHON` environment variable
-3. `.python-version` file (searches up directory tree)
-4. `requires-python` in `pyproject.toml`
-5. First available Python
+1. `UV_PYTHON` environment variable
+1. `.python-version` file (searches up directory tree)
+1. `requires-python` in `pyproject.toml`
+1. First available Python
 
----
+______________________________________________________________________
 
 ## Version Request Formats
 
 ### Standard Formats
 
-| Format | Example | Description |
-|--------|---------|-------------|
-| Major | `3` | Any 3.x version |
-| Minor | `3.12` | Any 3.12.x version |
-| Patch | `3.12.5` | Exact version |
-| Range | `>=3.11,<3.13` | Version constraint |
-| Implementation | `cpython`, `pypy` | Specific implementation |
-| Combined | `cpython@3.12` | Implementation + version |
-| Path | `/usr/bin/python3` | Executable path |
-| Name | `python3.12` | Executable name |
+| Format         | Example            | Description              |
+| -------------- | ------------------ | ------------------------ |
+| Major          | `3`                | Any 3.x version          |
+| Minor          | `3.12`             | Any 3.12.x version       |
+| Patch          | `3.12.5`           | Exact version            |
+| Range          | `>=3.11,<3.13`     | Version constraint       |
+| Implementation | `cpython`, `pypy`  | Specific implementation  |
+| Combined       | `cpython@3.12`     | Implementation + version |
+| Path           | `/usr/bin/python3` | Executable path          |
+| Name           | `python3.12`       | Executable name          |
 
 ### Special Variants
 
@@ -250,7 +250,7 @@ uv python install cpython-3.12.3-macos-aarch64-none
 uv python install cpython-3.12.3-linux-x86_64-gnu
 ```
 
----
+______________________________________________________________________
 
 ## Upgrading Python
 
@@ -273,7 +273,7 @@ Note: Only supports patch upgrades (3.12.x -> 3.12.y), not minor upgrades.
 uv python install 3.12 --preview-features python-upgrade
 ```
 
----
+______________________________________________________________________
 
 ## Uninstalling Python
 
@@ -285,19 +285,19 @@ uv python uninstall 3.11
 uv python uninstall 3.11 3.12
 ```
 
----
+______________________________________________________________________
 
 ## Configuration
 
 ### Environment Variables
 
-| Variable | Purpose |
-|----------|---------|
-| `UV_PYTHON` | Default Python version |
-| `UV_PYTHON_INSTALL_DIR` | Python installation directory |
-| `UV_PYTHON_PREFERENCE` | Version selection preference |
-| `UV_NO_PYTHON_DOWNLOADS` | Disable automatic downloads |
-| `UV_MANAGED_PYTHON` | Require uv-managed Python |
+| Variable                 | Purpose                       |
+| ------------------------ | ----------------------------- |
+| `UV_PYTHON`              | Default Python version        |
+| `UV_PYTHON_INSTALL_DIR`  | Python installation directory |
+| `UV_PYTHON_PREFERENCE`   | Version selection preference  |
+| `UV_NO_PYTHON_DOWNLOADS` | Disable automatic downloads   |
+| `UV_MANAGED_PYTHON`      | Require uv-managed Python     |
 
 ### Python Preference
 
@@ -330,7 +330,7 @@ export UV_NO_PYTHON_DOWNLOADS=1
 python-downloads = "manual"
 ```
 
----
+______________________________________________________________________
 
 ## Supported Implementations
 
@@ -356,17 +356,17 @@ python-downloads = "manual"
 - WebAssembly Python
 - Alias: `pyodide`
 
----
+______________________________________________________________________
 
 ## Platform Support
 
 ### Supported Platforms
 
-| Platform | Architecture | Notes |
-|----------|--------------|-------|
-| macOS | x86_64, aarch64 | Rosetta 2 supports x86_64 on ARM |
-| Linux | x86_64, aarch64 | glibc-based |
-| Windows | x86_64, aarch64 | WoA emulation for x86_64 |
+| Platform | Architecture    | Notes                            |
+| -------- | --------------- | -------------------------------- |
+| macOS    | x86_64, aarch64 | Rosetta 2 supports x86_64 on ARM |
+| Linux    | x86_64, aarch64 | glibc-based                      |
+| Windows  | x86_64, aarch64 | WoA emulation for x86_64         |
 
 ### Transparent Emulation
 
@@ -380,7 +380,7 @@ On Windows (ARM) with WoA:
 - x86_64 binaries work via emulation
 - Same architectural consistency requirement
 
----
+______________________________________________________________________
 
 ## Windows Integration
 
@@ -397,7 +397,7 @@ uv automatically registers managed Python in Windows registry (PEP 514):
 py -V:Astral/CPython3.13.1
 ```
 
----
+______________________________________________________________________
 
 ## Common Workflows
 
@@ -454,7 +454,7 @@ steps:
       python-version: ${{ matrix.python-version }}
 ```
 
----
+______________________________________________________________________
 
 ## Troubleshooting
 

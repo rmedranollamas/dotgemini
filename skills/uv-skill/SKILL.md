@@ -1,7 +1,7 @@
 ---
 name: uv-skill
 description: Guide for using uv - an extremely fast Python package and project manager written in Rust. Use when installing Python, managing virtual environments, adding dependencies, running scripts, building packages, or working with pyproject.toml. Replaces pip, pip-tools, pipx, poetry, pyenv, twine, and virtualenv.
-uv-version: ">=0.5.x"
+uv-version: '>=0.5.x'
 updated: 2025-01-15
 ---
 
@@ -31,24 +31,24 @@ uv is a single tool that replaces:
 
 ## Quick Reference
 
-| Task | Command |
-|------|---------|
-| New project | `uv init` |
-| New library | `uv init --lib` |
-| Add package | `uv add <pkg>` |
-| Add dev dependency | `uv add --dev <pkg>` |
-| Remove package | `uv remove <pkg>` |
-| Install all deps | `uv sync` |
-| Install (CI/prod) | `uv sync --locked` |
-| Run command | `uv run <cmd>` |
-| Run tool (no install) | `uvx <tool>` |
-| Install Python | `uv python install 3.12` |
-| Pin Python version | `uv python pin 3.12` |
-| Update all deps | `uv lock --upgrade` |
-| Update one package | `uv lock --upgrade-package <pkg>` |
-| Show dep tree | `uv tree` |
-| Build package | `uv build` |
-| Publish to PyPI | `uv publish` |
+| Task                  | Command                           |
+| --------------------- | --------------------------------- |
+| New project           | `uv init`                         |
+| New library           | `uv init --lib`                   |
+| Add package           | `uv add <pkg>`                    |
+| Add dev dependency    | `uv add --dev <pkg>`              |
+| Remove package        | `uv remove <pkg>`                 |
+| Install all deps      | `uv sync`                         |
+| Install (CI/prod)     | `uv sync --locked`                |
+| Run command           | `uv run <cmd>`                    |
+| Run tool (no install) | `uvx <tool>`                      |
+| Install Python        | `uv python install 3.12`          |
+| Pin Python version    | `uv python pin 3.12`              |
+| Update all deps       | `uv lock --upgrade`               |
+| Update one package    | `uv lock --upgrade-package <pkg>` |
+| Show dep tree         | `uv tree`                         |
+| Build package         | `uv build`                        |
+| Publish to PyPI       | `uv publish`                      |
 
 ## Quick Start
 
@@ -339,16 +339,16 @@ explicit = true
 
 ### Key Environment Variables
 
-| Variable | Purpose |
-|----------|---------|
-| `UV_CACHE_DIR` | Cache directory location |
-| `UV_PYTHON` | Default Python version |
-| `UV_INDEX_URL` | Default package index |
-| `UV_NO_CACHE` | Disable caching |
-| `UV_FROZEN` | Use lockfile without updating |
-| `UV_LOCKED` | Assert lockfile unchanged |
-| `UV_COMPILE_BYTECODE` | Compile to .pyc files |
-| `UV_LINK_MODE` | Package linking mode (copy, hardlink, symlink) |
+| Variable              | Purpose                                        |
+| --------------------- | ---------------------------------------------- |
+| `UV_CACHE_DIR`        | Cache directory location                       |
+| `UV_PYTHON`           | Default Python version                         |
+| `UV_INDEX_URL`        | Default package index                          |
+| `UV_NO_CACHE`         | Disable caching                                |
+| `UV_FROZEN`           | Use lockfile without updating                  |
+| `UV_LOCKED`           | Assert lockfile unchanged                      |
+| `UV_COMPILE_BYTECODE` | Compile to .pyc files                          |
+| `UV_LINK_MODE`        | Package linking mode (copy, hardlink, symlink) |
 
 ## Common Workflows
 
@@ -503,16 +503,16 @@ dev = ["pytest>=8.0"]
 
 **Command equivalents:**
 
-| Poetry | uv |
-|--------|-----|
-| `poetry install` | `uv sync` |
-| `poetry add requests` | `uv add requests` |
-| `poetry add -D pytest` | `uv add --dev pytest` |
-| `poetry remove requests` | `uv remove requests` |
-| `poetry run pytest` | `uv run pytest` |
-| `poetry lock` | `uv lock` |
-| `poetry build` | `uv build` |
-| `poetry publish` | `uv publish` |
+| Poetry                   | uv                    |
+| ------------------------ | --------------------- |
+| `poetry install`         | `uv sync`             |
+| `poetry add requests`    | `uv add requests`     |
+| `poetry add -D pytest`   | `uv add --dev pytest` |
+| `poetry remove requests` | `uv remove requests`  |
+| `poetry run pytest`      | `uv run pytest`       |
+| `poetry lock`            | `uv lock`             |
+| `poetry build`           | `uv build`            |
+| `poetry publish`         | `uv publish`          |
 
 ### From Pipenv
 
@@ -532,14 +532,14 @@ rm Pipfile Pipfile.lock
 
 **Command equivalents:**
 
-| Pipenv | uv |
-|--------|-----|
-| `pipenv install` | `uv sync` |
-| `pipenv install requests` | `uv add requests` |
-| `pipenv install --dev pytest` | `uv add --dev pytest` |
-| `pipenv run pytest` | `uv run pytest` |
-| `pipenv lock` | `uv lock` |
-| `pipenv shell` | `source .venv/bin/activate` (or use `uv run`) |
+| Pipenv                        | uv                                            |
+| ----------------------------- | --------------------------------------------- |
+| `pipenv install`              | `uv sync`                                     |
+| `pipenv install requests`     | `uv add requests`                             |
+| `pipenv install --dev pytest` | `uv add --dev pytest`                         |
+| `pipenv run pytest`           | `uv run pytest`                               |
+| `pipenv lock`                 | `uv lock`                                     |
+| `pipenv shell`                | `source .venv/bin/activate` (or use `uv run`) |
 
 ### From pyenv (Python version management only)
 
@@ -669,16 +669,16 @@ uv sync --locked
 
 ### Common Issues
 
-| Issue | Cause | Solution |
-|-------|-------|----------|
-| `No pyproject.toml` | Wrong directory | `cd` to root or `uv init` |
-| Package not found | Wrong index/typo | Check name, try `--index` |
-| Lockfile outdated | pyproject changed | Run `uv lock` |
-| `Resolver conflict` | Version conflicts | Try `uv lock --upgrade` |
-| Python mismatch | Not installed | `uv python install 3.12` |
-| Build failures | Missing deps | Try `--no-build-isolation` |
-| Hash mismatch | Corrupted cache | `uv cache clean` |
-| Slow first run | Cold cache | Normal, uses cache after |
+| Issue               | Cause             | Solution                   |
+| ------------------- | ----------------- | -------------------------- |
+| `No pyproject.toml` | Wrong directory   | `cd` to root or `uv init`  |
+| Package not found   | Wrong index/typo  | Check name, try `--index`  |
+| Lockfile outdated   | pyproject changed | Run `uv lock`              |
+| `Resolver conflict` | Version conflicts | Try `uv lock --upgrade`    |
+| Python mismatch     | Not installed     | `uv python install 3.12`   |
+| Build failures      | Missing deps      | Try `--no-build-isolation` |
+| Hash mismatch       | Corrupted cache   | `uv cache clean`           |
+| Slow first run      | Cold cache        | Normal, uses cache after   |
 
 ### Debug Commands
 

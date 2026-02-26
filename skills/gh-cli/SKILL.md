@@ -178,12 +178,12 @@ gh pr list --state merged --json headRefName,mergedAt
 ## Best Practices
 
 1. **Always check auth status first**: Run `gh auth status` before operations.
-2. **Push before PR**: Ensure the current branch is pushed (`git push -u origin HEAD`) before running `gh pr create`.
-3. **Use --fill**: Prefer `gh pr create --fill` to automatically use commit titles and bodies, which avoids shell escaping issues.
-4. **Non-interactive mode**: Always provide enough flags (e.g., `--title`, `--body`, or `--fill`) to avoid interactive prompts that hang in the CLI.
-5. **Replace Placeholders**: Always replace placeholders like `:owner`, `:repo`, `123`, or `branch-name` with actual values before executing. Use `gh repo view --json owner,name` to find the current repository's details.
-6. **Use structured output**: Prefer `--json` when parsing results programmatically.
-7. **Check command success**: Verify exit codes and output before proceeding.
+1. **Push before PR**: Ensure the current branch is pushed (`git push -u origin HEAD`) before running `gh pr create`.
+1. **Use --fill**: Prefer `gh pr create --fill` to automatically use commit titles and bodies, which avoids shell escaping issues.
+1. **Non-interactive mode**: Always provide enough flags (e.g., `--title`, `--body`, or `--fill`) to avoid interactive prompts that hang in the CLI.
+1. **Replace Placeholders**: Always replace placeholders like `:owner`, `:repo`, `123`, or `branch-name` with actual values before executing. Use `gh repo view --json owner,name` to find the current repository's details.
+1. **Use structured output**: Prefer `--json` when parsing results programmatically.
+1. **Check command success**: Verify exit codes and output before proceeding.
 
 ## Common Workflows
 
@@ -246,4 +246,3 @@ fi
 - Official docs: https://cli.github.com/manual/
 - All commands: `gh help`
 - Command-specific help: `gh <command> --help`
-

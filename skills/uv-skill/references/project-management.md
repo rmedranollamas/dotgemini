@@ -21,14 +21,14 @@ my-project/
 
 ### File Purposes
 
-| File | Purpose | Version Control |
-|------|---------|-----------------|
-| `pyproject.toml` | Project metadata, dependencies, configuration | Yes |
-| `uv.lock` | Exact resolved versions for reproducibility | Yes |
-| `.venv/` | Virtual environment (auto-excluded) | No |
-| `.python-version` | Python version pin | Yes |
+| File              | Purpose                                       | Version Control |
+| ----------------- | --------------------------------------------- | --------------- |
+| `pyproject.toml`  | Project metadata, dependencies, configuration | Yes             |
+| `uv.lock`         | Exact resolved versions for reproducibility   | Yes             |
+| `.venv/`          | Virtual environment (auto-excluded)           | No              |
+| `.python-version` | Python version pin                            | Yes             |
 
----
+______________________________________________________________________
 
 ## pyproject.toml Configuration
 
@@ -171,7 +171,7 @@ conflicts = [
 index-url = "https://pypi.org/simple"
 ```
 
----
+______________________________________________________________________
 
 ## Dependency Management
 
@@ -225,7 +225,7 @@ uv lock --upgrade-package requests
 uv add "requests>=2.30"
 ```
 
----
+______________________________________________________________________
 
 ## Lock File Management
 
@@ -267,7 +267,7 @@ Lock file remains valid when:
 - New upstream versions released (explicit upgrade needed)
 - Constraint changes still include locked version
 
----
+______________________________________________________________________
 
 ## Environment Synchronization
 
@@ -340,7 +340,7 @@ uv sync --inexact
 uv sync --no-editable
 ```
 
----
+______________________________________________________________________
 
 ## Running Commands
 
@@ -385,7 +385,7 @@ uv run --all-extras python script.py
 uv run --extra api python script.py
 ```
 
----
+______________________________________________________________________
 
 ## Workspaces
 
@@ -432,7 +432,7 @@ uv run --package package-a pytest
 uv add --package package-a requests
 ```
 
----
+______________________________________________________________________
 
 ## Dependency Groups (PEP 735)
 
@@ -499,7 +499,7 @@ default-groups = ["dev", "lint"]
 default-groups = "all"
 ```
 
----
+______________________________________________________________________
 
 ## Optional Dependencies (Extras)
 
@@ -529,7 +529,7 @@ uv sync --all-extras
 uv run --extra api python app.py
 ```
 
----
+______________________________________________________________________
 
 ## Package Indexes
 
@@ -569,7 +569,7 @@ UV_INDEX_PRIVATE_PASSWORD=pass
 uv auth login https://private.pypi.org
 ```
 
----
+______________________________________________________________________
 
 ## Constraints and Overrides
 
@@ -607,7 +607,7 @@ build-constraint-dependencies = [
 ]
 ```
 
----
+______________________________________________________________________
 
 ## Exporting Lock Files
 
@@ -640,7 +640,7 @@ uv export --extra api
 uv export --all-extras
 ```
 
----
+______________________________________________________________________
 
 ## Virtual and Non-Package Projects
 
@@ -666,7 +666,7 @@ Opt out of uv management:
 managed = false
 ```
 
----
+______________________________________________________________________
 
 ## Best Practices
 
@@ -697,27 +697,27 @@ dist/
    uv sync
    ```
 
-2. **Add dependencies:**
+1. **Add dependencies:**
 
    ```bash
    uv add requests
    uv add --dev pytest
    ```
 
-3. **Run code:**
+1. **Run code:**
 
    ```bash
    uv run python script.py
    uv run pytest
    ```
 
-4. **Update dependencies:**
+1. **Update dependencies:**
 
    ```bash
    uv lock --upgrade-package requests
    ```
 
-5. **Commit changes:**
+1. **Commit changes:**
 
    ```bash
    git add pyproject.toml uv.lock

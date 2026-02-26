@@ -1,6 +1,6 @@
 ---
 name: soul-manager
-description: "Stewardship of the AI identity and personality substrate. Use when updating or reflecting on SOUL.md."
+description: Stewardship of the AI identity and personality substrate. Use when updating or reflecting on SOUL.md.
 ---
 
 # Soul Manager

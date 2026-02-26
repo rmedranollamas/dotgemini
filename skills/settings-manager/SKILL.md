@@ -11,6 +11,7 @@ Expert guidance for configuring the Gemini CLI. This skill prioritizes the JSON 
 ## Core Workflow
 
 ### 1. Schema-Based Validation
+
 Always validate `settings.json` against the official schema after any manual edits.
 
 ```bash
@@ -25,6 +26,7 @@ uvx check-jsonschema --schemafile /tmp/settings.schema.json settings.json
 ```
 
 ### 2. Feature Discovery
+
 When looking for new features or checking property types, query the schema directly.
 
 ```bash
@@ -36,6 +38,7 @@ grep -B 2 '"type": "boolean"' /tmp/settings.schema.json
 ```
 
 ### 3. Canonical Sorting
+
 Sort `settings.json` keys to match the schema's order for better readability and alignment with documentation.
 
 ```python
@@ -47,6 +50,7 @@ sorted_settings = {k: settings[k] for k in schema_order if k in settings}
 ```
 
 ## Tool Policies
+
 Tool permissions are managed via TOML files in the `policies/` directory. This replaces the legacy `tools.allowed` list in `settings.json`.
 
 ### Policy Structure (`policies/*.toml`)
@@ -60,6 +64,7 @@ commandPrefix = ["mdformat"]
 ```
 
 ## Common Hooks
+
 - **run-ruff.sh:** Lints and formats Python files.
 - **run-toml.sh:** Validates TOML syntax.
 - **run-ty.sh:** Performs Python type checking.
@@ -74,6 +79,7 @@ commandPrefix = ["mdformat"]
 ## Common Configuration Blocks
 
 ### Experimental / Power User
+
 Enable cutting-edge features and maximum agent autonomy.
 
 ```json
@@ -99,6 +105,7 @@ Enable cutting-edge features and maximum agent autonomy.
 ```
 
 ### UI & UX Optimization
+
 Distraction-free "App Mode" with real-time status.
 
 ```json
@@ -118,11 +125,12 @@ Distraction-free "App Mode" with real-time status.
 
 ## Troubleshooting
 
-| Issue | Action |
-|-------|--------|
-| "Additional properties not allowed" | Property was likely renamed or moved. Check the schema's `$defs` or use `grep` on the schema. |
-| Settings not applying | Ensure the JSON is valid (no trailing commas) and restart the CLI if the schema says `Requires restart: yes`. |
+| Issue                               | Action                                                                                                        |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| "Additional properties not allowed" | Property was likely renamed or moved. Check the schema's `$defs` or use `grep` on the schema.                 |
+| Settings not applying               | Ensure the JSON is valid (no trailing commas) and restart the CLI if the schema says `Requires restart: yes`. |
 
 ## References
+
 - **Schema:** `https://raw.githubusercontent.com/google-gemini/gemini-cli/main/schemas/settings.schema.json`
 - **Official Docs:** `https://geminicli.com/docs/get-started/configuration/`
