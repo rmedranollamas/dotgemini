@@ -15,7 +15,8 @@
     "defaultApprovalMode": "auto_edit",
     "plan": {
       "modelRouting": true
-    }
+    },
+    "maxAttempts": 10
   },
   "ui": {
     "hideTips": true,
