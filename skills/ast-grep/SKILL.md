@@ -36,8 +36,7 @@ Clearly understand what the user wants to find. Ask clarifying questions if need
 
 Write a simple code snippet that represents what the user wants to match. Save this to a temporary file for testing.
 
-**Example:**
-If searching for "async functions that use await", create a test file:
+**Example:** If searching for "async functions that use await", create a test file:
 
 ```javascript
 // test_example.js

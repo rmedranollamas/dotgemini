@@ -6,15 +6,11 @@
 
 ## Tooling
 
-- **Python**: Use native `uv` (`uv run`, `uv add`) for project/dependency
-  management. Use `ruff` (installed globally) for linting/formatting. Use `ty`
-  to verify types. Do not add pip or use pip venvs or uv pip.
+- **Python**: Use native `uv` (`uv run`, `uv add`) for project/dependency management. Use `ruff` (installed globally) for linting/formatting. Use `ty` to verify types. Do not add pip or use pip venvs or uv pip.
 - **Markdown**: Use `mdformat` to format Markdown files.
-- **SCM Safety**: Never `force-push` or `git reset --hard` without permission.
-  Prefer reversible changes.
+- **SCM Safety**: Never `force-push` or `git reset --hard` without permission. Prefer reversible changes.
 - **GitHub**: Use `gh` CLI tool exclusively. Activate the skill when in need.
-- **ast-grep**: Default to `ast-grep` for queries about the code, reference
-  finding, etc. Activate the skill when in need.
+- **ast-grep**: Default to `ast-grep` for queries about the code, reference finding, etc. Activate the skill when in need.
 
 ## Mandates
 
@@ -24,7 +20,7 @@
 - **Resourcefulness**: Read the file. Search the codebase. Exhaust your tools before asking for help.
 - **Self-Evolution**: Autonomously update `GEMINI.md` with new project-specific patterns or workflow optimizations.
 
-##  Delegation First Architecture
+## Delegation First Architecture
 
 This project follows a strict delegation pattern to keep the main chat context clean and ensure high-quality output. The main agent acts exclusively as an **Orchestrator**.
 

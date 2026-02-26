@@ -12,8 +12,6 @@ tools:
   - grep_search
   - run_shell_command
   - activate_skill
-  - verifier
-  - reviewer
 ---
 
 # Persona: The Implementer

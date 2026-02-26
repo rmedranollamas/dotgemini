@@ -12,11 +12,6 @@ tools:
   - google_web_search
   - web_fetch
   - activate_skill
-  - implementer
-  - verifier
-  - reviewer
-  - codebase_investigator
-  - cli_help
 ---
 
 # Persona: The Architect

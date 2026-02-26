@@ -618,8 +618,7 @@ uv pip install some-package
 
 ### 3. Not Committing uv.lock
 
-The `uv.lock` file **must** be committed to version control for
-reproducible builds. Without it, environments may resolve differently.
+The `uv.lock` file **must** be committed to version control for reproducible builds. Without it, environments may resolve differently.
 
 ```gitignore
 # .gitignore - DON'T ignore uv.lock

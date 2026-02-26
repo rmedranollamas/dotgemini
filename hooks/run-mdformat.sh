@@ -28,7 +28,7 @@ if [[ "$FILE_PATH" == *.md ]] && [[ "$FILE_PATH" != *agents/* ]] && [[ "$FILE_PA
     fi
 
     HASH_BEFORE=$(md5sum "$FILE_PATH" | awk '{print $1}')
-    FORMAT_OUT=$(mdformat "$FILE_PATH" 2>&1)
+    FORMAT_OUT=$(mdformat --wrap=no "$FILE_PATH" 2>&1)
     EXIT_CODE=$?
     HASH_AFTER=$(md5sum "$FILE_PATH" | awk '{print $1}')
 
