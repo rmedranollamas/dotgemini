@@ -58,7 +58,8 @@
     },
     "compressionThreshold": 0.23,
     "skipNextSpeakerCheck": false,
-    "disableLoopDetection": false
+    "disableLoopDetection": false,
+    "name": "auto-gemini-3"
   },
   "context": {
     "fileName": [
