@@ -99,11 +99,6 @@ decision = "allow"
 priority = 100
 
 [[rule]]
-toolName = "enter_plan_mode"
-decision = "allow"
-priority = 100
-
-[[rule]]
-toolName = "exit_plan_mode"
+toolName = "planner"
 decision = "allow"
 priority = 100

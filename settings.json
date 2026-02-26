@@ -12,7 +12,10 @@
       "enabled": true,
       "maxAge": "30d"
     },
-    "defaultApprovalMode": "auto_edit"
+    "defaultApprovalMode": "auto_edit",
+    "plan": {
+      "modelRouting": true
+    }
   },
   "ui": {
     "hideTips": true,
@@ -54,8 +57,7 @@
     },
     "compressionThreshold": 0.2,
     "skipNextSpeakerCheck": false,
-    "disableLoopDetection": false,
-    "name": "auto-gemini-3"
+    "disableLoopDetection": false
   },
   "context": {
     "fileName": [
@@ -65,7 +67,8 @@
     "includeDirectories": [
       "~/.gemini"
     ],
-    "loadMemoryFromIncludeDirectories": true
+    "loadMemoryFromIncludeDirectories": true,
+    "includeDirectoryTree": true
   },
   "tools": {
     "shell": {
@@ -107,7 +110,10 @@
     "extensionReloading": true,
     "jitContext": true,
     "useOSC52Paste": true,
-    "plan": true
+    "useOSC52Copy": true,
+    "plan": true,
+    "modelSteering": true,
+    "directWebFetch": true
   },
   "hooksConfig": {
     "enabled": true,

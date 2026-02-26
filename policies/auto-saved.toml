@@ -2,16 +2,19 @@
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = [ "printf" ]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = [ "docker", "timeout" ]
 
 [[rule]]
 toolName = "run_shell_command"
 decision = "allow"
 priority = 100
+allow_redirection = true
 commandPrefix = [ "docker", "sleep", "kill", "cat" ]
