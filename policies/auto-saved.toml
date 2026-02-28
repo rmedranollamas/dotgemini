@@ -4,3 +4,45 @@ decision = "allow"
 priority = 100
 allow_redirection = true
 commandPrefix = [ "printf", "timeout", "sleep", "kill" ]
+
+[[rule]]
+toolName = "run_shell_command"
+decision = "allow"
+priority = 100
+commandPrefix = [ "uv" ]
+
+[[rule]]
+toolName = "run_shell_command"
+decision = "allow"
+priority = 100
+commandPrefix = [ "gh", "chmod", "mv", "research" ]
+
+[[rule]]
+toolName = "run_shell_command"
+decision = "allow"
+priority = 100
+commandPrefix = [ "research" ]
+
+[[rule]]
+toolName = "run_shell_command"
+decision = "allow"
+priority = 100
+commandPrefix = [ "export", "research" ]
+
+[[rule]]
+toolName = "run_shell_command"
+decision = "allow"
+priority = 100
+commandPrefix = [ "ls" ]
+
+[[rule]]
+toolName = "run_shell_command"
+decision = "allow"
+priority = 100
+commandPrefix = [ "grep" ]
+
+[[rule]]
+toolName = "run_shell_command"
+decision = "allow"
+priority = 100
+commandPrefix = [ "pwd", "realpath" ]

@@ -40,5 +40,5 @@ This project follows a strict delegation pattern to keep the main chat context c
 **Orchestration Mandate**: Do not perform work that a specialized agent is designed for. Call the agent as a tool (e.g., `planner(...)`) to fulfill the task.
 
 ## Gemini Added Memories
-
 - When using `uv run` or `uvx` to install Python packages (like `jsonschema`), always use `--index https://pypi.org/simple` to bypass internal registry authentication issues.
+- The RESEARCH_GEMINI_API_KEY for the research-cli extension is 'AIzaSyAMiRZ4TpJACIryiKcCL7ootlhUgY0kVu8'. Use this whenever setting up the environment for research tasks.
