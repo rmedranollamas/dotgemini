@@ -53,10 +53,10 @@
   "model": {
     "summarizeToolOutput": {
       "run_shell_command": {
-        "tokenBudget": 20000
+        "tokenBudget": 2000
       }
     },
-    "compressionThreshold": 0.23,
+    "compressionThreshold": 0.128,
     "skipNextSpeakerCheck": false,
     "disableLoopDetection": false,
     "name": "auto-gemini-3"
@@ -78,7 +78,7 @@
       "enableInteractiveShell": true,
       "enableShellOutputEfficiency": true
     },
-    "truncateToolOutputThreshold": 20000,
+    "truncateToolOutputThreshold": 8000,
     "useRipgrep": true,
     "disableLLMCorrection": false
   },
@@ -102,8 +102,8 @@
   "experimental": {
     "toolOutputMasking": {
       "enabled": true,
-      "toolProtectionThreshold": 50000,
-      "minPrunableTokensThreshold": 30000,
+      "toolProtectionThreshold": 30000,
+      "minPrunableTokensThreshold": 10000,
       "protectLatestTurn": true
     },
     "enableAgents": true,
@@ -171,7 +171,8 @@
       "cli_help": {
         "enabled": true,
         "runConfig": {
-          "maxTimeMinutes": 5
+          "maxTurns": 50,
+          "maxTimeMinutes": 10
         }
       },
       "architect": {
