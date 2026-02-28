@@ -94,9 +94,6 @@
     },
     "environmentVariableRedaction": {
       "enabled": true
-    },
-    "auth": {
-      "selectedType": "oauth-personal"
     }
   },
   "advanced": {
@@ -119,11 +116,6 @@
     "plan": true,
     "modelSteering": true,
     "directWebFetch": true
-  },
-  "extensionConfig": {
-    "research-cli": {
-      "Gemini API Key": "AIzaSyAMiRZ4TpJACIryiKcCL7ootlhUgY0kVu8"
-    }
   },
   "hooksConfig": {
     "enabled": true,
