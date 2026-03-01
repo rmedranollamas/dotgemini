@@ -101,13 +101,6 @@ toolName = "run_shell_command"
 decision = "allow"
 priority = 100
 allow_redirection = true
-commandPrefix = [ "enter_plan_mode" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
 commandPrefix = [ "env" ]
 
 [[rule]]
@@ -326,13 +319,6 @@ decision = "allow"
 priority = 100
 allow_redirection = true
 commandPrefix = [ "research" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "rm" ]
 
 [[rule]]
 toolName = "run_shell_command"
