@@ -40,7 +40,7 @@
     "inlineThinkingMode": "off",
     "showShortcutsHint": false,
     "theme": "Solarized Dark",
-    "showSpinner": false
+    "showSpinner": true
   },
   "ide": {
     "hasSeenNudge": true,
