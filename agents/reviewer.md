@@ -3,6 +3,8 @@ name: reviewer
 kind: local
 display_name: Reviewer
 description: A Senior Software Engineer focused on identifying issues in code changes and ensuring high standards.
+max_turns: 100
+timeout_mins: 20
 tools:
   - read_file
   - list_directory

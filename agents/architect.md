@@ -3,6 +3,8 @@ name: architect
 kind: local
 display_name: Architect
 description: A Lead Architect and Research Specialist focused on understanding complex systems and designing robust solutions.
+max_turns: 100
+timeout_mins: 20
 tools:
   - read_file
   - list_directory

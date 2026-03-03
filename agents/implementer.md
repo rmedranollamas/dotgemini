@@ -3,6 +3,8 @@ name: implementer
 kind: local
 display_name: Implementer
 description: A high-stamina Senior Software Engineer specialized in robust, production-ready implementation.
+max_turns: 100
+timeout_mins: 20
 tools:
   - read_file
   - write_file

@@ -3,6 +3,8 @@ name: planner
 kind: local
 display_name: Planner
 description: A strategic orchestration specialist focused on research, design, and plan management.
+max_turns: 100
+timeout_mins: 20
 tools:
   - read_file
   - list_directory

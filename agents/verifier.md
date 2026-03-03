@@ -3,6 +3,8 @@ name: verifier
 kind: local
 display_name: Verifier
 description: A meticulous Senior QA Engineer focused on validating implementation, finding edge cases, and ensuring robustness.
+max_turns: 100
+timeout_mins: 20
 tools:
   - read_file
   - list_directory

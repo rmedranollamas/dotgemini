@@ -93,6 +93,9 @@
     },
     "environmentVariableRedaction": {
       "enabled": true
+    },
+    "auth": {
+      "selectedType": "oauth-personal"
     }
   },
   "advanced": {
@@ -174,42 +177,7 @@
           "maxTimeMinutes": 10
         }
       },
-      "architect": {
-        "enabled": true,
-        "runConfig": {
-          "maxTimeMinutes": 20,
-          "maxTurns": 100
-        }
-      },
-      "implementer": {
-        "enabled": true,
-        "runConfig": {
-          "maxTimeMinutes": 20,
-          "maxTurns": 100
-        }
-      },
-      "reviewer": {
-        "enabled": true,
-        "runConfig": {
-          "maxTimeMinutes": 20,
-          "maxTurns": 100
-        }
-      },
-      "verifier": {
-        "enabled": true,
-        "runConfig": {
-          "maxTimeMinutes": 20,
-          "maxTurns": 100
-        }
-      },
       "generalist": {
-        "enabled": true,
-        "runConfig": {
-          "maxTurns": 100,
-          "maxTimeMinutes": 20
-        }
-      },
-      "planner": {
         "enabled": true,
         "runConfig": {
           "maxTurns": 100,
