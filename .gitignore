@@ -17,5 +17,6 @@ state.json
 tmp/
 trustedFolders.json
 usage_cache.json
+usage_cache.lock
 user_id
 hooks/*.log
