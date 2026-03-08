@@ -9,13 +9,14 @@
     "retryFetchErrors": true,
     "sessionRetention": {
       "enabled": true,
-      "maxAge": "30d"
+      "maxAge": "90d"
     },
     "defaultApprovalMode": "auto_edit",
     "plan": {
       "modelRouting": true
     },
-    "maxAttempts": 10
+    "maxAttempts": 10,
+    "enablePromptCompletion": true
   },
   "ui": {
     "hideTips": true,
@@ -35,11 +36,11 @@
     "hideWindowTitle": false,
     "showHomeDirectoryWarning": false,
     "showUserIdentity": true,
-    "autoThemeSwitching": false,
+    "autoThemeSwitching": true,
     "useBackgroundColor": true,
     "inlineThinkingMode": "off",
     "showShortcutsHint": false,
-    "theme": "Solarized Dark",
+    "theme": "Default Light",
     "showSpinner": true
   },
   "ide": {
