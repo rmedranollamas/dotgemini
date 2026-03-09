@@ -3,3 +3,14 @@ toolName = "run_shell_command"
 decision = "allow"
 priority = 100
 commandPrefix = [ "uname" ]
+
+[[rule]]
+toolName = "enter_plan_mode"
+decision = "allow"
+priority = 100
+
+[[rule]]
+toolName = "run_shell_command"
+decision = "allow"
+priority = 100
+commandPrefix = [ "pytest" ]
