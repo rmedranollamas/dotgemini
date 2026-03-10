@@ -16,7 +16,7 @@
       "modelRouting": true
     },
     "maxAttempts": 10,
-    "enablePromptCompletion": true
+    "enablePromptCompletion": false
   },
   "ui": {
     "hideTips": true,
@@ -41,7 +41,7 @@
     "inlineThinkingMode": "off",
     "showShortcutsHint": false,
     "theme": "Solarized Dark",
-    "showSpinner": true
+    "showSpinner": false
   },
   "ide": {
     "hasSeenNudge": true,
@@ -70,7 +70,7 @@
       "~/.gemini"
     ],
     "loadMemoryFromIncludeDirectories": true,
-    "includeDirectoryTree": false
+    "includeDirectoryTree": true
   },
   "tools": {
     "shell": {
