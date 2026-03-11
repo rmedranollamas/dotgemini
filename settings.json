@@ -55,7 +55,7 @@
   "model": {
     "summarizeToolOutput": {
       "run_shell_command": {
-        "tokenBudget": 2000
+        "tokenBudget": 5000
       }
     },
     "compressionThreshold": 0.128,
@@ -80,7 +80,7 @@
       "enableInteractiveShell": true,
       "enableShellOutputEfficiency": true
     },
-    "truncateToolOutputThreshold": 4000,
+    "truncateToolOutputThreshold": 12000,
     "useRipgrep": true,
     "disableLLMCorrection": false
   },
@@ -108,7 +108,7 @@
   "experimental": {
     "toolOutputMasking": {
       "enabled": true,
-      "toolProtectionThreshold": 20000,
+      "toolProtectionThreshold": 32000,
       "minPrunableTokensThreshold": 5000,
       "protectLatestTurn": true
     },
