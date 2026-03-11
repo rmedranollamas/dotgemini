@@ -40,7 +40,7 @@
     "useBackgroundColor": true,
     "inlineThinkingMode": "off",
     "showShortcutsHint": false,
-    "theme": "Default",
+    "theme": "Solarized Dark",
     "showSpinner": false,
     "loadingPhrases": "witty",
     "errorVerbosity": "low"
