@@ -40,8 +40,10 @@
     "useBackgroundColor": true,
     "inlineThinkingMode": "off",
     "showShortcutsHint": false,
-    "theme": "Solarized Dark",
-    "showSpinner": false
+    "theme": "Default",
+    "showSpinner": false,
+    "loadingPhrases": "witty",
+    "errorVerbosity": "low"
   },
   "ide": {
     "hasSeenNudge": true,
@@ -97,7 +99,8 @@
     },
     "auth": {
       "selectedType": "oauth-personal"
-    }
+    },
+    "autoAddToPolicyByDefault": true
   },
   "advanced": {
     "autoConfigureMemory": true
@@ -118,7 +121,7 @@
     "useOSC52Copy": true,
     "plan": true,
     "modelSteering": true,
-    "directWebFetch": true
+    "directWebFetch": false
   },
   "hooksConfig": {
     "enabled": true,
@@ -186,5 +189,8 @@
         }
       }
     }
+  },
+  "billing": {
+    "overageStrategy": "ask"
   }
 }
