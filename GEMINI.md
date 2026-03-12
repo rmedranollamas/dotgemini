@@ -41,4 +41,3 @@ This project follows a strict delegation pattern to keep the main chat context c
 
 ## Gemini Added Memories
 - When using `uv run` or `uvx` to install Python packages (like `jsonschema`), always use `--index https://pypi.org/simple` to bypass internal registry authentication issues.
-- The RESEARCH_GEMINI_API_KEY for the research-cli extension is 'AIzaSyAMiRZ4TpJACIryiKcCL7ootlhUgY0kVu8'. Use this whenever setting up the environment for research tasks.
