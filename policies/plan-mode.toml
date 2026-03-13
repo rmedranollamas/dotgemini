@@ -1,3 +1,8 @@
+[[rule]]
+toolName = "enter_plan_mode"
+decision = "allow"
+priority = 100
+
 # Research Sub-Agents in Plan Mode
 [[rule]]
 toolName = "codebase_investigator"

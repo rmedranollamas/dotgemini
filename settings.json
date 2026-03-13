@@ -42,7 +42,7 @@
     "showShortcutsHint": false,
     "theme": "Solarized Dark",
     "showSpinner": false,
-    "loadingPhrases": "witty",
+    "loadingPhrases": "off",
     "errorVerbosity": "low"
   },
   "ide": {

@@ -3,480 +3,129 @@ toolName = "run_shell_command"
 decision = "allow"
 priority = 100
 allow_redirection = true
-commandPrefix = [ "awk" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "base64" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "cat" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "chmod" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "column" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "command" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "cp" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "curl" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "date" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "df" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "diff" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "docker" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "du" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "echo" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "env" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "export" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "file" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "find" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "free" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "gemini" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "gh" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "git" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "git", "diff" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "git", "status" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "grep" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "head" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "hostname" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "id" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "jq" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "kill" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "ls" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "lscpu" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "mdformat" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "mkdir" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "mv" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "npm" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "nprintf" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "npx" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "php" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "printf" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "ps" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "pwd" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "python" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "python3" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "realpath" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "research" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "ruff" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "sed" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "sleep" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "sort" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "sqlite3" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "stat" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "tail" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "tar" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "timeout" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "touch" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "tr" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "tree" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "ty" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "uniq" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "unzip" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "uptime" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "uv" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "uvx" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "wc" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "which" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "whoami" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "write_todos" ]
-
-[[rule]]
-toolName = "run_shell_command"
-decision = "allow"
-priority = 100
-allow_redirection = true
-commandPrefix = [ "xargs" ]
+commandPrefix = [
+  "/usr/bin/awk",
+  "/usr/bin/base64",
+  "/usr/bin/cat",
+  "/usr/bin/chmod",
+  "/usr/bin/column",
+  "/usr/bin/cp",
+  "/usr/bin/curl",
+  "/usr/bin/date",
+  "/usr/bin/df",
+  "/usr/bin/diff",
+  "/usr/bin/docker",
+  "/usr/bin/du",
+  "/usr/bin/echo",
+  "/usr/bin/env",
+  "/usr/bin/file",
+  "/usr/bin/find",
+  "/usr/bin/free",
+  "/usr/bin/gh",
+  "/usr/bin/git",
+  "/usr/bin/grep",
+  "/usr/bin/head",
+  "/usr/bin/hostname",
+  "/usr/bin/id",
+  "/usr/bin/jq",
+  "/usr/bin/kill",
+  "/usr/bin/ls",
+  "/usr/bin/lscpu",
+  "/usr/bin/mkdir",
+  "/usr/bin/mv",
+  "/usr/bin/php",
+  "/usr/bin/printf",
+  "/usr/bin/ps",
+  "/usr/bin/pwd",
+  "/usr/bin/python",
+  "/usr/bin/python3",
+  "/usr/bin/realpath",
+  "/usr/bin/sed",
+  "/usr/bin/sleep",
+  "/usr/bin/sort",
+  "/usr/bin/sqlite3",
+  "/usr/bin/stat",
+  "/usr/bin/tail",
+  "/usr/bin/tar",
+  "/usr/bin/timeout",
+  "/usr/bin/touch",
+  "/usr/bin/tr",
+  "/usr/bin/tree",
+  "/usr/bin/uname",
+  "/usr/bin/uniq",
+  "/usr/bin/unzip",
+  "/usr/bin/uptime",
+  "/usr/bin/wc",
+  "/usr/bin/which",
+  "/usr/bin/whoami",
+  "/usr/bin/xargs",
+  "awk",
+  "base64",
+  "cat",
+  "chmod",
+  "column",
+  "command",
+  "cp",
+  "curl",
+  "date",
+  "df",
+  "diff",
+  "docker",
+  "du",
+  "echo",
+  "env",
+  "export",
+  "file",
+  "find",
+  "free",
+  "gemini",
+  "gh",
+  "git",
+  "grep",
+  "head",
+  "hostname",
+  "id",
+  "jq",
+  "kill",
+  "ls",
+  "lscpu",
+  "mdformat",
+  "mkdir",
+  "mv",
+  "npm",
+  "nprintf",
+  "npx",
+  "php",
+  "printf",
+  "ps",
+  "pwd",
+  "pytest",
+  "python",
+  "python3",
+  "realpath",
+  "research",
+  "ruff",
+  "sed",
+  "sleep",
+  "sort",
+  "sqlite3",
+  "stat",
+  "tail",
+  "tar",
+  "timeout",
+  "touch",
+  "tr",
+  "tree",
+  "ty",
+  "uname",
+  "uniq",
+  "unzip",
+  "uptime",
+  "uv",
+  "uvx",
+  "wc",
+  "which",
+  "whoami",
+  "write_todos",
+  "xargs"
+]
