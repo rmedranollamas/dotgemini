@@ -1,5 +1,4 @@
 description = "Consolidate and clean up shell command policies."
 prompt = """
-Execute the policy consolidation script:
-!{python3 /usr/local/google/home/niobium/.gemini/skills/policy-manager/scripts/consolidate_policies.py}
+Activate the `policy-manager` skill and run the consolidation workflow.
 """
