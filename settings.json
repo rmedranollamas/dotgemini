@@ -23,7 +23,16 @@
     "footer": {
       "hideSandboxStatus": true,
       "hideContextPercentage": false,
-      "hideCWD": false
+      "hideCWD": false,
+      "showLabels": false,
+      "items": [
+        "workspace",
+        "git-branch",
+        "model-name",
+        "context-used",
+        "code-changes",
+        "token-count"
+      ]
     },
     "showLineNumbers": true,
     "showCitations": true,
