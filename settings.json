@@ -13,7 +13,8 @@
     },
     "defaultApprovalMode": "auto_edit",
     "plan": {
-      "modelRouting": true
+      "modelRouting": true,
+      "enabled": true
     },
     "maxAttempts": 10,
     "enablePromptCompletion": false
@@ -128,7 +129,6 @@
     "jitContext": true,
     "useOSC52Paste": true,
     "useOSC52Copy": true,
-    "plan": true,
     "modelSteering": true,
     "directWebFetch": false
   },
