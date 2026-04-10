@@ -17,7 +17,7 @@
       "enabled": true
     },
     "maxAttempts": 10,
-    "enablePromptCompletion": false
+    "topicUpdateNarration": true
   },
   "ui": {
     "hideTips": true,
@@ -41,7 +41,7 @@
     "showMemoryUsage": false,
     "useAlternateBuffer": true,
     "incrementalRendering": true,
-    "hideContextSummary": true,
+    "hideContextSummary": false,
     "showModelInfoInChat": true,
     "hideWindowTitle": false,
     "showHomeDirectoryWarning": false,
@@ -65,7 +65,7 @@
   "model": {
     "summarizeToolOutput": {
       "run_shell_command": {
-        "tokenBudget": 5000
+        "tokenBudget": 10000
       }
     },
     "compressionThreshold": 0.128,
@@ -82,15 +82,16 @@
       "~/.gemini"
     ],
     "loadMemoryFromIncludeDirectories": true,
-    "includeDirectoryTree": true
+    "includeDirectoryTree": false
   },
   "tools": {
     "shell": {
       "showColor": true,
       "enableInteractiveShell": true,
-      "enableShellOutputEfficiency": true
+      "enableShellOutputEfficiency": true,
+      "backgroundCompletionBehavior": "inject"
     },
-    "truncateToolOutputThreshold": 12000,
+    "truncateToolOutputThreshold": 10000,
     "useRipgrep": true,
     "disableLLMCorrection": false
   },
@@ -110,18 +111,28 @@
     "auth": {
       "selectedType": "oauth-personal"
     },
-    "autoAddToPolicyByDefault": true
+    "autoAddToPolicyByDefault": true,
+    "enableConseca": true
   },
   "advanced": {
     "autoConfigureMemory": true
   },
-  "experimental": {
-    "toolOutputMasking": {
-      "enabled": true,
-      "toolProtectionThreshold": 32000,
-      "minPrunableTokensThreshold": 5000,
-      "protectLatestTurn": true
+  "contextManagement": {
+    "tools": {
+      "outputMasking": {
+        "enabled": true,
+        "protectionThresholdTokens": 32000,
+        "minPrunableThresholdTokens": 5000,
+        "protectLatestTurn": true
+      }
     },
+    "historyWindow": {
+      "maxTokens": 100000,
+      "retainedTokens": 20000
+    }
+  },
+  "experimental": {
+    "memoryManager": true,
     "enableAgents": true,
     "extensionManagement": true,
     "extensionConfig": true,
@@ -130,7 +141,7 @@
     "useOSC52Paste": true,
     "useOSC52Copy": true,
     "modelSteering": true,
-    "directWebFetch": false
+    "directWebFetch": true
   },
   "hooksConfig": {
     "enabled": true,
