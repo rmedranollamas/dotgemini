@@ -112,7 +112,7 @@
       "selectedType": "oauth-personal"
     },
     "autoAddToPolicyByDefault": true,
-    "enableConseca": true
+    "enableConseca": false
   },
   "advanced": {
     "autoConfigureMemory": true
