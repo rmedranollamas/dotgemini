@@ -23,8 +23,25 @@ Regardless of the language, follow these core steps:
    - Push to main: `git push origin main`
 1. **Tagging & Release**:
    - Create and push the tag: `git tag vX.Y.Z && git push origin vX.Y.Z`
-   - **Automated Release (Preferred but can be unreliable)**: Ideally, GitHub Actions should handle this.
-   - **Manual Release (Fallback)**: If automation fails, follow the manual steps below.
+   - **CI/CD Orchestration (CRITICAL)**: If the repository has an automated "Build and Release" workflow (check `.github/workflows`), **do not** run `gh release create` manually. Let the CI create the release. Manual creation often causes "immutable release" or "tag exists" errors in CI.
+   - **Manual Release (Fallback)**: If there is no CI or if automation fails, follow the manual steps below.
+
+## CI/CD Synchronization & Immutable Releases
+
+Many production repositories enforce **Immutable Releases** (via repository rules). This means once a tag is associated with a release, it cannot be deleted, and assets cannot be added/modified after the release is published.
+
+### Prevention
+- **Verify CI Status**: Before acting, check `gh run list` to see if a release job is already in progress.
+- **Push Tags Only**: Prefer `git push origin vX.Y.Z` and wait for the CI to create the release.
+
+### Recovery from "Immutable Release" Errors
+If you manually created a release and blocked the CI, or if the CI failed and the release is locked:
+1. **Download CI Artifacts**: Use `gh run download <RUN_ID>` to get any binaries built by the failed CI job.
+2. **Version Bump**: If the tag/release is immutable, you **must** bump the version (e.g., `v1.0.0` -> `v1.0.0.1`) and start over. 
+3. **Manual Re-creation**: Create the new release and upload the downloaded artifacts in a single command:
+   ```bash
+   gh release create vX.Y.Z.1 ./dist/* --generate-notes
+   ```
 
 ## Ecosystem Specifics
 

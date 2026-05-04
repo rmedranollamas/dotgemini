@@ -1,6 +1,8 @@
 .gemini/
 acknowledgments/
 extensions/
+extension_integrity.json
+gemini-credentials.json
 gha-creds-*.json
 google_accounts.json
 history/

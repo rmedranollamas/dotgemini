@@ -17,7 +17,8 @@
       "enabled": true
     },
     "maxAttempts": 10,
-    "topicUpdateNarration": true
+    "topicUpdateNarration": true,
+    "enableNotifications": true
   },
   "ui": {
     "hideTips": true,
@@ -53,7 +54,11 @@
     "theme": "Solarized Dark",
     "showSpinner": false,
     "loadingPhrases": "off",
-    "errorVerbosity": "low"
+    "errorVerbosity": "low",
+    "escapePastedAtSymbols": true,
+    "terminalBuffer": true,
+    "dynamicWindowTitle": true,
+    "compactToolOutput": true
   },
   "ide": {
     "hasSeenNudge": true,
@@ -62,16 +67,48 @@
   "privacy": {
     "usageStatisticsEnabled": false
   },
+  "billing": {
+    "overageStrategy": "ask"
+  },
   "model": {
     "summarizeToolOutput": {
       "run_shell_command": {
-        "tokenBudget": 10000
+        "tokenBudget": 64000
       }
     },
     "compressionThreshold": 0.128,
     "skipNextSpeakerCheck": false,
     "disableLoopDetection": false,
     "name": "auto-gemini-3"
+  },
+  "agents": {
+    "overrides": {
+      "codebase_investigator": {
+        "enabled": true,
+        "runConfig": {
+          "maxTurns": 100,
+          "maxTimeMinutes": 20
+        }
+      },
+      "cli_help": {
+        "enabled": true,
+        "runConfig": {
+          "maxTurns": 50,
+          "maxTimeMinutes": 10
+        }
+      },
+      "generalist": {
+        "enabled": true,
+        "runConfig": {
+          "maxTurns": 100,
+          "maxTimeMinutes": 20
+        }
+      }
+    },
+    "browser": {
+      "blockFileUploads": true,
+      "confirmSensitiveActions": true
+    }
   },
   "context": {
     "fileName": [
@@ -82,7 +119,10 @@
       "~/.gemini"
     ],
     "loadMemoryFromIncludeDirectories": true,
-    "includeDirectoryTree": false
+    "includeDirectoryTree": false,
+    "fileFiltering": {
+      "enableFileWatcher": true
+    }
   },
   "tools": {
     "shell": {
@@ -91,14 +131,12 @@
       "enableShellOutputEfficiency": true,
       "backgroundCompletionBehavior": "inject"
     },
-    "truncateToolOutputThreshold": 10000,
+    "truncateToolOutputThreshold": 32000,
     "useRipgrep": true,
-    "disableLLMCorrection": false
+    "disableLLMCorrection": false,
+    "sandboxNetworkAccess": true
   },
   "useWriteTodos": true,
-  "skills": {
-    "enabled": true
-  },
   "security": {
     "disableYoloMode": false,
     "enablePermanentToolApproval": true,
@@ -112,36 +150,33 @@
       "selectedType": "oauth-personal"
     },
     "autoAddToPolicyByDefault": true,
-    "enableConseca": false
+    "enableConseca": false,
+    "toolSandboxing": false
   },
   "advanced": {
     "autoConfigureMemory": true
   },
-  "contextManagement": {
-    "tools": {
-      "outputMasking": {
-        "enabled": true,
-        "protectionThresholdTokens": 32000,
-        "minPrunableThresholdTokens": 5000,
-        "protectLatestTurn": true
-      }
-    },
-    "historyWindow": {
-      "maxTokens": 100000,
-      "retainedTokens": 20000
-    }
-  },
   "experimental": {
-    "memoryManager": true,
+    "memoryV2": true,
     "enableAgents": true,
     "extensionManagement": true,
     "extensionConfig": true,
+    "extensionRegistry": true,
     "extensionReloading": true,
     "jitContext": true,
     "useOSC52Paste": true,
     "useOSC52Copy": true,
     "modelSteering": true,
-    "directWebFetch": true
+    "directWebFetch": true,
+    "topicUpdateNarration": true,
+    "worktrees": true,
+    "autoMemory": true,
+    "generalistProfile": false,
+    "contextManagement": true,
+    "taskTracker": true
+  },
+  "skills": {
+    "enabled": true
   },
   "hooksConfig": {
     "enabled": true,
@@ -185,32 +220,17 @@
       }
     ]
   },
-  "agents": {
-    "overrides": {
-      "codebase_investigator": {
-        "enabled": true,
-        "runConfig": {
-          "maxTurns": 100,
-          "maxTimeMinutes": 20
-        }
-      },
-      "cli_help": {
-        "enabled": true,
-        "runConfig": {
-          "maxTurns": 50,
-          "maxTimeMinutes": 10
-        }
-      },
-      "generalist": {
-        "enabled": true,
-        "runConfig": {
-          "maxTurns": 100,
-          "maxTimeMinutes": 20
-        }
+  "contextManagement": {
+    "tools": {
+      "outputMasking": {
+        "protectionThresholdTokens": 32000,
+        "minPrunableThresholdTokens": 16000,
+        "protectLatestTurn": true
       }
+    },
+    "historyWindow": {
+      "maxTokens": 100000,
+      "retainedTokens": 32000
     }
-  },
-  "billing": {
-    "overageStrategy": "ask"
   }
 }

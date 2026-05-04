@@ -97,3 +97,9 @@ priority = 100
 toolName = "planner"
 decision = "allow"
 priority = 100
+
+[[rule]]
+toolName = "list_background_processes"
+decision = "allow"
+priority = 100
+
