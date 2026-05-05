@@ -30,9 +30,7 @@
       "items": [
         "workspace",
         "git-branch",
-        "model-name",
         "context-used",
-        "code-changes",
         "token-count"
       ]
     },
@@ -172,7 +170,7 @@
     "worktrees": true,
     "autoMemory": true,
     "generalistProfile": false,
-    "contextManagement": true,
+    "contextManagement": false,
     "taskTracker": true
   },
   "skills": {

@@ -1,5 +1,5 @@
 ---
-name: gh-release-skill
+name: gh-release
 description: 'Universal GitHub release workflow: versioning, tagging, and creating releases using the gh CLI across multiple ecosystems (Node, Python, Go, Rust). Use when cutting new software versions.'
 ---
 
