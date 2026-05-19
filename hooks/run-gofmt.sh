@@ -52,11 +52,15 @@ if [[ "$FILE_PATH" == *.go ]]; then
                     hookEventName: "AfterTool",
                     additionalContext: $a
                 }
-            }'
-    fi
+                }'
+                else
+                echo '{"decision": "allow"}'
+                fi
 
-    if [[ "$GEMINI_DEBUG_HOOKS" != "false" ]]; then
-        mkdir -p "$LOG_DIR"
-        echo "[$(date '+%Y-%m-%d %H:%M:%S')] run-gofmt.sh [Session: $SESSION_ID] $STATUS: $FILE_PATH" >> "$LOG_FILE"
-    fi
-fi
+                if [[ "$GEMINI_DEBUG_HOOKS" != "false" ]]; then
+                mkdir -p "$LOG_DIR"
+                echo "[$(date '+%Y-%m-%d %H:%M:%S')] run-gofmt.sh [Session: $SESSION_ID] $STATUS: $FILE_PATH" >> "$LOG_FILE"
+                fi
+                else
+                echo '{"decision": "allow"}'
+                fi
