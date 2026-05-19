@@ -9,7 +9,16 @@ if ! command -v jq &> /dev/null; then
 fi
 
 INPUT=$(cat)
+SESSION_ID=$(echo "$INPUT" | jq -r '.session_id // "n/a"')
 FILE_PATH=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
+
+HOOK_DIR="$(dirname "$(readlink -f "$0")")"
+if [ -n "$GEMINI_PROJECT_DIR" ]; then
+    LOG_DIR="$GEMINI_PROJECT_DIR/.gemini"
+else
+    LOG_DIR="$HOOK_DIR"
+fi
+LOG_FILE="$LOG_DIR/hooks.log"
 
 # 1. Global Ignore Patterns
 # Skip checks for directories that contain agent logic, skill docs, or session history.
@@ -65,6 +74,9 @@ elif [[ "$FILE_PATH" == *.json ]] || [[ "$FILE_PATH" == *.jsonl ]]; then
 
 elif [[ "$FILE_PATH" == *.toml ]]; then
     exec "$(dirname "$0")/run-toml.sh" <<< "$INPUT"
+
+elif [[ "$FILE_PATH" == *.yml ]] || [[ "$FILE_PATH" == *.yaml ]]; then
+    exec "$(dirname "$0")/run-yaml.sh" <<< "$INPUT"
 
 elif [[ "$FILE_PATH" == *.sh ]]; then
     exec "$(dirname "$0")/run-shell.sh" <<< "$INPUT"

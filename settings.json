@@ -191,7 +191,7 @@
             "name": "quality-gate",
             "type": "command",
             "command": "/home/pi/.gemini/hooks/quality-gate.sh",
-            "description": "Unified quality gate for all supported languages (Go, Python, JSON, TOML, Shell, Markdown).",
+            "description": "Unified quality gate for all supported languages (Go, Python, JSON, JSONL, TOML, YAML, Shell, Markdown).",
             "timeout": 10000
           }
         ]

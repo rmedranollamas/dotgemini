@@ -14,7 +14,7 @@ This repository contains my personal configurations, specialized agents, and aut
   - `quality-gate.sh`: Unified dispatcher for all supported languages.
     - **Go**: `gofmt` and `go vet`.
     - **Python**: `ruff` (lint/format) and `ty` (types).
-    - **JSON/JSONL/TOML/Shell**: Syntax validation and auto-formatting (JSON/JSONL) via `jq`, `tomllib`, and `bash -n`.
+    - **JSON/JSONL/TOML/YAML/Shell**: Syntax validation and auto-formatting (JSON/JSONL) via `jq`, `tomllib`, `pyyaml`, and `bash -n`.
     - **Markdown**: Formatting via `mdformat`.
 - **`policies/`**: Granular tool permissions.
 - **`skills/`**: Expert guidance modules for the agent.
