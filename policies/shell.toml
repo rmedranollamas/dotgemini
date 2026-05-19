@@ -81,6 +81,8 @@ commandPrefix = [
   "gemini",
   "gh",
   "git",
+  "go",
+  "gofmt",
   "grep",
   "head",
   "hostname",
