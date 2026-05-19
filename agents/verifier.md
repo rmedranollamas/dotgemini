@@ -11,6 +11,15 @@ tools:
   - glob
   - grep_search
   - run_shell_command
+  - google_web_search
+  - web_fetch
+  - update_topic
+  - tracker_create_task
+  - tracker_list_tasks
+  - tracker_update_task
+  - tracker_get_task
+  - tracker_add_dependency
+  - tracker_visualize
   - activate_skill
 ---
 

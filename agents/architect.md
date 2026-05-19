@@ -13,12 +13,17 @@ tools:
   - run_shell_command
   - enter_plan_mode
   - exit_plan_mode
-  - write_file
-  - replace
-  - ask_user
-  - save_memory
   - google_web_search
   - web_fetch
+  - write_file
+  - replace
+  - update_topic
+  - tracker_create_task
+  - tracker_list_tasks
+  - tracker_update_task
+  - tracker_get_task
+  - tracker_add_dependency
+  - tracker_visualize
   - activate_skill
 ---
 
