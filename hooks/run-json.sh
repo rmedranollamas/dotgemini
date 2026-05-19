@@ -22,8 +22,20 @@ if [[ "$FILE_PATH" == *.json ]]; then
         exit 0
     fi
 
-    OUTPUT=$(jq . "$FILE_PATH" 2>&1 > /dev/null)
-    EXIT_CODE=$?
+    HASH_BEFORE=$(md5sum "$FILE_PATH" | awk '{print $1}')
+    
+    # Use a temporary file for formatting to avoid truncation on error
+    TMP_FILE=$(mktemp)
+    if jq . "$FILE_PATH" > "$TMP_FILE" 2> /dev/null; then
+        mv "$TMP_FILE" "$FILE_PATH"
+        EXIT_CODE=0
+    else
+        OUTPUT=$(jq . "$FILE_PATH" 2>&1 > /dev/null)
+        EXIT_CODE=$?
+        rm -f "$TMP_FILE"
+    fi
+
+    HASH_AFTER=$(md5sum "$FILE_PATH" | awk '{print $1}')
 
     STATUS="SUCCESS"
     if [ $EXIT_CODE -ne 0 ]; then
@@ -33,6 +45,18 @@ if [[ "$FILE_PATH" == *.json ]]; then
             '{
                 decision: "deny",
                 reason: $r
+            }'
+    elif [ "$HASH_BEFORE" != "$HASH_AFTER" ]; then
+        STATUS="MODIFIED"
+        USER_MSG=$(printf "Auto-formatted %s." "$FILE_PATH")
+        AGENT_MSG=$(printf "NOTE: I've auto-formatted %s using jq to match project standards. Carry on." "$FILE_PATH")
+        jq -n --arg u "$USER_MSG" --arg a "$AGENT_MSG" \
+            '{
+                systemMessage: $u,
+                hookSpecificOutput: {
+                    hookEventName: "AfterTool",
+                    additionalContext: $a
+                }
             }'
     else
         echo '{"decision": "allow"}'
