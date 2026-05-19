@@ -59,6 +59,8 @@ commandPrefix = [
   "/usr/bin/which",
   "/usr/bin/whoami",
   "/usr/bin/xargs",
+  "/usr/local/go/bin/go",
+  "/usr/local/go/bin/gofmt",
   "awk",
   "base64",
   "cat",
