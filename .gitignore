@@ -22,3 +22,5 @@ usage_cache.json
 usage_cache.lock
 user_id
 hooks/*.log
+antigravity-cli/
+config/
