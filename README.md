@@ -19,6 +19,7 @@ This repository contains my personal configurations, specialized agents, and aut
 - **`policies/`**: Granular tool permissions.
 - **`skills/`**: Expert guidance modules for the agent.
   - `settings-manager`: Specialized logic for managing `settings.json` and schema validation.
+  - `hook-author`: Best practices for creating and extending quality-gate hooks.
 
 ## 🚀 Workflow
 
