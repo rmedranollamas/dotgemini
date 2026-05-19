@@ -19,6 +19,7 @@ LOG_FILE="$LOG_DIR/hooks.log"
 
 if [[ "$FILE_PATH" == *.sh ]]; then
     if [ ! -f "$FILE_PATH" ]; then
+        echo '{"decision": "allow"}'
         exit 0
     fi
 

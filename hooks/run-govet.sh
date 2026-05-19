@@ -24,6 +24,7 @@ LOG_FILE="$LOG_DIR/hooks.log"
 
 if [[ "$FILE_PATH" == *.go ]]; then
     if [ ! -f "$FILE_PATH" ]; then
+        echo '{"decision": "allow"}'
         exit 0
     fi
 
@@ -45,14 +46,14 @@ if [[ "$FILE_PATH" == *.go ]]; then
                 decision: "deny",
                 reason: $r
             }'
-            else
-            echo '{"decision": "allow"}'
-            fi
+    else
+        echo '{"decision": "allow"}'
+    fi
 
-            if [[ "$GEMINI_DEBUG_HOOKS" != "false" ]]; then
-            mkdir -p "$LOG_DIR"
-            echo "[$(date '+%Y-%m-%d %H:%M:%S')] run-govet.sh [Session: $SESSION_ID] $STATUS: $FILE_PATH" >> "$LOG_FILE"
-            fi
-            else
-            echo '{"decision": "allow"}'
-            fi
+    if [[ "$GEMINI_DEBUG_HOOKS" != "false" ]]; then
+        mkdir -p "$LOG_DIR"
+        echo "[$(date '+%Y-%m-%d %H:%M:%S')] run-govet.sh [Session: $SESSION_ID] $STATUS: $FILE_PATH" >> "$LOG_FILE"
+    fi
+else
+    echo '{"decision": "allow"}'
+fi
