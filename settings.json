@@ -188,30 +188,30 @@
         "matcher": "write_file|replace",
         "hooks": [
           {
-            "name": "md-format",
+            "name": "quality-gate",
             "type": "command",
-            "command": "$HOME/.gemini/hooks/run-mdformat.sh",
-            "description": "Markdown formatting check.",
+            "command": "/home/pi/.gemini/hooks/run-mdformat.sh",
+            "description": "Unified quality gate for Go and Markdown.",
             "timeout": 5000
           },
           {
             "name": "toml-validator",
             "type": "command",
-            "command": "$HOME/.gemini/hooks/run-toml.sh",
+            "command": "/home/pi/.gemini/hooks/run-toml.sh",
             "description": "TOML syntax validation.",
             "timeout": 5000
           },
           {
             "name": "ruff-lint",
             "type": "command",
-            "command": "$HOME/.gemini/hooks/run-ruff.sh",
+            "command": "/home/pi/.gemini/hooks/run-ruff.sh",
             "description": "Linting and formatting check.",
             "timeout": 5000
           },
           {
             "name": "ty-check",
             "type": "command",
-            "command": "$HOME/.gemini/hooks/run-ty.sh",
+            "command": "/home/pi/.gemini/hooks/run-ty.sh",
             "description": "Python type checking.",
             "timeout": 5000
           }

@@ -5,54 +5,31 @@ if ! command -v jq &> /dev/null; then
     exit 0
 fi
 
-if ! command -v mdformat &> /dev/null; then
-    echo "Warning: mdformat is not installed." >&2
-    exit 0
-fi
-
 INPUT=$(cat)
-SESSION_ID=$(echo "$INPUT" | jq -r '.session_id // "n/a"')
 FILE_PATH=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
 
-HOOK_DIR="$(dirname "$(readlink -f \"$0\")")"
-if [ -n "$GEMINI_PROJECT_DIR" ]; then
-    LOG_DIR="$GEMINI_PROJECT_DIR/.gemini"
-else
-    LOG_DIR="$HOOK_DIR"
-fi
-LOG_FILE="$LOG_DIR/hooks.log"
-
-if [[ "$FILE_PATH" == *.md ]] && [[ "$FILE_PATH" != *agents/* ]] && [[ "$FILE_PATH" != *skills/* ]]; then
-    if [ ! -f "$FILE_PATH" ]; then
+if [[ "$FILE_PATH" == *.md ]]; then
+    exec "$(dirname "$0")/run-mdformat-real.sh" <<< "$INPUT"
+elif [[ "$FILE_PATH" == *.go ]]; then
+    # 1. Run gofmt
+    FMT_RES=$("$(dirname "$0")/run-gofmt.sh" <<< "$INPUT")
+    if echo "$FMT_RES" | jq -e '.decision == "deny"' > /dev/null; then
+        echo "$FMT_RES"
         exit 0
     fi
 
-    HASH_BEFORE=$(md5sum "$FILE_PATH" | awk '{print $1}')
-    FORMAT_OUT=$(mdformat --wrap=no "$FILE_PATH" 2>&1)
-    EXIT_CODE=$?
-    HASH_AFTER=$(md5sum "$FILE_PATH" | awk '{print $1}')
-
-    STATUS="SUCCESS"
-    if [ $EXIT_CODE -ne 0 ]; then
-        STATUS="FAILED"
-        jq -n --arg out "$FORMAT_OUT" \
-          '{ \
-            decision: "deny", \
-            reason: ("mdformat failed:\n" + $out), \
-            hookSpecificOutput: { \
-              hookEventName: "AfterTool", \
-              additionalContext: ("mdformat failed:\n" + $out) \
-            } \
-          }'
-    elif [ "$HASH_BEFORE" != "$HASH_AFTER" ]; then
-        STATUS="MODIFIED"
-        MSG=$(printf "mdformat auto-formatted %s.\n\nOutput:\n%s" "$FILE_PATH" "$FORMAT_OUT")
-        jq -n --arg msg "$MSG" '{systemMessage: $msg}'
+    # 2. Run go vet
+    VET_RES=$("$(dirname "$0")/run-govet.sh" <<< "$INPUT")
+    if echo "$VET_RES" | jq -e '.decision == "deny"' > /dev/null; then
+        echo "$VET_RES"
+        exit 0
     fi
 
-    if [[ "$GEMINI_DEBUG_HOOKS" != "false" ]]; then
-        mkdir -p "$LOG_DIR"
-        echo "[$(date '+%Y-%m-%d %H:%M:%S')] run-mdformat.sh [Session: $SESSION_ID] $STATUS: $FILE_PATH" >> "$LOG_FILE"
+    # 3. Return fmt result (might contain auto-formatting notification)
+    # If FMT_RES has a systemMessage, we should return it
+    if echo "$FMT_RES" | jq -e '.systemMessage' > /dev/null; then
+        echo "$FMT_RES"
+    else
+        echo '{"decision": "allow"}'
     fi
 fi
-

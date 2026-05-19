@@ -103,3 +103,8 @@ toolName = "list_background_processes"
 decision = "allow"
 priority = 100
 
+[[rule]]
+toolName = "read_background_output"
+decision = "allow"
+priority = 100
+

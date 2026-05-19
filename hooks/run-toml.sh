@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
 
-if ! command -v jq &> /dev/null;
-    then
+if ! command -v jq &> /dev/null; then
     echo "Error: jq is not installed." >&2
     exit 0
 fi
 
-if ! command -v python3 &> /dev/null;
-    then
+if ! command -v python3 &> /dev/null; then
     echo "Warning: python3 is not installed." >&2
     exit 0
 fi
@@ -50,15 +48,12 @@ with open(path, 'rb') as f:
     STATUS="SUCCESS"
     if [ $EXIT_CODE -ne 0 ]; then
         STATUS="FAILED"
-        jq -n --arg out "$OUTPUT" \
-          '{
-            decision: "deny",
-            reason: ("TOML validation failed:\n" + $out),
-            hookSpecificOutput: {
-              hookEventName: "AfterTool",
-              additionalContext: ("TOML validation failed:\n" + $out)
-            }
-          }'
+        REASON=$(printf "SYNTAX ERROR: I can't parse %s. Fix the broken TOML structure before retrying: %s" "$FILE_PATH" "$OUTPUT")
+        jq -n --arg r "$REASON" \
+            '{
+                decision: "deny",
+                reason: $r
+            }'
     fi
 
     if [[ "$GEMINI_DEBUG_HOOKS" != "false" ]]; then
