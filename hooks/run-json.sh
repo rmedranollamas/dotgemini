@@ -17,7 +17,7 @@ else
 fi
 LOG_FILE="$LOG_DIR/hooks.log"
 
-if [[ "$FILE_PATH" == *.json ]]; then
+if [[ "$FILE_PATH" == *.json ]] || [[ "$FILE_PATH" == *.jsonl ]]; then
     if [ ! -f "$FILE_PATH" ]; then
         exit 0
     fi
@@ -26,10 +26,16 @@ if [[ "$FILE_PATH" == *.json ]]; then
     
     # Use a temporary file for formatting to avoid truncation on error
     TMP_FILE=$(mktemp)
-    if jq . "$FILE_PATH" > "$TMP_FILE" 2> /dev/null; then
+    JQ_ARGS="."
+    if [[ "$FILE_PATH" == *.jsonl ]]; then
+        JQ_ARGS="-c ."
+    fi
+
+    if jq $JQ_ARGS "$FILE_PATH" > "$TMP_FILE" 2> /dev/null; then
         mv "$TMP_FILE" "$FILE_PATH"
         EXIT_CODE=0
     else
+        # For error reporting, run again to capture message
         OUTPUT=$(jq . "$FILE_PATH" 2>&1 > /dev/null)
         EXIT_CODE=$?
         rm -f "$TMP_FILE"

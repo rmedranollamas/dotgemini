@@ -60,7 +60,7 @@ elif [[ "$FILE_PATH" == *.py ]]; then
         echo '{"decision": "allow"}'
     fi
 
-elif [[ "$FILE_PATH" == *.json ]]; then
+elif [[ "$FILE_PATH" == *.json ]] || [[ "$FILE_PATH" == *.jsonl ]]; then
     exec "$(dirname "$0")/run-json.sh" <<< "$INPUT"
 
 elif [[ "$FILE_PATH" == *.toml ]]; then
