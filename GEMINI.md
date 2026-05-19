@@ -9,6 +9,7 @@
 - **Python**: Use native `uv` (`uv run`, `uv add`) for project/dependency management. Use `ruff` (installed globally) for linting/formatting. Use `ty` to verify types. Do not add pip or use pip venvs or uv pip.
 - **Go**: Use standard `gofmt` for formatting and `go vet` for static analysis.
 - **JSON**: Use standard `jq` for syntax validation.
+- **Shell**: Use `bash -n` for syntax validation.
 - **Markdown**: Use `mdformat` to format Markdown files.
 - **SCM Safety**: Never `force-push` or `git reset --hard` without permission. Prefer reversible changes.
 - **GitHub**: Use `gh` CLI tool exclusively. Activate the skill when in need.

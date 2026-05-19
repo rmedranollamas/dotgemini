@@ -66,6 +66,9 @@ elif [[ "$FILE_PATH" == *.json ]]; then
 elif [[ "$FILE_PATH" == *.toml ]]; then
     exec "$(dirname "$0")/run-toml.sh" <<< "$INPUT"
 
+elif [[ "$FILE_PATH" == *.sh ]]; then
+    exec "$(dirname "$0")/run-shell.sh" <<< "$INPUT"
+
 else
     # Default allow for all other file types
     echo '{"decision": "allow"}'
