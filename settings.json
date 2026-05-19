@@ -190,30 +190,9 @@
           {
             "name": "quality-gate",
             "type": "command",
-            "command": "/home/pi/.gemini/hooks/run-mdformat.sh",
-            "description": "Unified quality gate for Go, JSON, and Markdown.",
-            "timeout": 5000
-          },
-          {
-            "name": "toml-validator",
-            "type": "command",
-            "command": "/home/pi/.gemini/hooks/run-toml.sh",
-            "description": "TOML syntax validation.",
-            "timeout": 5000
-          },
-          {
-            "name": "ruff-lint",
-            "type": "command",
-            "command": "/home/pi/.gemini/hooks/run-ruff.sh",
-            "description": "Linting and formatting check.",
-            "timeout": 5000
-          },
-          {
-            "name": "ty-check",
-            "type": "command",
-            "command": "/home/pi/.gemini/hooks/run-ty.sh",
-            "description": "Python type checking.",
-            "timeout": 5000
+            "command": "/home/pi/.gemini/hooks/quality-gate.sh",
+            "description": "Unified quality gate for all supported languages (Go, Python, JSON, TOML, Markdown).",
+            "timeout": 10000
           }
         ]
       }

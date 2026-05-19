@@ -11,10 +11,11 @@ This repository contains my personal configurations, specialized agents, and aut
   - `reviewer`: Focused on code quality and actionable feedback.
 - **`commands/`**: Custom one-off prompt shortcuts (`/fix`, `/plan`, `/execute`, etc.).
 - **`hooks/`**: Automated quality gates triggered on file edits.
-  - `run-ruff.sh`: Python linting and formatting.
-  - `run-toml.sh`: TOML syntax validation.
-  - `run-ty.sh`: Python type checking.
-  - `run-mdformat.sh`: Unified quality gate for Go (fmt/vet), JSON (syntax), and Markdown.
+  - `quality-gate.sh`: Unified dispatcher for all supported languages.
+    - **Go**: `gofmt` and `go vet`.
+    - **Python**: `ruff` (lint/format) and `ty` (types).
+    - **JSON/TOML**: Syntax validation via `jq` and `tomllib`.
+    - **Markdown**: Formatting via `mdformat`.
 - **`policies/`**: Granular tool permissions.
 - **`skills/`**: Expert guidance modules for the agent.
   - `settings-manager`: Specialized logic for managing `settings.json` and schema validation.
