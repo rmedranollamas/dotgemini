@@ -191,7 +191,7 @@
             "name": "quality-gate",
             "type": "command",
             "command": "/home/pi/.gemini/hooks/run-mdformat.sh",
-            "description": "Unified quality gate for Go and Markdown.",
+            "description": "Unified quality gate for Go, JSON, and Markdown.",
             "timeout": 5000
           },
           {

@@ -14,7 +14,7 @@ This repository contains my personal configurations, specialized agents, and aut
   - `run-ruff.sh`: Python linting and formatting.
   - `run-toml.sh`: TOML syntax validation.
   - `run-ty.sh`: Python type checking.
-  - `run-mdformat.sh`: Unified quality gate for Go (fmt/vet) and Markdown.
+  - `run-mdformat.sh`: Unified quality gate for Go (fmt/vet), JSON (syntax), and Markdown.
 - **`policies/`**: Granular tool permissions.
 - **`skills/`**: Expert guidance modules for the agent.
   - `settings-manager`: Specialized logic for managing `settings.json` and schema validation.

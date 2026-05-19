@@ -32,6 +32,8 @@ elif [[ "$FILE_PATH" == *.go ]]; then
     else
         echo '{"decision": "allow"}'
     fi
+elif [[ "$FILE_PATH" == *.json ]]; then
+    exec "$(dirname "$0")/run-json.sh" <<< "$INPUT"
 else
     echo '{"decision": "allow"}'
 fi
