@@ -7,6 +7,7 @@
 ## Tooling
 
 - **Python**: Use native `uv` (`uv run`, `uv add`) for project/dependency management. Use `ruff` (installed globally) for linting/formatting. Use `ty` to verify types. Do not add pip or use pip venvs or uv pip.
+- **Go**: Use standard `gofmt` for formatting and `go vet` for static analysis.
 - **Markdown**: Use `mdformat` to format Markdown files.
 - **SCM Safety**: Never `force-push` or `git reset --hard` without permission. Prefer reversible changes.
 - **GitHub**: Use `gh` CLI tool exclusively. Activate the skill when in need.
@@ -40,4 +41,5 @@ This project follows a strict delegation pattern to keep the main chat context c
 **Orchestration Mandate**: Do not perform work that a specialized agent is designed for. Call the agent as a tool (e.g., `planner(...)`) to fulfill the task.
 
 ## Gemini Added Memories
+
 - When using `uv run` or `uvx` to install Python packages (like `jsonschema`), always use `--index https://pypi.org/simple` to bypass internal registry authentication issues.
