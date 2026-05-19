@@ -21,7 +21,7 @@
     "enableNotifications": true
   },
   "ui": {
-    "hideTips": true,
+    "hideTips": false,
     "footer": {
       "hideSandboxStatus": true,
       "hideContextPercentage": false,
@@ -77,7 +77,7 @@
     "compressionThreshold": 0.128,
     "skipNextSpeakerCheck": false,
     "disableLoopDetection": false,
-    "name": "auto-gemini-3"
+    "name": "gemini-3-flash-preview"
   },
   "agents": {
     "overrides": {
@@ -125,7 +125,7 @@
   "tools": {
     "shell": {
       "showColor": true,
-      "enableInteractiveShell": true,
+      "enableInteractiveShell": false,
       "enableShellOutputEfficiency": true,
       "backgroundCompletionBehavior": "inject"
     },
@@ -155,13 +155,11 @@
     "autoConfigureMemory": true
   },
   "experimental": {
-    "memoryV2": true,
     "enableAgents": true,
     "extensionManagement": true,
     "extensionConfig": true,
     "extensionRegistry": true,
     "extensionReloading": true,
-    "jitContext": true,
     "useOSC52Paste": true,
     "useOSC52Copy": true,
     "modelSteering": true,
@@ -171,7 +169,10 @@
     "autoMemory": true,
     "generalistProfile": false,
     "contextManagement": false,
-    "taskTracker": true
+    "taskTracker": true,
+    "voice": {
+      "backend": "gemini-live"
+    }
   },
   "skills": {
     "enabled": true

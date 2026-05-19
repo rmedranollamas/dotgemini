@@ -89,7 +89,6 @@ Enable cutting-edge features and maximum agent autonomy.
     "extensionManagement": true,
     "extensionConfig": true,
     "extensionReloading": true,
-    "jitContext": true,
     "skills": true,
     "plan": true,
     "codebaseInvestigatorSettings": {
