@@ -32,4 +32,6 @@ elif [[ "$FILE_PATH" == *.go ]]; then
     else
         echo '{"decision": "allow"}'
     fi
+else
+    echo '{"decision": "allow"}'
 fi
