@@ -11,7 +11,14 @@ fi
 INPUT=$(cat)
 FILE_PATH=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
 
-# 1. Dispatch by extension
+# 1. Global Ignore Patterns
+# Skip checks for directories that contain agent logic, skill docs, or session history.
+if [[ "$FILE_PATH" == *agents/* ]] || [[ "$FILE_PATH" == *skills/* ]] || [[ "$FILE_PATH" == *history/* ]] || [[ "$FILE_PATH" == *tmp/* ]]; then
+    echo '{"decision": "allow"}'
+    exit 0
+fi
+
+# 2. Dispatch by extension
 if [[ "$FILE_PATH" == *.md ]]; then
     exec "$(dirname "$0")/run-mdformat-real.sh" <<< "$INPUT"
 

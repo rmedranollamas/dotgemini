@@ -22,7 +22,7 @@ else
 fi
 LOG_FILE="$LOG_DIR/hooks.log"
 
-if [[ "$FILE_PATH" == *.md ]] && [[ "$FILE_PATH" != *agents/* ]] && [[ "$FILE_PATH" != *skills/* ]]; then
+if [[ "$FILE_PATH" == *.md ]]; then
     if [ ! -f "$FILE_PATH" ]; then
         exit 0
     fi

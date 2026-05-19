@@ -86,6 +86,7 @@ commandPrefix = [
   "go",
   "gofmt",
   "grep",
+  "hooks/",
   "head",
   "hostname",
   "id",
