@@ -1,0 +1,22 @@
+{
+  "altScreenMode": "always",
+  "artifactReviewPolicy": "agent-decides",
+  "colorScheme": "solarized dark",
+  "editor": "emacs",
+  "enableTelemetry": false,
+  "enableTerminalSandbox": true,
+  "model": "Gemini 3.5 Flash (Medium)",
+  "notifications": true,
+  "runningLightSpeed": "off",
+  "showFeedbackSurvey": false,
+  "statusLine": {
+    "type": "",
+    "command": "",
+    "enabled": true
+  },
+  "trustedWorkspaces": [
+    "/home/pi",
+    "/home/pi/.gemini"
+  ],
+  "verbosity": "low"
+}

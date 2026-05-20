@@ -1,4 +1,16 @@
 acknowledgments/
+antigravity-cli/antigravity-oauth-token
+antigravity-cli/bin/
+antigravity-cli/brain/
+antigravity-cli/cache/
+antigravity-cli/cli.log
+antigravity-cli/conversations/
+antigravity-cli/history.jsonl
+antigravity-cli/implicit/
+antigravity-cli/last_check.timestamp
+antigravity-cli/log/
+config/.migrated
+config/projects/
 extension_integrity.json
 extensions/
 gemini-credentials.json
