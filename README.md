@@ -9,7 +9,12 @@ This repository contains my personal configurations, specialized agents, and aut
   - `implementer`: Focused on robust, production-ready implementation.
   - `verifier`: Focused on validation, edge cases, and robustness.
   - `reviewer`: Focused on code quality and actionable feedback.
-- **`commands/`**: Custom one-off prompt shortcuts (`/fix`, `/plan`, `/execute`, etc.).
+- **`commands/`**: Custom one-off prompt shortcuts.
+  - `/git/sync`: Automated git pull/push and branch cleanup.
+  - `/learn`: Extract knowledge from the current context into memory.
+  - `/policy-sync`: Consolidate and clean up shell command policies.
+  - `/skill`: Guided creation or refinement of agent skills.
+  - `/soul`: Update and refine AI soul based on recent interactions.
 - **`hooks/`**: Automated quality gates triggered on file edits.
   - `quality-gate.sh`: Unified dispatcher for all supported languages.
     - **Go**: `gofmt` and `go vet`.
@@ -18,8 +23,15 @@ This repository contains my personal configurations, specialized agents, and aut
     - **Markdown**: Formatting via `mdformat`.
 - **`policies/`**: Granular tool permissions.
 - **`skills/`**: Expert guidance modules for the agent.
-  - `settings-manager`: Specialized logic for managing `settings.json` and schema validation.
+  - `ast-grep`: Structural code search and analysis.
+  - `gh-cli`: GitHub CLI automation for repos, PRs, and issues.
+  - `gh-release`: Universal workflow for cutting software versions.
   - `hook-author`: Best practices for creating and extending quality-gate hooks.
+  - `policy-manager`: Consolidation and cleanup of shell command policies.
+  - `settings-manager`: Specialized logic for managing `settings.json` and schema validation.
+  - `skill-author`: Guide for creating new skills and agentic capabilities.
+  - `soul-manager`: Stewardship of AI identity and personality substrate.
+  - `uv-skill`: Ultra-fast Python project and dependency management via `uv`.
 
 ## 🚀 Workflow
 
