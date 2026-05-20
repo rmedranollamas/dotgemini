@@ -83,17 +83,21 @@ modes = ["plan"]
 [[rule]]
 toolName = "run_shell_command"
 commandPrefix = [
-    "git status",
-    "git diff",
-    "ls",
-    "grep",
-    "find",
+    "ast-grep",
     "cat",
-    "pwd",
-    "du",
     "df",
+    "du",
+    "find",
+    "git diff",
+    "git status",
+    "grep",
+    "jq",
+    "ls",
+    "pwd",
+    "sg",
     "stat",
-    "tree"
+    "tree",
+    "which"
 ]
 decision = "allow"
 priority = 100
