@@ -5,11 +5,11 @@ description: Use when creating, refactoring, or extending Gemini CLI quality-gat
 
 # Hook Author
 
-Guide for creating robust, unified quality-gate hooks for the Gemini CLI.
+Guide for creating robust, distributed quality-gate hooks for the Gemini CLI.
 
 ## Overview
 
-Hooks are the "immune system" of the codebase. They must be fast, safe, and return explicit JSON decisions.
+Hooks are the "immune system" of the codebase. They must be fast, safe, and return explicit JSON decisions. Each hook should be registered individually in `settings.json` to allow for granular visibility and parallel execution.
 
 ## Procedures
 
@@ -43,7 +43,10 @@ LOG_FILE="$LOG_DIR/hooks.log"
 
 # 4. Logic
 if [[ "$FILE_PATH" == *.ext ]]; then
-    if [ ! -f "$FILE_PATH" ]; then exit 0; fi
+    if [ ! -f "$FILE_PATH" ]; then
+        echo '{"decision": "allow"}'
+        exit 0
+    fi
 
     # Run tool (and handle output)
     OUTPUT=$(my-tool "$FILE_PATH" 2>&1)
@@ -70,25 +73,40 @@ else
 fi
 ```
 
-### 2. Integration into Dispatcher
+### 2. Registration in settings.json
 
-After creating the worker script, add it to `hooks/quality-gate.sh`:
+Register hooks individually using relative paths for maximum portability:
 
-1.  **Add Case**: Add an `elif` block for the new extension.
-2.  **Order Matters**: Run formatters/fixers *before* static analysis.
-3.  **Merge Messages**: If multiple tools run, prefer the one with a `systemMessage` (auto-formatting notification).
+```json
+{
+  "hooks": {
+    "AfterTool": [
+      {
+        "matcher": "write_file|replace",
+        "hooks": [
+          {
+            "name": "my-lang-hook",
+            "type": "command",
+            "command": "hooks/run-lang.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
 
 ### 3. Documentation
 
 - Add the tool to the `Tooling` section in `GEMINI.md`.
 - Add the hook to the `hooks/` list in `README.md`.
-- Update the `quality-gate` description in `settings.json`.
 
 ## Boundaries (ALWAYS/NEVER)
 
 - **ALWAYS** return a valid JSON decision (e.g., `{"decision": "allow"}`).
 - **ALWAYS** check for dependencies (`jq` is mandatory).
 - **ALWAYS** use `printf` or `jq --arg` to handle tool output safely in JSON.
+- **ALWAYS** use relative paths (e.g., `hooks/run-lang.sh`) in `settings.json`.
 - **NEVER** leave a worker script without a default "allow" for non-matching files.
 - **NEVER** mutate files without checking if they actually changed (use `md5sum`).
 - **NEVER** use `exit 1` for validation failures; use `{"decision": "deny"}`.
@@ -96,6 +114,7 @@ After creating the worker script, add it to `hooks/quality-gate.sh`:
 ## Verification
 
 Test the hook with:
+
 - A perfectly valid file.
 - A file with syntax errors.
 - A "messy" file that should be auto-formatted (if supported).

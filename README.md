@@ -16,11 +16,13 @@ This repository contains my personal configurations, specialized agents, and aut
   - `/skill`: Guided creation or refinement of agent skills.
   - `/soul`: Update and refine AI soul based on recent interactions.
 - **`hooks/`**: Automated quality gates triggered on file edits.
-  - `quality-gate.sh`: Unified dispatcher for all supported languages.
-    - **Go**: `gofmt` and `go vet`.
-    - **Python**: `ruff` (lint/format) and `ty` (types).
-    - **JSON/JSONL/TOML/YAML/Shell**: Syntax validation and auto-formatting (JSON/JSONL) via `jq`, `tomllib`, `pyyaml`, and `bash -n`.
-    - **Markdown**: Formatting via `mdformat`.
+  - `run-gofmt.sh` & `run-govet.sh`: Go formatting and static analysis.
+  - `run-ruff.sh` & `run-ty.sh`: Python linting, formatting, and type checking.
+  - `run-json.sh`: JSON/JSONL validation and auto-formatting.
+  - `run-yaml.sh`: YAML syntax validation.
+  - `run-toml.sh`: TOML syntax validation.
+  - `run-shell.sh`: Shell script syntax validation.
+  - `run-mdformat.sh`: Markdown formatting.
 - **`policies/`**: Granular tool permissions.
 - **`skills/`**: Expert guidance modules for the agent.
   - `ast-grep`: Structural code search and analysis.

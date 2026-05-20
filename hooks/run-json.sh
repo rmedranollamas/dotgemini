@@ -2,6 +2,7 @@
 
 if ! command -v jq &> /dev/null; then
     echo "Error: jq is not installed." >&2
+    echo "{}"
     exit 0
 fi
 
@@ -10,16 +11,14 @@ SESSION_ID=$(echo "$INPUT" | jq -r '.session_id // "n/a"')
 FILE_PATH=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
 
 HOOK_DIR="$(dirname "$(readlink -f "$0")")"
-if [ -n "$GEMINI_PROJECT_DIR" ]; then
-    LOG_DIR="$GEMINI_PROJECT_DIR/.gemini"
-else
-    LOG_DIR="$HOOK_DIR"
-fi
+LOG_DIR="${GEMINI_PROJECT_DIR:-$HOOK_DIR}/.gemini"
 LOG_FILE="$LOG_DIR/hooks.log"
+mkdir -p "$LOG_DIR"
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] $(basename "$0") CALLED for $FILE_PATH" >> "$LOG_FILE"
 
 if [[ "$FILE_PATH" == *.json ]] || [[ "$FILE_PATH" == *.jsonl ]]; then
     if [ ! -f "$FILE_PATH" ]; then
-        echo '{"decision": "allow"}'
+        echo '{}'
         exit 0
     fi
 
@@ -56,7 +55,7 @@ if [[ "$FILE_PATH" == *.json ]] || [[ "$FILE_PATH" == *.jsonl ]]; then
     elif [ "$HASH_BEFORE" != "$HASH_AFTER" ]; then
         STATUS="MODIFIED"
         USER_MSG=$(printf "Auto-formatted %s." "$FILE_PATH")
-        AGENT_MSG=$(printf "NOTE: I've auto-formatted %s using jq to match project standards. Carry on." "$FILE_PATH")
+        AGENT_MSG=$(printf "VERIFIED: I've auto-formatted %s using jq to match project standards. Carry on." "$FILE_PATH")
         jq -n --arg u "$USER_MSG" --arg a "$AGENT_MSG" \
             '{
                 systemMessage: $u,
@@ -66,7 +65,7 @@ if [[ "$FILE_PATH" == *.json ]] || [[ "$FILE_PATH" == *.jsonl ]]; then
                 }
             }'
     else
-        echo '{"decision": "allow"}'
+        echo '{}'
     fi
 
     if [[ "$GEMINI_DEBUG_HOOKS" != "false" ]]; then
@@ -74,5 +73,5 @@ if [[ "$FILE_PATH" == *.json ]] || [[ "$FILE_PATH" == *.jsonl ]]; then
         echo "[$(date '+%Y-%m-%d %H:%M:%S')] run-json.sh [Session: $SESSION_ID] $STATUS: $FILE_PATH" >> "$LOG_FILE"
     fi
 else
-    echo '{"decision": "allow"}'
+    echo '{}'
 fi

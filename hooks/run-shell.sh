@@ -2,6 +2,7 @@
 
 if ! command -v jq &> /dev/null; then
     echo "Error: jq is not installed." >&2
+    echo "{}"
     exit 0
 fi
 
@@ -16,10 +17,12 @@ else
     LOG_DIR="$HOOK_DIR"
 fi
 LOG_FILE="$LOG_DIR/hooks.log"
+mkdir -p "$LOG_DIR"
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] $(basename "$0") CALLED for $FILE_PATH" >> "$LOG_FILE"
 
 if [[ "$FILE_PATH" == *.sh ]]; then
     if [ ! -f "$FILE_PATH" ]; then
-        echo '{"decision": "allow"}'
+        echo '{}'
         exit 0
     fi
 
@@ -37,7 +40,7 @@ if [[ "$FILE_PATH" == *.sh ]]; then
                 reason: $r
             }'
     else
-        echo '{"decision": "allow"}'
+        echo '{}'
     fi
 
     if [[ "$GEMINI_DEBUG_HOOKS" != "false" ]]; then
@@ -45,5 +48,5 @@ if [[ "$FILE_PATH" == *.sh ]]; then
         echo "[$(date '+%Y-%m-%d %H:%M:%S')] run-shell.sh [Session: $SESSION_ID] $STATUS: $FILE_PATH" >> "$LOG_FILE"
     fi
 else
-    echo '{"decision": "allow"}'
+    echo '{}'
 fi

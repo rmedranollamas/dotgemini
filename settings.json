@@ -77,7 +77,7 @@
     "compressionThreshold": 0.128,
     "skipNextSpeakerCheck": false,
     "disableLoopDetection": false,
-    "name": "gemini-3-flash-preview"
+    "name": "auto-gemini-3"
   },
   "agents": {
     "overrides": {
@@ -145,7 +145,7 @@
       "enabled": true
     },
     "auth": {
-      "selectedType": "oauth-personal"
+      "selectedType": "gemini-api-key"
     },
     "autoAddToPolicyByDefault": true,
     "enableConseca": false,
@@ -188,11 +188,67 @@
         "matcher": "write_file|replace",
         "hooks": [
           {
-            "name": "quality-gate",
+            "name": "gofmt",
             "type": "command",
-            "command": "/home/pi/.gemini/hooks/quality-gate.sh",
-            "description": "Unified quality gate for all supported languages (Go, Python, JSON, JSONL, TOML, YAML, Shell, Markdown).",
-            "timeout": 10000
+            "command": "/home/pi/.gemini/hooks/run-gofmt.sh",
+            "description": "Go formatting check.",
+            "timeout": 5000
+          },
+          {
+            "name": "govet",
+            "type": "command",
+            "command": "/home/pi/.gemini/hooks/run-govet.sh",
+            "description": "Go static analysis.",
+            "timeout": 5000
+          },
+          {
+            "name": "json-validator",
+            "type": "command",
+            "command": "/home/pi/.gemini/hooks/run-json.sh",
+            "description": "JSON syntax and formatting.",
+            "timeout": 5000
+          },
+          {
+            "name": "mdformat",
+            "type": "command",
+            "command": "/home/pi/.gemini/hooks/run-mdformat.sh",
+            "description": "Markdown formatting.",
+            "timeout": 5000
+          },
+          {
+            "name": "ruff-lint",
+            "type": "command",
+            "command": "/home/pi/.gemini/hooks/run-ruff.sh",
+            "description": "Python linting and formatting.",
+            "timeout": 5000
+          },
+          {
+            "name": "shell-validator",
+            "type": "command",
+            "command": "/home/pi/.gemini/hooks/run-shell.sh",
+            "description": "Shell script syntax check.",
+            "timeout": 5000
+          },
+          {
+            "name": "toml-validator",
+            "type": "command",
+            "command": "/home/pi/.gemini/hooks/run-toml.sh",
+            "description": "TOML syntax validation.",
+            "timeout": 5000
+          },
+          {
+            "name": "ty-check",
+            "type": "command",
+            "command": "/home/pi/.gemini/hooks/run-ty.sh",
+            "description": "Python type checking.",
+            "timeout": 5000
+          },
+          {
+            "name": "yaml-validator",
+            "type": "command",
+            "command": "/home/pi/.gemini/hooks/run-yaml.sh",
+            "description": "YAML syntax validation.",
+            "timeout": 5000
           }
         ]
       }
