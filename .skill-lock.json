@@ -1,0 +1,59 @@
+{
+  "version": 3,
+  "skills": {
+    "ast-grep": {
+      "source": "ast-grep/agent-skill",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/ast-grep/agent-skill.git",
+      "skillPath": "ast-grep/skills/ast-grep/SKILL.md",
+      "skillFolderHash": "ef60f77564e2d47d0cba25a809daa3af8f0c469b",
+      "installedAt": "2026-06-03T14:07:14.774Z",
+      "updatedAt": "2026-06-03T14:07:14.774Z"
+    },
+    "ruff": {
+      "source": "astral-sh/claude-code-plugins",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/astral-sh/claude-code-plugins.git",
+      "skillPath": "plugins/astral/skills/ruff/SKILL.md",
+      "skillFolderHash": "46e64350889df1af25113df450999101f48fd744",
+      "installedAt": "2026-06-03T14:14:46.801Z",
+      "updatedAt": "2026-06-03T14:14:46.801Z"
+    },
+    "ty": {
+      "source": "astral-sh/claude-code-plugins",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/astral-sh/claude-code-plugins.git",
+      "skillPath": "plugins/astral/skills/ty/SKILL.md",
+      "skillFolderHash": "723536a590532587a37768a7227cf8ce52399542",
+      "installedAt": "2026-06-03T14:14:59.059Z",
+      "updatedAt": "2026-06-03T14:14:59.059Z"
+    },
+    "uv": {
+      "source": "astral-sh/claude-code-plugins",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/astral-sh/claude-code-plugins.git",
+      "skillPath": "plugins/astral/skills/uv/SKILL.md",
+      "skillFolderHash": "bca0368b210d4b3ce04b4895829afe0dbc6949a8",
+      "installedAt": "2026-06-03T14:15:10.299Z",
+      "updatedAt": "2026-06-03T14:15:10.299Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "antigravity",
+    "antigravity-cli",
+    "cline",
+    "codex",
+    "cursor",
+    "deepagents",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-code-cli",
+    "opencode",
+    "warp",
+    "zed"
+  ]
+}
