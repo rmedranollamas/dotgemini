@@ -49,7 +49,7 @@
     "useBackgroundColor": true,
     "inlineThinkingMode": "off",
     "showShortcutsHint": false,
-    "theme": "Solarized Dark",
+    "theme": "ANSI",
     "showSpinner": false,
     "loadingPhrases": "off",
     "errorVerbosity": "low",
@@ -77,7 +77,7 @@
     "compressionThreshold": 0.128,
     "skipNextSpeakerCheck": false,
     "disableLoopDetection": false,
-    "name": "auto-gemini-3"
+    "name": "auto"
   },
   "agents": {
     "overrides": {
@@ -172,7 +172,8 @@
     "taskTracker": true,
     "voice": {
       "backend": "gemini-live"
-    }
+    },
+    "gemma": true
   },
   "skills": {
     "enabled": true
