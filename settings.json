@@ -75,7 +75,7 @@
       }
     },
     "compressionThreshold": 0.128,
-    "skipNextSpeakerCheck": false,
+    "skipNextSpeakerCheck": true,
     "disableLoopDetection": false,
     "name": "gemini-3.5-flash"
   },
