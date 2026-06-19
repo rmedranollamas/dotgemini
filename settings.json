@@ -77,7 +77,7 @@
     "compressionThreshold": 0.128,
     "skipNextSpeakerCheck": false,
     "disableLoopDetection": false,
-    "name": "auto"
+    "name": "gemini-3.5-flash"
   },
   "agents": {
     "overrides": {
