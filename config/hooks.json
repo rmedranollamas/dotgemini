@@ -1,0 +1,56 @@
+{
+  "code-quality-gate": {
+    "PreToolUse": [
+      {
+        "matcher": "write_to_file|replace_file_content|multi_replace_file_content",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/pi/.gemini/config/hooks/run-gofmt.sh",
+            "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "/home/pi/.gemini/config/hooks/run-govet.sh",
+            "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "/home/pi/.gemini/config/hooks/run-json.sh",
+            "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "/home/pi/.gemini/config/hooks/run-mdformat.sh",
+            "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "/home/pi/.gemini/config/hooks/run-ruff.sh",
+            "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "/home/pi/.gemini/config/hooks/run-shell.sh",
+            "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "/home/pi/.gemini/config/hooks/run-toml.sh",
+            "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "/home/pi/.gemini/config/hooks/run-ty.sh",
+            "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "/home/pi/.gemini/config/hooks/run-yaml.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

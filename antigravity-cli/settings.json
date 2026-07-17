@@ -1,22 +1,48 @@
 {
+  "agentMode": "accept-edits",
   "altScreenMode": "always",
   "artifactReviewPolicy": "agent-decides",
-  "colorScheme": "solarized dark",
-  "editor": "emacs",
+  "colorScheme": "dark",
+  "editor": "emacsclient",
   "enableTelemetry": false,
   "enableTerminalSandbox": true,
+  "historySize": 10000,
   "model": "Gemini 3.5 Flash (Medium)",
   "notifications": true,
+  "permissions": {
+    "allow": [
+      "command(git diff)",
+      "command(git checkout)",
+      "command(jq)",
+      "unsandboxed(gh)",
+      "unsandboxed(uv)",
+      "unsandboxed(git push origin vibe/ci-setup-e55c83)",
+      "unsandboxed(ls)",
+      "unsandboxed(find)",
+      "unsandboxed(git status)",
+      "unsandboxed(git diff)",
+      "unsandboxed(cat)",
+      "unsandboxed(git add)"
+    ]
+  },
   "runningLightSpeed": "off",
   "showFeedbackSurvey": false,
+  "showTips": false,
   "statusLine": {
     "type": "",
     "command": "",
-    "enabled": true
+    "enabled": false
   },
+  "toolPermission": "proceed-in-sandbox",
   "trustedWorkspaces": [
     "/home/pi",
-    "/home/pi/.gemini"
+    "/home/pi/.gemini",
+    "/home/pi/agyclaw",
+    "/home/pi/exiftool_gps",
+    "/home/pi/research-cli",
+    "/home/pi/x",
+    "/home/pi/osint"
   ],
+  "useTerminalCursor": true,
   "verbosity": "low"
 }
