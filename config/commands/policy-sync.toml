@@ -1,4 +1,0 @@
-description = "Consolidate and clean up shell command policies."
-prompt = """
-Activate the `policy-manager` skill and run the consolidation workflow.
-"""

@@ -1,6 +1,0 @@
-description = "Deeply investigate the codebase and context to prepare for work."
-prompt = """
-First, use the 'codebase_investigator' to gather comprehensive technical context, architectural mapping, and system-wide dependencies.
-Then, delegate the architectural investigation and system analysis to the 'architect' agent.
-The objective is to build a mental map of the project and produce a 'State of the System' report as defined in the agent's workflow.
-"""
