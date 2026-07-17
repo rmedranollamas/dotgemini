@@ -4,3 +4,4 @@ antigravity-cli/
 config/.migrated
 config/projects/
 config/config.json
+config/hooks/hooks.log
