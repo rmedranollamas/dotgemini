@@ -1,79 +1,41 @@
-# .gemini - Personal Gemini CLI Configuration
+# .gemini - Personal Antigravity CLI (agy) Configuration
 
-This repository contains my personal configurations, specialized agents, and automation hooks for the **Gemini CLI**.
+This repository contains my personal configurations, specialized agents, and automation hooks for the **Antigravity CLI (agy)**.
 
 ## 🏗️ Architecture
 
-- **`agents/`**: Persistent specialized personas.
-  - `architect`: Focused on research, system mapping, and planning.
-  - `implementer`: Focused on robust, production-ready implementation.
-  - `verifier`: Focused on validation, edge cases, and robustness.
-  - `reviewer`: Focused on code quality and actionable feedback.
-- **`commands/`**: Custom one-off prompt shortcuts.
-  - `/git/sync`: Automated git pull/push and branch cleanup.
-  - `/learn`: Extract knowledge from the current context into memory.
-  - `/policy-sync`: Consolidate and clean up shell command policies.
-  - `/skill`: Guided creation or refinement of agent skills.
-  - `/soul`: Update and refine AI soul based on recent interactions.
-- **`hooks/`**: Automated quality gates triggered on file edits.
-  - `run-gofmt.sh` & `run-govet.sh`: Go formatting and static analysis.
-  - `run-ruff.sh` & `run-ty.sh`: Python linting, formatting, and type checking.
-  - `run-json.sh`: JSON/JSONL validation and auto-formatting.
-  - `run-yaml.sh`: YAML syntax validation.
-  - `run-toml.sh`: TOML syntax validation.
-  - `run-shell.sh`: Shell script syntax validation.
-  - `run-mdformat.sh`: Markdown formatting.
-- **`policies/`**: Granular tool permissions.
-- **`skills/`**: Expert guidance modules for the agent.
-  - `ast-grep`: Structural code search and analysis.
-  - `gh-cli`: GitHub CLI automation for repos, PRs, and issues.
-  - `gh-release`: Universal workflow for cutting software versions.
-  - `hook-author`: Best practices for creating and extending quality-gate hooks.
-  - `policy-manager`: Consolidation and cleanup of shell command policies.
-  - `settings-manager`: Specialized logic for managing `settings.json` and schema validation.
-  - `skill-author`: Guide for creating new skills and agentic capabilities.
-  - `soul-manager`: Stewardship of AI identity and personality substrate.
-  - `uv-skill`: Ultra-fast Python project and dependency management via `uv`.
+- **`config/`**: Global customizations and configuration files.
+  - **`skills/`**: Expert guidance modules for the agent (e.g., `uv`, `ast-grep`, `ruff`, `ty`, `soul-manager`).
+  - **`hooks/`**: Automated quality-gate validation scripts.
+    - `run-gofmt.sh` & `run-govet.sh`: Go formatting and static analysis.
+    - `run-ruff.sh` & `run-ty.sh`: Python linting, formatting, and type checking.
+    - `run-json.sh`: JSON/JSONL validation and formatting.
+    - `run-yaml.sh`: YAML syntax validation.
+    - `run-toml.sh`: TOML syntax validation.
+    - `run-shell.sh`: Shell script syntax validation.
+    - `run-mdformat.sh`: Markdown formatting.
+  - **`hooks.json`**: New-format validation hooks registration file mapped under `PreToolUse` (BeforeTool).
+- **`antigravity-cli/`**: Active CLI session data, preferred preferences (\[settings.json\](file:///home/pi/.gemini/antigravity-cli/settings.json)), and keyboard mappings (\[keybindings.json\](file:///home/pi/.gemini/antigravity-cli/keybindings.json)).
+- **`antigravity/`**: Electron desktop application data (including `webm_encoder`).
 
 ## 🚀 Workflow
 
-This setup leverages a delegation pattern:
+This setup leverages native agent execution and lifecycle hooks:
 
-1. **Orchestration**: The main Gemini flow handles the high-level request.
-1. **Implementation**: Complex coding tasks are delegated to the `implementer` agent.
-1. **Verification**: Changes are passed to the `verifier` agent for deep testing and edge-case discovery.
-1. **Automation**: Hooks ensure all written code is formatted and validated before it hits the disk.
+1. **Orchestration**: The main agent handles high-level requests and delegates tasks to native built-in subagents (like `planner`, `implementer`, `verifier`) which have optimized prompts and model configs.
+1. **Quality Gates**: Migrated hooks run on the host before any file modification tool executes (`PreToolUse`). If formatting or syntax validation fails, the write is intercepted and blocked to prevent corrupted code.
 
 ## 🛠️ Management
 
-### Settings Manager
-
-The `settings-manager` skill is utilized autonomously when you ask to update or validate your configuration. You can manage skills via:
-
-- `/skills list`: See available modules.
-
-- `/skills reload`: Refresh skill definitions.
-
-### Agents
-
-Refresh the agent registry after making changes to `.md` files:
-
-- `/agents refresh`
-
-To use an agent, simply ask the main assistant to delegate a task to it.
-
 ### Hook Logs
 
-Hooks log concisely to `.gemini/hooks.log` (or `hooks/hooks.log`). You can monitor execution in real-time:
+Hooks log to `config/hooks/hooks.log`. You can monitor execution in real-time:
 
 ```bash
-
-tail -f .gemini/hooks.log
-
+tail -f ~/.gemini/config/hooks/hooks.log
 ```
 
 ## 📜 Core Files
 
 - `GEMINI.md`: The "Source of Truth" for my engineering philosophy and tool usage.
-- `SOUL.md`: Defines the persona and core mandates of my assistant.
-- `settings.json`: The main configuration file (validated against the official schema).
+- `SOUL.md`: Persona and core mandates of my assistant.
