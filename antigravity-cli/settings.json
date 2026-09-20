@@ -1,33 +1,15 @@
 {
   "agentMode": "accept-edits",
-  "altScreenMode": "always",
   "artifactReviewPolicy": "agent-decides",
   "colorScheme": "dark",
   "editor": "emacsclient",
-  "enableTelemetry": false,
   "enableTerminalSandbox": true,
   "historySize": 10000,
-  "model": "Gemini 3.5 Flash (Medium)",
+  "model": "Gemini 3.8 Flash (Medium)",
   "notifications": true,
-  "permissions": {
-    "allow": [
-      "command(git diff)",
-      "command(git checkout)",
-      "command(jq)",
-      "unsandboxed(gh)",
-      "unsandboxed(uv)",
-      "unsandboxed(git push origin vibe/ci-setup-e55c83)",
-      "unsandboxed(ls)",
-      "unsandboxed(find)",
-      "unsandboxed(git status)",
-      "unsandboxed(git diff)",
-      "unsandboxed(cat)",
-      "unsandboxed(git add)"
-    ]
-  },
+  "pickerGrouping": "grouped",
   "runningLightSpeed": "off",
   "showFeedbackSurvey": false,
-  "showTips": false,
   "statusLine": {
     "type": "",
     "command": "",
@@ -37,11 +19,11 @@
   "trustedWorkspaces": [
     "/home/pi",
     "/home/pi/.gemini",
-    "/home/pi/agyclaw",
     "/home/pi/exiftool_gps",
     "/home/pi/research-cli",
     "/home/pi/x",
-    "/home/pi/osint"
+    "/home/pi/osint",
+    "/home/pi/swiss-bank"
   ],
   "useTerminalCursor": true,
   "verbosity": "low"
