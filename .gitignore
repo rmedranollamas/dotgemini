@@ -7,8 +7,11 @@ antigravity-cli/bin/
 antigravity-cli/brain/
 antigravity-cli/builtin/
 antigravity-cli/cache/
+antigravity-cli/crashes/
 antigravity-cli/cli.log
 antigravity-cli/conversation_summaries.db
+antigravity-cli/conversation_summaries.db-shm
+antigravity-cli/conversation_summaries.db-wal
 antigravity-cli/conversations/
 antigravity-cli/history.jsonl
 antigravity-cli/implicit/
